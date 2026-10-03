@@ -195,9 +195,17 @@ def render_1bpp(text, cells, align='left'):
     """16x16-glyph-format strip (per cell: left column 16 rows, right column 16 rows), 1bpp."""
     W = cells * 16
     canvas = [[0] * W for _ in range(16)]
-    tw = text_width(text)
-    x = 0 if align == 'left' else (W - tw) // 2 if align == 'center' else W - tw
-    draw_text(canvas, text, max(0, x), 2, 1)
+    # letter gaps; if the text is too wide, drop gaps (after narrow glyphs first) until it fits
+    gaps = [1] * max(0, len(text) - 1)
+    tw = lambda: sum(GLYPHS[ch][1] for ch in text) + sum(gaps)
+    for i in sorted(range(len(gaps)), key=lambda i: GLYPHS[text[i]][1]):
+        if tw() <= W: break
+        gaps[i] = 0
+    x = 0 if align == 'left' else (W - tw()) // 2 if align == 'center' else W - tw()
+    x = max(0, x)
+    for i, ch in enumerate(text):
+        draw_text(canvas, ch, x, 2, 1)
+        x += GLYPHS[ch][1] + (gaps[i] if i < len(gaps) else 0)
     out = bytearray()
     for cell in range(cells):
         for col in range(2):

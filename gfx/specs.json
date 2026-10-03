@@ -395,5 +395,45 @@
     "text": ""
    }
   ]
+ },
+ "setup_ingame": {
+  "_doc": "Other > Setup screen: 1bpp 16x16-format label strip at $08:$658F (expanded by $08:$46D0 from $08:$5FDA); the CPU badge is drawn by tools/gfx_badge.py",
+  "raw1bpp": [
+   {
+    "offset": "02258F",
+    "cells": 4,
+    "text": " Game Time"
+   },
+   {
+    "offset": "02260F",
+    "cells": 4,
+    "text": " Players"
+   },
+   {
+    "offset": "02268F",
+    "cells": 4,
+    "text": " Text Speed"
+   },
+   {
+    "offset": "02270F",
+    "cells": 1,
+    "text": "yrs"
+   },
+   {
+    "offset": "02272F",
+    "cells": 1,
+    "text": "Fast"
+   },
+   {
+    "offset": "02274F",
+    "cells": 1,
+    "text": "Med"
+   },
+   {
+    "offset": "02276F",
+    "cells": 1,
+    "text": "Slow"
+   }
+  ]
  }
 }
