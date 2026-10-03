@@ -22,11 +22,14 @@ and $4F (profiles) · bank 0 $1D28-$3FFF engine/font.
 Dialogue/news/portrait boxes, names (preset + typed), places, cards, money ($), HUD, popups, title menu, save slots,
 setup, character select, profiles, name keyboard, goal roulette (city codes), intro stories, town bubbles,
 step counter, TV-news window (two-line scroll ring at $C0BF), disaster region names (bank $30),
-winner's wish scene text (`script/endings_en.json`, `tools/gfx_endings.py`, loader hook $0C:$4091).
+winner's wish scene text (`script/endings_en.json`, `tools/gfx_endings.py`, loader hook $0C:$4091),
+Other > Assets / Setup screens (1bpp strips in bank $08, `gfx/specs.json`, `tools/gfx_badge.py`), sell-off screen
+(bank $3D strips `tools/gfx_sell.py`, SellAmount/SellHeader big-digit dollars), compact money popup ($C129 = popup up).
 
 ## Open
 - Investment screen prices (game units, big digits), any remaining menus (Other submenu, stock market, card shop),
   endings / year-end screens — being surveyed.
 - Translation review pass (in progress).
 - 臺灣 logo on the roulette panel left as is (TAIWAN already printed under it).
+- Sell-off screen message box sits half off-screen (same in the original), so longer English lines are cut.
 - 女王 lettering in Penny's ending picture (bank $32 picture, descriptor table $57:$5942) left as artwork.
