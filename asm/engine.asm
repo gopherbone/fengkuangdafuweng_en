@@ -26,6 +26,8 @@ SECTION "blank_14_40ef", ROMX[$40EF], BANK[$14]
     ds 32, 0
 
 ; name-entry keyboard (bank $07): names are stored as plain ASCII (max 6 letters + FD in the 7-byte field)
+SECTION "ending_page", ROMX[$4091], BANK[$0C]
+    call EndPage            ; was: call $1A31 (load a wish-scene text page)
 SECTION "kbd_init", ROMX[$4093], BANK[$07]
     ld a, $FD               ; was: ld a,$F0 / ld [hl+],a  (Chinese page prefix)
     ld [hl], a
@@ -1487,6 +1489,28 @@ NewsReset::
     pop bc
     xor a
     jr GotoLine
+
+; Winner's wish scene: load a text page (descriptor $C101 tiles / $C105 map) from the winning character's English
+; bank ($60 + character) instead of the scene's own bank. Called from $0C:$4091 with bank $0C mapped.
+EndPage::
+    ld a, [$C100]
+    push af
+    ld a, [$C217]           ; winner -> player struct pointer ($0C:$4014) -> character
+    ld l, a
+    ld h, 0
+    add hl, hl
+    ld de, $4014
+    add hl, de
+    ld a, [hl+]
+    ld h, [hl]
+    ld l, a
+    ld a, [hl]
+    add ENDING_BANK
+    ld [$C100], a
+    call $1A31
+    pop af
+    ld [$C100], a
+    ret
 
 ; Cursor to the start of the news tile line currently shown on top.
 NewsTop::
