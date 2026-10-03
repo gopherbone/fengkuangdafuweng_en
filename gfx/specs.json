@@ -220,5 +220,109 @@
     "align": "right"
    }
   ]
+ },
+ "roulette": {
+  "generator": "tools/gfx_roulette.py"
+ },
+ "roulette_header": {
+  "_doc": "1bpp 32x16 header bitmaps (bank 39:$582F + 64*city), copied doubled to $8C80",
+  "raw1bpp": [
+   {
+    "offset": "0E582F",
+    "cells": 2,
+    "text": "TPE",
+    "align": "center"
+   },
+   {
+    "offset": "0E586F",
+    "cells": 2,
+    "text": "TXG",
+    "align": "center"
+   },
+   {
+    "offset": "0E58AF",
+    "cells": 2,
+    "text": "CYI",
+    "align": "center"
+   },
+   {
+    "offset": "0E58EF",
+    "cells": 2,
+    "text": "KHH",
+    "align": "center"
+   },
+   {
+    "offset": "0E592F",
+    "cells": 2,
+    "text": "TTT",
+    "align": "center"
+   },
+   {
+    "offset": "0E596F",
+    "cells": 2,
+    "text": "MZG",
+    "align": "center"
+   },
+   {
+    "offset": "0E59AF",
+    "cells": 2,
+    "text": "SNW",
+    "align": "center"
+   },
+   {
+    "offset": "0E59EF",
+    "cells": 2,
+    "text": "KEL",
+    "align": "center"
+   },
+   {
+    "offset": "0E5A2F",
+    "cells": 2,
+    "text": "CHW",
+    "align": "center"
+   },
+   {
+    "offset": "0E5A6F",
+    "cells": 2,
+    "text": "TNN",
+    "align": "center"
+   },
+   {
+    "offset": "0E5AAF",
+    "cells": 2,
+    "text": "HUN",
+    "align": "center"
+   },
+   {
+    "offset": "0E5AEF",
+    "cells": 2,
+    "text": "GNI",
+    "align": "center"
+   },
+   {
+    "offset": "0E5B2F",
+    "cells": 2,
+    "text": "NTO",
+    "align": "center"
+   },
+   {
+    "offset": "0E5B6F",
+    "cells": 2,
+    "text": "JDE",
+    "align": "center"
+   },
+   {
+    "offset": "0E5BAF",
+    "cells": 2,
+    "text": "TYN",
+    "align": "center"
+   },
+   {
+    "offset": "0E5BEF",
+    "cells": 2,
+    "text": "ILN",
+    "align": "center"
+   }
+  ]
  }
 }

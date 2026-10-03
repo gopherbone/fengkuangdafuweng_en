@@ -165,8 +165,21 @@ class Rebuild:
     def get_tile(self, ti):
         return bytes(self.t9000[ti * 16: ti * 16 + 16]) if ti < 0x80 else bytes(self.t8800[(ti - 0x80) * 16: (ti - 0x80) * 16 + 16])
 
-    def emit(self):
-        """-> {rom_offset_hex: data_hex} for the new bank and the patched descriptor."""
+    def emit(self, start=None):
+        """-> {rom_offset_hex: data_hex} for the new bank and the patched descriptor.
+        With start=addr the blocks go into free space of the ORIGINAL bank at addr (bank byte kept), for screens
+        whose own code is far-called through the descriptor's bank."""
+        if start is not None:
+            b = bytearray(); ptrs = []
+            def put(data):
+                ptrs.append(start + len(b)); b.extend(data)
+            put(len(self.t9000).to_bytes(2, 'little') + self.t9000)
+            put(len(self.t8800).to_bytes(2, 'little') + self.t8800)
+            put(bytes(self.map[:2]) + self.map[2]); put(bytes(self.attr[:2]) + self.attr[2])
+            put(self.pal[0]); put(self.pal[1])
+            assert start + len(b) <= 0x8000, 'not enough free space in bank'
+            desc = bytes([self.src_bank]) + b''.join(p.to_bytes(2, 'little') for p in ptrs)
+            return {'%06X' % (self.src_bank * 0x4000 + start - 0x4000): bytes(b).hex(), '%06X' % self.desc_off: desc.hex()}
         b = bytearray([self.bank]); ptrs = []
         def put(data):
             ptrs.append(0x4000 + len(b)); b.extend(data)
@@ -215,7 +228,7 @@ def run(names, preview=False):
         scr = Screen(spec['state'])
         mine = {}
         if 'rebuild' in spec:
-            rb = Rebuild(int(spec['rebuild']['descriptor'], 16), int(spec['rebuild']['bank'], 16))
+            rb = Rebuild(int(spec['rebuild']['descriptor'], 16), int(spec['rebuild'].get('bank', '0'), 16))
             for reg in spec['regions']:
                 r0, c0, h, w = reg['rect']
                 cells = [(r, c) for r in range(r0, r0 + h) for c in range(c0, c0 + w)]
@@ -236,7 +249,8 @@ def run(names, preview=False):
                         raise SystemExit('%s: cell %s uses a blank shared tile; mark region unshare' % (name, cell))
                     mine[ti] = data
             for ti, data in mine.items(): rb.set_tile(ti, data)
-            patch[name] = rb.emit()
+            st_ = spec['rebuild'].get('in_bank_at')
+            patch[name] = rb.emit(int(st_, 16) if st_ else None)
             print(name, 'rebuilt into bank %02X, %d tiles changed' % (rb.bank, len(mine)))
             json.dump(dict(sorted(patch.items())), open(pfile, 'w'), indent=1)
             continue
