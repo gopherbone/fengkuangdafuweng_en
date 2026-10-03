@@ -196,12 +196,9 @@ def main():
     known = {(x['bank'], x['addr']) for x in S}
     aliases = 0
     for x in S:
-        if x['refs'][0] not in ('names38',) or x['id'] not in index: continue
-        name = x['zh'].replace('<BOX>', ''); out = []; page = None
-        for ch in name:
-            g = inv[ch]; pg, c = g >> 8, g & 0xFF
-            out += [0xF0 | pg, c] if pg != page else [c]; page = pg
-        pat = bytes(out + [0xFD]); n = index[x['id']]
+        if not (x['refs'][0] == 'names38' or x['refs'][0].startswith('T68:1:')) or x['id'] not in index: continue
+        pat = bytes.fromhex(x['raw']); n = index[x['id']]
+        if len(pat) < 4: continue
         i = ORIG_ROM.find(pat)
         while i != -1:
             bk = i // 0x4000; ad = 0x4000 + i % 0x4000 if i >= 0x4000 else i
