@@ -28,7 +28,7 @@ CHAR_NAMES = ['Meatball', 'Dubi', 'Penny Qian', 'Wu No-Guts', 'Sachiko', 'Hanamu
 
 TOK = {'NAME': [0xE0], 'NAME_E1': [0xE1], 'NAME_E8': [0xE8], 'E9': [0xE9], 'FE': [0xFE], 'NUM': [0xEC],
        'EE': [0xEE], 'EA': [0xEA], 'EB': [0xEB], 'EF': [0xEF], 'END': [0xFF], 'NL': [0xFB], 'PAGE': [0xFA, 0xFC],
-       'P0': [0xE2], 'P1': [0xE3], 'P2': [0xE4], 'P3': [0xE5], 'P4': [0xE6], 'P5': [0xE7], 'NOP': [], 'BS': [0x80]}
+       'P0': [0xE2], 'P1': [0xE3], 'P2': [0xE4], 'P3': [0xE5], 'P4': [0xE6], 'P5': [0xE7], 'NOP': [], 'BS': [0x80], 'M': [0x81]}
 TAIL_CODES = {0xFA, 0xFB, 0xFC, 0xF9, 0xFD, 0xED}
 
 def encode(text, problems, sid):
@@ -131,8 +131,10 @@ def main():
         text = ''.join(parts)
         # game-printed numbers are right-aligned in a padded field: a '$' in front would float away, and the
         # unit after them is tucked back against the digits with the $80 backspace control.
-        text = re.sub(r'\$\s*(?=<(END|NUM|EE|EA|EB|EC|EF)>)', '', text)
-        text = re.sub(r'(<(?:END|NUM|EE|EA|EB|EC|EF)>)\s*(?=0K)', r'\1', text)
+        # money: the engine prints game numbers x10,000 with separators when prefixed by <M> ($81);
+        # translators marked money as <CODE>0K (or 0,000 for counts of people)
+        text = re.sub(r'\$\s+(?=<(END|NUM|EE|EA|EB|EC)>)', '$', text)
+        text = re.sub(r'(<(?:END|NUM|EE|EA|EB|EC)>)\s*0(?:K|,000)', r'<M>\1', text)
         last = zhs[-1]
         text = re.sub(r'(\s|<PAGE>)*<BOX>\s*$', '', text)
         text = re.sub(r'<END>\s*$', '<END>', text)
@@ -176,6 +178,16 @@ def main():
         off = x['bank'] * 0x4000 + x['addr'] - 0x4000
         assert x['end'] - x['addr'] >= 3, sid
         rom[off:off + 3] = bytes([0xF6, n & 0xFF, n >> 8])
+    # graphical text (pre-drawn tiles redrawn in English)
+    gp = os.path.join(ROOT, 'gfx', 'patch.json')
+    if os.path.exists(gp):
+        owner = {}
+        for screen, tiles in json.load(open(gp)).items():
+            for off, data in tiles.items():
+                if off in owner and owner[off][1] != data:
+                    raise SystemExit('gfx conflict at %s: %s vs %s' % (off, owner[off][0], screen))
+                owner[off] = (screen, data)
+                o = int(off, 16); rom[o:o + 16] = bytes.fromhex(data)
     base = os.path.join(ROOT, 'build', 'base.gbc')
     open(base, 'wb').write(rom)
 

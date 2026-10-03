@@ -22,9 +22,12 @@ DEF EN_RETSP  EQU $C795
 DEF EN_TMP    EQU $C796   ; 2
 DEF EN_INSERT EQU $C798
 DEF EN_SSTART EQU $C799   ; 2
+DEF EN_NUMMODE EQU $C79B
+DEF EN_NUMLEN EQU $C79C
 DEF EN_STUB   EQU $C7A0   ; 16: delegate stub; any HL in $C7A0-$C7AF resumes English
 DEF EN_TOKEN_CHR  EQU $C7A8
 DEF EN_TOKEN_WAIT EQU $C7AA
+DEF EN_NUMBUF EQU $C7D0   ; 16
 DEF EN_COL    EQU $C7B0   ; 16 rows current column + 16 rows next column (same 256-byte page)
 
 DEF FLAG_ACTIVE    EQU 0
@@ -37,3 +40,9 @@ DEF FLAG_NOWRAP_MASK EQU 1 << FLAG_NOWRAP
 DEF FLAG_ACTIVE_MASK EQU 1 << FLAG_ACTIVE
 DEF FLAG_NEWS_MASK   EQU 1 << FLAG_NEWS
 DEF EN_BACKPX EQU 3       ; how far '0K' tucks back against a printed number
+DEF EN_LMARGIN EQU 3      ; px of padding at the start of each wrapped line
+DEF EN_RMARGIN EQU 2      ; px kept free at the end of each wrapped line
+DEF EN_FSAVE  EQU $C800   ; 33: saved PX + column buffers while drawing a money field
+DEF EN_FSTART EQU $C821   ; 2
+DEF EN_WRAM   EQU $C823   ; 1: WriteCol targets EN_FIELD instead of VRAM
+DEF EN_FIELD  EQU $C830   ; 144: 9-column money field buffer (1bpp rows)

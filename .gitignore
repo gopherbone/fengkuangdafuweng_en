@@ -18,3 +18,5 @@ font/ocr.json
 font/hints_p*.tsv
 script/review_part_*
 script/static_dump.tsv
+gfx/_shot.png
+gfx/preview_*.png

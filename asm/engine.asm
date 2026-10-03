@@ -13,6 +13,16 @@ SECTION "hook_0a3b", ROM0[$0A3B]
 SECTION "hook_0a43", ROM0[$0A43]
     jp EnHook               ; was: ld a,[hl+] / cp $FF  (3 bytes); original continues at $0A46
 
+; bank $14 number-field routine (HUD cash, money popups, events): replaced by an English dollar field
+SECTION "hook_14_5914", ROMX[$5914], BANK[$14]
+    jp NumField             ; DE = 7-digit buffer (entered from $5907/$590C/$5911)
+SECTION "hook_14_58d3", ROMX[$58D3], BANK[$14]
+    jp NumFieldDebt         ; debt variant: 6 digits at $C222
+
+; the money popup's 萬 glyph (copied after the number field): blank, the field shows full dollars
+SECTION "blank_14_40ef", ROMX[$40EF], BANK[$14]
+    ds 32, 0
+
 ; ---------------------------------------------------------------- engine (free ROM0 space)
 SECTION "en_engine", ROM0[$3000]
 
@@ -200,8 +210,8 @@ EnRun::
     jr .after
 .space:
     call CurX
-    and a
-    jr z, .nodraw           ; no leading spaces at line start
+    cp EN_LMARGIN + 1
+    jr c, .nodraw           ; no leading spaces at line start
     ld a, ' '
     call DrawChar
 .nodraw:
@@ -238,18 +248,20 @@ EnControl:
     jr z, .tab
     cp $80
     jp z, BackSpace
+    cp $81
+    jr z, .money
     cp $F9
     jr z, .sync
     cp $FF
-    jr z, .sync
+    jp z, EnNumber
     cp $EA
-    jr z, .sync
+    jp z, EnNumber
     cp $EB
-    jr z, .sync
+    jp z, EnNumber
     cp $EC
-    jr z, .sync
+    jp z, EnNumber
     cp $EE
-    jr z, .sync
+    jp z, EnNumber
     cp $EF
     jr z, .sync
     ; name / word inserts (E0-E9, FE): the original handler recurses into $0A43
@@ -277,6 +289,10 @@ EnControl:
     ld [$C0DF], a
     ld a, $FA
     jp Delegate
+.money:
+    ld a, 1
+    ld [EN_NUMMODE], a
+    jp EnRun
 .nl:
     call NewLinePlain
     jp EnRun
@@ -537,6 +553,15 @@ FreshColumn::
     jr nz, .clr
     ld a, 1
     ld [EN_WSTART], a
+    ; wrapped text gets a left margin at the start of a line (label strips are laid out exactly)
+    ld a, [EN_FLAGS]
+    bit FLAG_NOWRAP, a
+    ret nz
+    call CurX
+    and a
+    ret nz
+    ld a, EN_LMARGIN
+    ld [EN_PX], a
     ret
 
 ; A = x position in pixels from the line start (0..255)
@@ -666,8 +691,10 @@ CheckWrap::
     ld a, [EN_CBANK]
     ld [rROMB], a
     call CurX
-    and a
-    ret z                   ; already at line start
+    ld b, a
+    cp EN_LMARGIN + 1
+    ret c                   ; already at line start
+    ld a, b
     add c
     jr c, .wrap
     dec a                   ; last column of the word (advance includes 1px spacing)
@@ -683,6 +710,9 @@ CheckWrap::
     ld a, h
     and a
     ret nz                  ; > 255 px lines: never wrap
+    ld a, l
+    sub EN_RMARGIN
+    ld l, a
     ld a, b
     cp l
     ret c
@@ -793,6 +823,353 @@ DrawChar::
     jr nz, .mv
     jp WriteCol
 
+; ---------------------------------------------------------------- numbers
+; The game keeps numbers as decimal digit buffers (one byte 0-9 per digit) in units of 10,000 for money.
+; We print them ourselves: no leading zeros, and in money mode (prefix $81) x10,000 with thousands separators.
+EnNumber::
+    ld c, 0                 ; C bit0 = negative (debt)
+    cp $FF
+    jr nz, .notff
+    ld hl, $C16C
+    ld b, 7
+    jr .print
+.notff:
+    cp $EA
+    jr nz, .notea
+    ld hl, $D6A4
+    ld b, 7
+    jr .print
+.notea:
+    cp $EB
+    jr nz, .noteb
+    ld a, [$D6D0]
+    and a
+    jr z, .plain
+    jr .debt
+.noteb:
+    cp $EC
+    jr nz, .plain
+    call PlayerDebt
+    jr z, .plain
+.debt:
+    ld hl, $C222
+    ld b, 6
+    ld c, 1
+    jr .print
+.plain:
+    ld hl, $C221
+    ld b, 7
+.print:
+    ; collect significant digits as ASCII into EN_NUMBUF, E = count
+    ld de, EN_NUMBUF
+.skip:
+    ld a, [hl]
+    and a
+    jr nz, .copy
+    inc hl
+    dec b
+    jr nz, .skip
+    ld a, '0'               ; value is zero
+    ld [de], a
+    inc de
+    jr .digits_done
+.copy:
+    ld a, [hl+]
+    add '0'
+    ld [de], a
+    inc de
+    dec b
+    jr nz, .copy
+    ld a, [EN_NUMMODE]
+    and a
+    jr z, .digits_done
+    ld a, '0'
+    ld b, 4
+.x10k:
+    ld [de], a
+    inc de
+    dec b
+    jr nz, .x10k
+.digits_done:
+    ld a, e
+    sub LOW(EN_NUMBUF)
+    ld [EN_NUMLEN], a
+    ; draw: sign, then digits with separators every 3 from the right (money mode)
+    ld a, c
+    and a
+    jr z, .nosign
+    ld a, '-'
+    call DrawChar
+.nosign:
+    ld hl, EN_NUMBUF
+.draw:
+    ld a, [EN_NUMLEN]
+    and a
+    jr z, .end
+    ld b, a
+    ld a, [EN_NUMMODE]
+    and a
+    jr z, .nosep
+    ld a, l
+    cp LOW(EN_NUMBUF)
+    jr z, .nosep            ; never before the first digit
+    ld a, b
+.mod3:
+    sub 3
+    jr z, .sep
+    jr nc, .mod3
+    jr .nosep
+.sep:
+    push hl
+    ld a, ','
+    call DrawChar
+    pop hl
+.nosep:
+    ld a, [hl+]
+    push hl
+    call DrawChar
+    pop hl
+    ld a, [EN_NUMLEN]
+    dec a
+    ld [EN_NUMLEN], a
+    jr .draw
+.end:
+    xor a
+    ld [EN_NUMMODE], a
+    ld [EN_WSTART], a
+    jp EnRun.after
+
+; ---- money field for non-text callers: 9 columns (72 px) at [C0C8], right-aligned "$12,340,000"
+NumFieldDebt::
+    ld de, $C222
+    ld b, 6
+    ld c, 1
+    jr NumFieldGo
+NumField::
+    ld b, 7
+    ld c, 0
+NumFieldGo:
+    ; save the text engine's drawing state (a dialog may be mid-render)
+    push bc
+    push de
+    ld hl, EN_PX
+    ld de, EN_FSAVE
+    ld a, [hl]
+    ld [de], a
+    inc de
+    ld hl, EN_COL
+    ld b, 32
+.sv:
+    ld a, [hl+]
+    ld [de], a
+    inc de
+    dec b
+    jr nz, .sv
+    pop de
+    pop bc
+    ; build "-$1,234,0000" text in EN_NUMBUF (NUL terminated)
+    call FormatMoney
+    ; width in px
+    ld hl, EN_NUMBUF
+    ld c, 0
+.w:
+    ld a, [hl+]
+    and a
+    jr z, .wd
+    push hl
+    call GlyphAdvance
+    pop hl
+    add c
+    ld c, a
+    jr .w
+.wd:
+    ; render into the RAM field buffer (no visible partial states), then copy to VRAM in one pass
+    ld a, [$C0C8]
+    ld [EN_FSTART], a
+    ld a, [$C0C9]
+    ld [EN_FSTART+1], a
+    xor a
+    ld [EN_PX], a
+    ld hl, EN_COL
+    ld b, 32
+.clr:
+    ld [hl+], a
+    dec b
+    jr nz, .clr
+    ld hl, EN_FIELD
+    ld b, 9*16
+.clrf:
+    ld [hl+], a
+    dec b
+    jr nz, .clrf
+    ld a, 1
+    ld [EN_WRAM], a
+    ; start x = 72 - width (+1 for the trailing spacing of the last glyph)
+    ld a, 73
+    sub c
+    jr nc, .xok
+    xor a
+.xok:
+    ld b, a
+    and 7
+    ld [EN_PX], a
+    ld a, b
+    srl a
+    srl a
+    srl a                   ; columns
+    ld l, a
+    ld h, 0
+    add hl, hl
+    add hl, hl
+    add hl, hl
+    add hl, hl
+    add hl, hl
+    ld a, [EN_FSTART]
+    ld e, a
+    ld a, [EN_FSTART+1]
+    ld d, a
+    add hl, de
+    ld a, l
+    ld [$C0C8], a
+    ld a, h
+    ld [$C0C9], a
+    ld hl, EN_NUMBUF
+.dr:
+    ld a, [hl+]
+    and a
+    jr z, .done
+    push hl
+    call DrawChar
+    pop hl
+    jr .dr
+.done:
+    xor a
+    ld [EN_WRAM], a
+    ; copy the 9 columns to VRAM (each byte to both bitplanes)
+    ld a, [EN_FSTART]
+    ld l, a
+    ld a, [EN_FSTART+1]
+    ld h, a
+    ld de, EN_FIELD
+    ld b, 9*16
+.cp:
+    ldh a, [rSTAT]
+    bit 1, a
+    jr nz, .cp
+    ld a, [de]
+    ld [hl+], a
+    ld [hl+], a
+    inc de
+    dec b
+    jr nz, .cp
+    ; cursor = field end
+    ld a, l
+    ld [$C0C8], a
+    ld a, h
+    ld [$C0C9], a
+    ; restore engine state
+    ld hl, EN_FSAVE
+    ld a, [hl+]
+    ld [EN_PX], a
+    ld de, EN_COL
+    ld b, 32
+.rs:
+    ld a, [hl+]
+    ld [de], a
+    inc de
+    dec b
+    jr nz, .rs
+    ret
+
+; DE = digit buffer, B = digits, C = 1 if negative -> EN_NUMBUF = "[-]$d,ddd,dd0,000" NUL-terminated (x10,000)
+FormatMoney::
+    ld hl, EN_NUMBUF
+    ld a, c
+    and a
+    jr z, .pos
+    ld a, '-'
+    ld [hl+], a
+.pos:
+    ld a, '$'
+    ld [hl+], a
+    ; skip leading zeros
+.skip:
+    ld a, [de]
+    and a
+    jr nz, .sig
+    inc de
+    dec b
+    jr nz, .skip
+    ld a, '0'               ; zero
+    ld [hl+], a
+    xor a
+    ld [hl], a
+    ret
+.sig:
+    ; digits remaining (B) + 4 trailing zeros = total; separators before positions where remaining % 3 == 0
+    ld a, b
+    add 4
+    ld c, a                 ; C = digits left to emit
+.emit:
+    ld a, c
+    and a
+    jr z, .fin
+    cp 4
+    jr nc, .real
+    ld a, '0'               ; trailing zeros (x10,000)
+    jr .put
+.real:
+    ld a, c
+    cp 5
+    jr c, .zero4
+    ld a, [de]
+    inc de
+    add '0'
+    jr .put
+.zero4:
+    ld a, '0'
+.put:
+    ld [hl+], a
+    dec c
+    ld a, c
+    and a
+    jr z, .fin
+.mod:
+    sub 3
+    jr z, .comma
+    jr nc, .mod
+    jr .emit
+.comma:
+    ld a, ','
+    ld [hl+], a
+    jr .emit
+.fin:
+    xor a
+    ld [hl], a
+    ret
+
+; Z set if the current player has no debt (mirrors bank $14:$58C7)
+PlayerDebt::
+    ld a, $14
+    ld [rROMB], a
+    ld a, [$C21C]
+    ld l, a
+    ld h, 0
+    add hl, hl
+    ld de, $5230
+    add hl, de
+    ld a, [hl+]
+    ld h, [hl]
+    ld l, a
+    ld de, $003A
+    add hl, de
+    ld b, [hl]
+    ld a, [EN_CBANK]
+    ld [rROMB], a
+    ld a, b
+    and a
+    ret
+
 ; $80: back up into the previous column (re-read it from VRAM) so the next glyph sits EN_BACKPX px into it.
 BackSpace::
     ld a, [$C0C8]
@@ -838,6 +1215,9 @@ NextColumnAddr::
 
 ; Write the 16-row column buffer to VRAM at [C0C8] (each row byte to both bitplanes).
 WriteCol::
+    ld a, [EN_WRAM]
+    and a
+    jr nz, WriteColRam
     ld a, [$C0C8]
     ld l, a
     ld a, [$C0C9]
@@ -854,6 +1234,32 @@ WriteCol::
     inc de
     dec b
     jr nz, .w
+    ret
+
+; RAM-target variant: column (C0C8 - EN_FSTART)/32 of the field buffer, 16 bytes per column
+WriteColRam:
+    ld a, [EN_FSTART]
+    ld e, a
+    ld a, [EN_FSTART+1]
+    ld d, a
+    ld a, [$C0C8]
+    sub e
+    ld l, a
+    ld a, [$C0C9]
+    sbc d
+    ld h, a
+    srl h
+    rr l                    ; /2 : 16 bytes per column
+    ld de, EN_FIELD
+    add hl, de
+    ld de, EN_COL
+    ld b, 16
+.c:
+    ld a, [de]
+    ld [hl+], a
+    inc de
+    dec b
+    jr nz, .c
     ret
 
 ; New page: clear the box like the original FC handler and restart at its top-left.

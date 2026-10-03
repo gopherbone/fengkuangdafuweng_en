@@ -1,0 +1,134 @@
+{
+ "_doc": "Graphical text. state = save state on the ORIGINAL ROM showing the screen. rect = [row, col, height, width] in tiles. Lines are drawn with the VWF font.",
+ "title_menu": {
+  "state": "snaps/menu.state",
+  "regions": [
+   {
+    "rect": [
+     2,
+     3,
+     2,
+     6
+    ],
+    "lines": [
+     "Continue"
+    ]
+   },
+   {
+    "rect": [
+     4,
+     3,
+     2,
+     6
+    ],
+    "lines": [
+     "New"
+    ]
+   },
+   {
+    "rect": [
+     6,
+     3,
+     2,
+     6
+    ],
+    "lines": [
+     "Copy"
+    ]
+   }
+  ]
+ },
+ "setup": {
+  "state": "st/o_s1.state",
+  "regions": [
+   {
+    "rect": [
+     1,
+     7,
+     2,
+     7
+    ],
+    "lines": [
+     "Game Setup"
+    ],
+    "align": "center"
+   },
+   {
+    "rect": [
+     5,
+     4,
+     2,
+     6
+    ],
+    "lines": [
+     "Players"
+    ],
+    "keep_bottom": 2
+   },
+   {
+    "rect": [
+     8,
+     4,
+     2,
+     6
+    ],
+    "lines": [
+     "Humans"
+    ],
+    "keep_bottom": 2
+   },
+   {
+    "rect": [
+     11,
+     4,
+     2,
+     6
+    ],
+    "lines": [
+     "Game Time"
+    ],
+    "keep_bottom": 2
+   },
+   {
+    "rect": [
+     5,
+     16,
+     2,
+     2
+    ],
+    "lines": [
+     ""
+    ],
+    "keep_bottom": 2
+   },
+   {
+    "rect": [
+     11,
+     16,
+     2,
+     2
+    ],
+    "lines": [
+     "yrs"
+    ],
+    "keep_bottom": 2
+   }
+  ]
+ },
+ "money_popup": {
+  "state": "snaps/popup.state",
+  "regions": [
+   {
+    "rect": [
+     30,
+     12,
+     2,
+     1
+    ],
+    "lines": [
+     ""
+    ]
+   }
+  ]
+ }
+}

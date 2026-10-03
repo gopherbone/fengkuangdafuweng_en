@@ -1,10 +1,117 @@
 {
  "_doc": "Fixed-slot label strips: the game renders the whole string as one tile run and its tilemap shows each 2-hanzi (4-column) or 1-hanzi (2-column) slot separately. Each entry: list of [columns, label].",
- "06:4BE1": [[2, "Yes"], [2, "No"]],
- "27:761B": [[4, "Invest"], [4, "Auto"], [4, "Cancel"]],
- "06:6E54": [[4, "Move"], [4, "Cards"], [4, "Other"], [2, "Yr"], [2, ""], [2, "To"], [4, "goal"], [2, ""], [4, "Cash"]],
- "06:6E6A": [[4, "View"], [4, "All"], [4, "Assets"], [4, "Setup"]],
- "06:6E78": [[2, "0K"], [2, ""]],
- "27:73B2": [[2, "Buy"], [2, "Sell"]],
- "27:747E": [[4, "Buy"], [4, "Sell"], [2, "00M"]]
+ "06:4BE1": [
+  [
+   2,
+   "Yes"
+  ],
+  [
+   2,
+   "No"
+  ]
+ ],
+ "27:761B": [
+  [
+   4,
+   "Invest"
+  ],
+  [
+   4,
+   "Auto"
+  ],
+  [
+   4,
+   "Cancel"
+  ]
+ ],
+ "06:6E54": [
+  [
+   4,
+   "Move"
+  ],
+  [
+   4,
+   "Cards"
+  ],
+  [
+   4,
+   "Other"
+  ],
+  [
+   2,
+   "Yr"
+  ],
+  [
+   2,
+   ""
+  ],
+  [
+   2,
+   "To"
+  ],
+  [
+   4,
+   "goal"
+  ],
+  [
+   2,
+   ""
+  ],
+  [
+   4,
+   "Cash"
+  ]
+ ],
+ "06:6E6A": [
+  [
+   4,
+   "View"
+  ],
+  [
+   4,
+   "All"
+  ],
+  [
+   4,
+   "Assets"
+  ],
+  [
+   4,
+   "Setup"
+  ]
+ ],
+ "06:6E78": [
+  [
+   2,
+   ""
+  ],
+  [
+   2,
+   ""
+  ]
+ ],
+ "27:73B2": [
+  [
+   2,
+   "Buy"
+  ],
+  [
+   2,
+   "Sell"
+  ]
+ ],
+ "27:747E": [
+  [
+   4,
+   "Buy"
+  ],
+  [
+   4,
+   "Sell"
+  ],
+  [
+   2,
+   "00M"
+  ]
+ ]
 }
