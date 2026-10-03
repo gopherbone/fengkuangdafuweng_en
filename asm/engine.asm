@@ -1401,3 +1401,131 @@ FarCopyProf::
     pop af
     ld [rROMB], a
     ret
+
+; ---------------------------------------------------------------- investment list prices (bank $25)
+; The list writes prices as tilemap entries pointing at preloaded 8x16 digit tiles ($50 + 2*digit, top/bottom).
+; Replacement: "$20,000,000" right-aligned so it ends where the original field + unit cell ended (HL+10),
+; using two blank tiles ($64-$67) for '$' and ','.
+SECTION "hook_25_437b", ROMX[$437B], BANK[$25]
+    jp PriceTiles
+
+SECTION "price_tiles", ROM0[$1D40]
+PriceTiles::
+    push hl
+    ; glyphs for '$' and ',' into tiles $64-$67 (VRAM $9640), each 1bpp row written to both planes
+    ld hl, $9640
+    ld de, PriceGlyphs
+    ld b, 32
+.gl:
+    ldh a, [rSTAT]
+    and 3
+    jr nz, .gl
+    ld a, [de]
+    ld [hl+], a
+    ld [hl+], a
+    inc de
+    dec b
+    jr nz, .gl
+    ; text
+    ld de, $C221
+    ld b, 7
+    ld c, 0
+    call FormatMoney
+    ld hl, EN_NUMBUF
+    ld c, 0
+.len:
+    ld a, [hl+]
+    and a
+    jr z, .lend
+    inc c
+    jr .len
+.lend:
+    pop hl                  ; field start (map address)
+    ; blank 4 columns left of the field through to the field end, then draw from (start + 11 - len)
+    push hl
+    ld a, l
+    sub 4
+    ld l, a                 ; same row: field starts at column >= 4
+    ld b, 15
+.clr:
+    ld a, $FF
+    call PutPair
+    dec b
+    jr nz, .clr
+    pop hl
+    ld a, 11
+    sub c
+    jr nc, .fwd
+    ; longer than 11: move left
+    cpl
+    inc a
+    ld b, a
+.back:
+    dec l
+    dec b
+    jr nz, .back
+    jr .draw
+.fwd:
+    add l
+    ld l, a
+.draw:
+    ld de, EN_NUMBUF
+.ch:
+    ld a, [de]
+    inc de
+    and a
+    ret z
+    cp '$'
+    jr nz, .notd
+    ld a, $64
+    jr .put
+.notd:
+    cp ','
+    jr nz, .dig
+    ld a, $66
+    jr .put
+.dig:
+    sub '0'
+    add a
+    add $50
+.put:
+    call PutPair
+    jr .ch
+
+; A = top tile; writes A at [HL] and A+1 (or $FF if A = $FF) one row below, then HL = next column
+PutPair:
+    push bc
+    push de
+    ld c, a
+.w1:
+    ldh a, [rSTAT]
+    and 3
+    jr nz, .w1
+    ld a, c
+    ld [hl], a
+    push hl
+    ld de, 32
+    add hl, de
+    ld a, c
+    cp $FF
+    jr z, .w2
+    inc a
+.w2:
+    ld b, a
+.w3:
+    ldh a, [rSTAT]
+    and 3
+    jr nz, .w3
+    ld a, b
+    ld [hl], a
+    pop hl
+    inc l
+    pop de
+    pop bc
+    ret
+
+PriceGlyphs:
+    ; '$' (8x16, matches the bold 7px digits)
+    db $0C, $3E, $7F, $6D, $6C, $7C, $3E, $1F, $0D, $6D, $7F, $3E, $0C, $0C, $00, $00
+    ; ','
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $1C, $1C, $0C, $18, $00, $00
