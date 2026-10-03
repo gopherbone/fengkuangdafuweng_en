@@ -3,11 +3,12 @@
 Raw 2bpp tiles at $08:$679F (copied to $9560 by $08:$5FF8): 4 columns x (top, bottom) tiles, a 32x16 rounded
 badge drawn in colour 2. We keep the border, clear the inside and write "CPU".
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 from gfx import ROM, draw_text, text_width
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 OFF = 0x08 * 0x4000 + 0x679F - 0x4000
 
 def main():

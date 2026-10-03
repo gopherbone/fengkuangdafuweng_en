@@ -5,11 +5,12 @@ separate block (table $39:$50CB entry 0 -> $50DD, copied to $91F0 with BC=$05C0 
 shared between cells, so: four cells get private copies in slots $7B-$7E, the grid block is re-emitted (96 tiles)
 in free space, the copy length is patched, and the descriptor map is rebuilt in-bank.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 from gfx import ROM, Rebuild, build_region
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 BANK = 0x39
 DESC = 0x0E4430
 FREE = 0x5C40

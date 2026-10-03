@@ -1,5 +1,6 @@
 # survey.py rom state outdir frames every  : autoplay (mostly A), screenshot every N frames, contact sheets of 16
-import sys, os, random; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys, os, random; sys.path.insert(0, _R + '/tools')
 from emu import boot
 from PIL import Image
 rom, st, out, frames, every = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5])

@@ -4,14 +4,15 @@ Original: table $4C:$562D = 8 x [bank][page list]; each page record (bank $4C) =
 pointers into that bank; pages are pre-rendered 12px text. We render script/intro_en.json with the VWF font
 (white on black, word-wrapped to 144 px), dedupe tiles, and give character k its own bank $70+k.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/font')
+sys.path.insert(0, _R + '/tools')
+sys.path.insert(0, _R + '/font')
 import intro_pages as ip
 from gfx import draw_text, text_width, px_tile
 from en_font import GLYPHS
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 FIRST_BANK = 0x70
 W, LEFT, TEXTW, PITCH, TOP = 20, 8, 144, 13, 2
 

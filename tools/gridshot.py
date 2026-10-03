@@ -1,6 +1,7 @@
 """gridshot.py rom state out.png [win] : screenshot x4 with the BG tilemap grid (scroll applied) labelled in
 TILEMAP coordinates (row,col) - the coordinates tools/gfx.py specs use. With 'win', grid the window instead."""
-import sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0, _R + '/tools')
 from emu import boot
 from PIL import Image, ImageDraw
 g = boot(sys.argv[1]); g.snapshot_load(path=sys.argv[2]); g.run_frames(1)

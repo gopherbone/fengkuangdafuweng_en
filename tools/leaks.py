@@ -1,6 +1,7 @@
 # leaks.py rom state outdir frames [seed] : autoplay the ENGLISH build and log every Chinese glyph drawn by the
 # original renderer (bank, address of the glyph byte), grouped into runs. Also takes periodic screenshots.
-import sys, os, json, random; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys, os, json, random; sys.path.insert(0, _R + '/tools')
 from emu import boot
 rom, st, out, frames = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
 seed = int(sys.argv[5]) if len(sys.argv) > 5 else 11

@@ -1,5 +1,6 @@
 # step.py rom in_state out_state 'seq' [shot.png]; seq tokens: key, key*N(hold frames), wN
-import sys; sys.path.insert(0,'/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0,_R + '/tools')
 from emu import boot
 rom, ins, outs, seq = sys.argv[1:5]; shot = sys.argv[5] if len(sys.argv)>5 else outs.replace('.state','.png')
 g=boot(rom); g.snapshot_load(path=ins)

@@ -4,11 +4,12 @@ Table $42:$4057 -> 12 entries of [2-byte ptr][13-byte screen descriptor] (banks 
 map rows 2-3, columns 1-4; 月 is the rightmost shape there. We erase it (paint the surrounding background colour)
 in the tiles in place; the English month name is already drawn at the bottom of each picture.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 from gfx import ROM, Rebuild
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 B42 = 0x42 * 0x4000 - 0x4000
 ROWS, COLS = (2, 3), (1, 2, 3, 4)
 

@@ -1,7 +1,9 @@
+import os
 import sys
-sys.path.insert(0, "/Users/nick/sameboy-cli/cli/py")
+SAMEBOY = os.environ.get("SAMEBOY_CLI", os.path.expanduser("~/sameboy-cli"))
+sys.path.insert(0, os.path.join(SAMEBOY, "cli", "py"))
 from gbemu import GBEmu
-EMU = "/Users/nick/sameboy-cli/build/gbemu"
+EMU = os.environ.get("GBEMU", os.path.join(SAMEBOY, "build", "gbemu"))
 
 def boot(rom, model="cgb", seed=1, sav=None):
     g = GBEmu(EMU)

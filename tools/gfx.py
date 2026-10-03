@@ -8,14 +8,15 @@ gfx/patch.json = {rom_offset_hex: tile_hex}. tools/build.py applies it.
   python3 tools/gfx.py [screen ...]      # regenerate patches (needs the local save states)
   python3 tools/gfx.py --preview NAME    # write gfx/preview_NAME.png (before | after)
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json, argparse
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/font')
+sys.path.insert(0, _R + '/tools')
+sys.path.insert(0, _R + '/font')
 from emu import boot
 from en_font import GLYPHS
 from PIL import Image
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 ROM = open(os.path.join(ROOT, 'orig', 'fkdfw.gbc'), 'rb').read()
 
 def tile_px(t):

@@ -1,4 +1,5 @@
-import json, sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools'); import fkdfw
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import json, sys; sys.path.insert(0, _R + '/tools'); import fkdfw
 rom = fkdfw.load_rom(); t = fkdfw.load_table()
 h = json.load(open(sys.argv[1]))
 runs = []

@@ -574,5 +574,17 @@
     "unshare": true
    }
   ]
+ },
+ "endings": {
+  "generator": "tools/gfx_endings.py"
+ },
+ "setup_badge": {
+  "generator": "tools/gfx_badge.py"
+ },
+ "sell": {
+  "generator": "tools/gfx_sell.py"
+ },
+ "months": {
+  "generator": "tools/gfx_months.py"
  }
 }

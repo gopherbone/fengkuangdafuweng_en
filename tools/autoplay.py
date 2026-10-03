@@ -1,5 +1,6 @@
 # autoplay.py rom state outdir frames : press A periodically, log renderer string reads at $0A43
-import sys, json, os, random; sys.path.insert(0,'/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys, json, os, random; sys.path.insert(0,_R + '/tools')
 from emu import boot
 rom, st, out, frames = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
 os.makedirs(out, exist_ok=True)

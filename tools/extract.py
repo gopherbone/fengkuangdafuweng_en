@@ -3,7 +3,8 @@
 Text banks use a two-level table: top[group] -> subtable, subtable[index] -> string (bank-local address).
 Strings are terminated by FD (end of message) or FF (end).
 """
-import sys, json; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys, json; sys.path.insert(0, _R + '/tools')
 import fkdfw
 rom = fkdfw.load_rom(); tab = fkdfw.load_table()
 
@@ -86,7 +87,7 @@ for (b, a), e in sorted(entries.items()):
 spans = [(x['bank'], x['addr'], x['end']) for x in out]
 for x in out:
     x['inside'] = [ '%02X:%04X' % (b, a) for b, a, e in spans if b == x['bank'] and a < x['addr'] < e ]
-json.dump(out, open('/Users/nick/crazyrichman_claude/script/strings.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(out, open(_R + '/script/strings.json', 'w'), ensure_ascii=False, indent=1)
 import collections
 print(len(out), collections.Counter(x['bank'] for x in out), 'orphans', sum(1 for x in out if x['refs'] == ['orphan']),
       'inside', sum(1 for x in out if x['inside']))

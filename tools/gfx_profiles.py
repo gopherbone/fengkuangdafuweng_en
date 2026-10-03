@@ -7,12 +7,13 @@ at shared tiles in places, so:
     the screen far-calls), with every per-character text cell remapped to its own per-character tile index;
   * the 8 per-character blocks are rebuilt (extended) in bank $7C and copied by FarCopyProf ($2FF0).
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, json, os
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 import gfx
 from gfx import ROM, Rebuild, build_region
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 DESC = 0x130DD3
 BANK = 0x4F
 BASE_START = 0x6FA0          # free space at the end of bank $4F

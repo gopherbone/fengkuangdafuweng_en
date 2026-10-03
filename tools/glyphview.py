@@ -1,7 +1,8 @@
 """glyphview.py OUT.png ID [ID ...]  — render glyphs (hex ids like 48F) enlarged, labelled, from the original ROM."""
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys
 from PIL import Image, ImageDraw
-rom = open('/Users/nick/crazyrichman_claude/orig/fkdfw.gbc', 'rb').read()
+rom = open(_R + '/orig/fkdfw.gbc', 'rb').read()
 def glyph(idx):
     p, x = idx >> 8, idx & 0xff
     o = (9 + (p >> 1)) * 0x4000 + (p & 1) * 0x2000 + 1 + x * 32

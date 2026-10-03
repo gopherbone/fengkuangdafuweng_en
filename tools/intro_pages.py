@@ -1,6 +1,7 @@
 """Character intro story pages (pre-rendered 12px text images). Shared helpers for reading and rebuilding them."""
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 from PIL import Image
-ROM = open('/Users/nick/crazyrichman_claude/orig/fkdfw.gbc', 'rb').read()
+ROM = open(_R + '/orig/fkdfw.gbc', 'rb').read()
 B4C = 0x4C * 0x4000
 TABLE = 0x562D          # 8 x [bank][page list ptr], indexed by player 1's character ($D400)
 COUNTS = [5, 4, 5, 5, 6, 6, 4, 4]

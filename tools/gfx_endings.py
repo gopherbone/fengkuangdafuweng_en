@@ -9,11 +9,12 @@ We render script/endings_en.json with the VWF font (white on black, as the origi
 bank $60+k, and repoint the records there. The engine's EndPage (hooked at $0C:$4091) swaps in that bank for the
 load.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 from gfx import ROM, draw_text, text_width, px_tile
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 FIRST_BANK = 0x60
 BC = 0x0C * 0x4000 - 0x4000
 TABLE = 0x40E7

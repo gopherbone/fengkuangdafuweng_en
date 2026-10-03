@@ -1,6 +1,7 @@
 """find_desc.py rom state 'keys' : run inputs (tokens: key, wN) and report every screen descriptor loaded
 (the generic loader at $0F80 copies it to $C100), with its ROM location."""
-import sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0, _R + '/tools')
 from emu import boot
 rom = open(sys.argv[1], 'rb').read()
 g = boot(sys.argv[1]); g.snapshot_load(path=sys.argv[2])

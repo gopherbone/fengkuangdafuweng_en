@@ -4,11 +4,12 @@ Table $03:$40AC: 60 x [board space][tile data ptr (0x80 bytes, bank 3)][OBJ pale
 outline and tail, clear the inside (wider text area than the original's inner accents allowed) and draw the
 English name with a condensed version of the VWF font, black for cities and grey for towns as in the original.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/font')
+sys.path.insert(0, _R + '/font')
 from en_font import GLYPHS
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 ROM = open(os.path.join(ROOT, 'orig', 'fkdfw.gbc'), 'rb').read()
 B3 = 0x3 * 0x4000
 TABLE, COUNT, FIRST_BLOCK = 0x40AC, 60, 0x4058

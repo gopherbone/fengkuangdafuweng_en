@@ -1,7 +1,8 @@
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import numpy as np, json
 from PIL import Image, ImageDraw, ImageFont
 from scipy.ndimage import gaussian_filter
-d=open('/Users/nick/crazyrichman_claude/orig/fkdfw.gbc','rb').read()
+d=open(_R + '/orig/fkdfw.gbc','rb').read()
 def glyph(idx):
     p,x=idx>>8,idx&0xff
     o=(9+(p>>1))*0x4000+(p&1)*0x2000+1+x*32
@@ -41,5 +42,5 @@ for idx in range(0,10*256):
     sc=np.max([m@v for m in mats],axis=0)
     top=np.argsort(-sc)[:5]
     res[idx]=[(cands[t],round(float(sc[t]),3)) for t in top]
-json.dump(res,open('/Users/nick/crazyrichman_claude/font/ocr.json','w'),ensure_ascii=False)
+json.dump(res,open(_R + '/font/ocr.json','w'),ensure_ascii=False)
 print(len(res))

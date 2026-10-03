@@ -1,8 +1,9 @@
 # vramsrc.py rom state [frames] : dump the visible BG/window tilemap and, per distinct tile, where its 16 bytes occur
 # in the ORIGINAL rom (bank:addr). Helps find the source of pre-drawn graphics that are not loaded via $0F80.
-import sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0, _R + '/tools')
 from emu import boot
-rom = open('/Users/nick/crazyrichman_claude/orig/fkdfw.gbc', 'rb').read()
+rom = open(_R + '/orig/fkdfw.gbc', 'rb').read()
 g = boot(sys.argv[1]); g.snapshot_load(path=sys.argv[2]); g.input_set([]); g.run_frames(int(sys.argv[3]) if len(sys.argv) > 3 else 2)
 lcdc = g.mem_read(0xFF40, 1)[0]; wy, wx = g.mem_read(0xFF4A, 1)[0], g.mem_read(0xFF4B, 1)[0]
 use_win = bool(lcdc & 0x20) and wy < 144

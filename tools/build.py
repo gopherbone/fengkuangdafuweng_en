@@ -222,6 +222,10 @@ def main():
     # graphical text (pre-drawn tiles redrawn in English)
     gp = os.path.join(ROOT, 'gfx', 'patch.json')
     if os.path.exists(gp):
+        specs = [k for k in json.load(open(os.path.join(ROOT, 'gfx', 'specs.json'))) if not k.startswith('_')]
+        missing = sorted(set(specs) - set(json.load(open(gp))))
+        if missing:
+            raise SystemExit('gfx/patch.json lacks %s: run tools/gfx.py / the generators' % ', '.join(missing))
         owner = {}
         for screen, chunks in json.load(open(gp)).items():
             for off, data in chunks.items():

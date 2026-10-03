@@ -1,5 +1,6 @@
 """Static scan: find plausible text strings in every bank and decode them."""
-import sys, json, collections; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys, json, collections; sys.path.insert(0, _R + '/tools')
 import fkdfw
 rom = fkdfw.load_rom(); tab = fkdfw.load_table()
 valid = {k for k, v in tab.items() if v != '<blank>'}
@@ -33,6 +34,6 @@ for bank in range(len(rom) // 0x4000):
         else: i += 1
 by = collections.Counter(o // 0x4000 for o, _ in out)
 print(len(out), sorted((hex(b), n) for b, n in by.items() if n >= 3))
-with open('/Users/nick/crazyrichman_claude/script/static_dump.tsv', 'w') as f:
+with open(_R + '/script/static_dump.tsv', 'w') as f:
     for o, e in out:
         f.write('%06X\t%02X:%04X\t%s\n' % (o, o // 0x4000, 0x4000 + o % 0x4000 if o >= 0x4000 else o, fkdfw.decode(rom, o, tab, e - o)[0]))

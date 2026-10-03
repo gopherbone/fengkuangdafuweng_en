@@ -1,6 +1,7 @@
 """tilesrc.py rom state [state...] : for each on-screen BG/window tile, find where its 16 bytes live in the ROM.
 Prints source blocks (contiguous runs) so we know which graphics are stored uncompressed."""
-import sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0, _R + '/tools')
 from emu import boot
 rom = open(sys.argv[1], 'rb').read()
 g = boot(sys.argv[1])

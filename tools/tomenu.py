@@ -1,5 +1,6 @@
 # tomenu.py rom state out.state : play (A presses) until the turn menu (Move/Cards/Other) is up, save a state there
-import sys; sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
+import sys; sys.path.insert(0, _R + '/tools')
 from emu import boot
 from PIL import Image
 rom, st, out = sys.argv[1:4]

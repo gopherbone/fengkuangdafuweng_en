@@ -4,11 +4,12 @@
 (3 cells: 手 自 動, the menu reads 手動 / 自動 sharing the 動 cell). Amounts are printed by the engine (SellAmount /
 SellHeader) as dollars in the screen's big digits, using the 金 cell for '-' and the 億 cell for '$' and ','; the 萬 cell is blank.
 """
+import os as _os; _R = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))  # repo root
 import sys, os, json
-sys.path.insert(0, '/Users/nick/crazyrichman_claude/tools')
+sys.path.insert(0, _R + '/tools')
 from gfx import render_1bpp
 
-ROOT = '/Users/nick/crazyrichman_claude'
+ROOT = _R
 B3D = 0x3D * 0x4000 - 0x4000
 # big-digit style glyphs, 8 x 16 (same bitmaps as the engine's PriceGlyphs)
 DOLLAR = [0x0C, 0x3E, 0x7F, 0x6D, 0x6C, 0x7C, 0x3E, 0x1F, 0x0D, 0x6D, 0x7F, 0x3E, 0x0C, 0x0C, 0x00, 0x00]

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crazy Tycoon English Patch</title>
+<meta name="description" content="Unofficial English translation patch for Feng Kuang Da Fu Weng (瘋狂大富翁), an unlicensed Game Boy Color board game. Patch your own ROM in the browser.">
+<style>
+  :root {
+    --bg: #f6f3ec;
+    --panel: #ffffff;
+    --ink: #1e1b16;
+    --muted: #6a6358;
+    --line: #ddd5c6;
+    --accent: #c8321e;
+    --accent-ink: #ffffff;
+    --ok: #1d7a3a;
+    --warn: #a35a00;
+    --bad: #b3261e;
+    --drop: #fffaf0;
+    --notice: #fff4d6;
+    --notice-line: #e7c56d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17150f;
+      --panel: #221f18;
+      --ink: #efe9dc;
+      --muted: #a89f8e;
+      --line: #3a352a;
+      --accent: #e5533c;
+      --accent-ink: #ffffff;
+      --ok: #5cc27a;
+      --warn: #e0a24a;
+      --bad: #ef6b5f;
+      --drop: #2a261d;
+      --notice: #2e2a1c;
+      --notice-line: #6e5a24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h1 small { display: block; font-size: 1rem; font-weight: 500; color: var(--muted); margin-top: 6px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+  .notice {
+    background: var(--notice); border: 1px solid var(--notice-line); border-radius: 10px;
+    padding: 14px 16px; margin: 20px 0 8px; font-size: 0.95rem;
+  }
+  .notice strong { display: block; margin-bottom: 4px; }
+  .notice p:last-child { margin-bottom: 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  #drop {
+    display: block; border: 2px dashed var(--line); background: var(--drop); border-radius: 12px;
+    padding: 36px 16px; text-align: center; cursor: pointer; transition: border-color .15s, transform .15s;
+  }
+  #drop.over { border-color: var(--accent); transform: scale(1.01); }
+  #drop b { display: block; font-size: 1.1rem; margin-bottom: 4px; }
+  #drop span { color: var(--muted); font-size: 0.92rem; }
+  #file { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  #status { margin-top: 16px; min-height: 1.5em; }
+  #status.ok { color: var(--ok); }
+  #status.warn { color: var(--warn); }
+  #status.bad { color: var(--bad); }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  button, .button {
+    font: inherit; font-weight: 600; border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer;
+    background: var(--accent); color: var(--accent-ink); text-decoration: none; display: inline-block;
+  }
+  button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  button[hidden], .button[hidden] { display: none; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; font-size: 0.92rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; min-width: 0; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .gallery figure { margin: 0; }
+  .gallery img {
+    width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--line);
+    image-rendering: pixelated; image-rendering: crisp-edges; background: #000;
+  }
+  .gallery figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+  footer { margin-top: 48px; font-size: 0.85rem; color: var(--muted); }
+  ol { padding-left: 20px; margin: 0 0 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Crazy Tycoon <small>English translation patch for 瘋狂大富翁 (Feng Kuang Da Fu Weng), Game Boy Color</small></h1>
+
+  <div class="notice" role="note">
+    <strong>This translation was made by AI.</strong>
+    <p>The script, the reworked graphics and the code changes were produced by an AI model (Anthropic's Claude),
+    directed and play-tested by a human. No professional or fluent human translator reviewed it, so expect
+    mistakes and odd phrasing.</p>
+    <p>If you enjoy fan translations, please support the human translators and hackers who make them:
+    play their releases, report bugs, credit them, and help with their projects. This patch is no substitute
+    for their work.</p>
+  </div>
+
+  <h2>Patch your ROM</h2>
+  <div class="card">
+    <label id="drop" for="file">
+      <b>Drop your ROM here</b>
+      <span>or click to choose a file. Nothing is uploaded: patching happens in your browser.</span>
+    </label>
+    <input id="file" type="file" accept=".gbc,.gb,.bin">
+    <div id="status" aria-live="polite">Loading patch…</div>
+    <div class="actions">
+      <a id="download" class="button" hidden>Download patched ROM</a>
+      <button id="force" class="secondary" hidden>Patch anyway</button>
+    </div>
+  </div>
+
+  <h2>You need this ROM</h2>
+  <div class="card">
+    <dl>
+      <dt>File name</dt><dd><code>Feng Kuang Da Fu Weng (Unlicensed, Chinese) (Multicart Rip) [Header Fix].gbc</code></dd>
+      <dt>Size</dt><dd>2,097,152 bytes (2 MiB)</dd>
+      <dt>CRC32</dt><dd><code id="src-crc">AD68B3DD</code></dd>
+      <dt>MD5</dt><dd><code>0302066cf764b39159922594f31e3445</code></dd>
+      <dt>SHA-1</dt><dd><code>72d3b05ca1bd08b646c3a3240fcc29f630958825</code></dd>
+      <dt>Header title</dt><dd><code>POKMON'FIGHT</code> (the cartridge header of this unlicensed release)</dd>
+    </dl>
+    <p style="margin-top:12px">This page doesn't provide the game. You need your own copy of the ROM above.</p>
+  </div>
+
+  <h2>Screenshots</h2>
+  <div class="gallery">
+    <figure><img src="screenshots/news.png" alt="VF News anchors introducing the contest" width="480" height="432" loading="lazy"><figcaption>VF News explains the rules</figcaption></figure>
+    <figure><img src="screenshots/turnmenu.png" alt="Board with the turn menu and status panel" width="480" height="432" loading="lazy"><figcaption>Your turn</figcaption></figure>
+    <figure><img src="screenshots/profile.png" alt="Character profile for Meatball" width="480" height="432" loading="lazy"><figcaption>Character profiles</figcaption></figure>
+    <figure><img src="screenshots/intro.png" alt="Character intro story page" width="480" height="432" loading="lazy"><figcaption>Character stories</figcaption></figure>
+    <figure><img src="screenshots/roulette.png" alt="Goal city roulette" width="480" height="432" loading="lazy"><figcaption>Goal roulette</figcaption></figure>
+    <figure><img src="screenshots/popup.png" alt="Money popup and portrait dialogue" width="480" height="432" loading="lazy"><figcaption>Fines and fortunes</figcaption></figure>
+    <figure><img src="screenshots/cardhouse.png" alt="Card shop list with prices" width="480" height="432" loading="lazy"><figcaption>The Card House</figcaption></figure>
+    <figure><img src="screenshots/setup.png" alt="Setup screen" width="480" height="432" loading="lazy"><figcaption>Setup</figcaption></figure>
+    <figure><img src="screenshots/month.png" alt="Month splash for July" width="480" height="432" loading="lazy"><figcaption>A new month</figcaption></figure>
+    <figure><img src="screenshots/wish.png" alt="Ending scene: Penny Qian's wish" width="480" height="432" loading="lazy"><figcaption>The winner's wish</figcaption></figure>
+  </div>
+
+  <h2>Other ways to patch</h2>
+  <ol>
+    <li>Download <a href="crazy-tycoon-en.ips">crazy-tycoon-en.ips</a>.</li>
+    <li>Apply it to the ROM above with any IPS patcher (Floating IPS, Lunar IPS, Rom Patcher JS…).</li>
+    <li>The patched ROM should have CRC32 <code id="dst-crc">4614544C</code>.</li>
+  </ol>
+
+  <footer>
+    Unofficial fan translation, not affiliated with the game's developer or publisher.
+    Source, notes and tools on <a href="https://github.com/gopherbone/fengkuangdafuweng_en">GitHub</a>.
+  </footer>
+</main>
+
+<script>
+(() => {
+  const statusEl = document.getElementById('status');
+  const drop = document.getElementById('drop');
+  const fileInput = document.getElementById('file');
+  const dl = document.getElementById('download');
+  const force = document.getElementById('force');
+  const OUT_NAME = 'Crazy Tycoon (Feng Kuang Da Fu Weng) (English).gbc';
+  let ips = null, meta = null, pending = null;
+
+  const say = (msg, cls) => { statusEl.textContent = msg; statusEl.className = cls || ''; };
+
+  // CRC32 (IEEE)
+  const table = new Uint32Array(256);
+  for (let i = 0; i < 256; i++) { let c = i; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; table[i] = c >>> 0; }
+  const crc32 = (u8) => { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = table[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return ((c ^ 0xFFFFFFFF) >>> 0).toString(16).toUpperCase().padStart(8, '0'); };
+
+  function applyIps(rom, patch) {
+    const head = String.fromCharCode(...patch.subarray(0, 5));
+    if (head !== 'PATCH') throw new Error('not an IPS patch');
+    let out = new Uint8Array(rom); let p = 5;
+    while (true) {
+      if (p + 3 > patch.length) throw new Error('truncated patch');
+      if (patch[p] === 0x45 && patch[p + 1] === 0x4F && patch[p + 2] === 0x46) break; // "EOF"
+      const off = (patch[p] << 16) | (patch[p + 1] << 8) | patch[p + 2];
+      const size = (patch[p + 3] << 8) | patch[p + 4]; p += 5;
+      const need = (n) => { if (n > out.length) { const g = new Uint8Array(n); g.set(out); out = g; } };
+      if (size === 0) {
+        const run = (patch[p] << 8) | patch[p + 1]; const v = patch[p + 2]; p += 3;
+        need(off + run); out.fill(v, off, off + run);
+      } else {
+        need(off + size); out.set(patch.subarray(p, p + size), off); p += size;
+      }
+    }
+    return out;
+  }
+
+  function offer(bytes) {
+    if (dl.href) URL.revokeObjectURL(dl.href);
+    dl.href = URL.createObjectURL(new Blob([bytes], { type: 'application/octet-stream' }));
+    dl.download = OUT_NAME;
+    dl.hidden = false;
+    dl.click();
+  }
+
+  function patchAndOffer(rom) {
+    const out = applyIps(rom, ips);
+    const c = crc32(out);
+    if (c === meta.patched.crc32) say('Patched successfully (CRC32 ' + c + '). Your download should start; if not, use the button.', 'ok');
+    else say('Patched, but the result (CRC32 ' + c + ') differs from the expected ' + meta.patched.crc32 + '. It may not work.', 'warn');
+    offer(out);
+  }
+
+  async function handle(file) {
+    dl.hidden = true; force.hidden = true; pending = null;
+    if (!ips) { say('The patch hasn\'t loaded yet. Try again in a moment.', 'warn'); return; }
+    const rom = new Uint8Array(await file.arrayBuffer());
+    const c = crc32(rom);
+    if (c === meta.source.crc32) { patchAndOffer(rom); return; }
+    if (c === meta.patched.crc32) { say('This ROM is already patched (CRC32 ' + c + ').', 'ok'); return; }
+    say('This file\'s CRC32 is ' + c + ', not the expected ' + meta.source.crc32 + ' (' + rom.length.toLocaleString() +
+        ' bytes). It\'s probably a different dump or version, and the patched game may crash.', 'bad');
+    pending = rom; force.hidden = false;
+  }
+
+  force.addEventListener('click', () => { if (pending) { force.hidden = true; patchAndOffer(pending); } });
+  fileInput.addEventListener('change', () => { if (fileInput.files[0]) handle(fileInput.files[0]); fileInput.value = ''; });
+  ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handle(f); });
+  // allow dropping anywhere on the page
+  window.addEventListener('dragover', e => e.preventDefault());
+  window.addEventListener('drop', e => { e.preventDefault(); const f = e.dataTransfer && e.dataTransfer.files[0]; if (f) handle(f); });
+
+  Promise.all([
+    fetch('crazy-tycoon-en.ips').then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); }),
+    fetch('crazy-tycoon-en.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+  ]).then(([p, m]) => {
+    ips = new Uint8Array(p); meta = m;
+    document.getElementById('src-crc').textContent = m.source.crc32;
+    document.getElementById('dst-crc').textContent = m.patched.crc32;
+    say('Ready. Drop your ROM above.');
+  }).catch(() => say('Couldn\'t load the patch file. If you opened this page from disk, use the hosted page or an IPS patcher instead.', 'bad'));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+ "source": {
+  "size": 2097152,
+  "crc32": "AD68B3DD",
+  "md5": "0302066cf764b39159922594f31e3445",
+  "sha1": "72d3b05ca1bd08b646c3a3240fcc29f630958825"
+ },
+ "patched": {
+  "size": 2097152,
+  "crc32": "4614544C",
+  "md5": "3f8a50ca1ccce69bf64808ba29ce0e11",
+  "sha1": "e11bf3e7e6af35362ed5f678f3dd87408c9e6fd8"
+ },
+ "patch": {
+  "size": 224930,
+  "crc32": "F93A9AC3",
+  "md5": "83fc87609ba0d1f04e769869f36fc213",
+  "sha1": "15f16ec9ef52807f6ba87d84b9e76c0027608460"
+ }
+}
