@@ -15,7 +15,7 @@
 
 ## Bank map (new data)
 $58 string table · $59-$5C English text · $70-$77 intro pages (one per character) · $7C profile per-character tiles ·
-$7D setup screen · $60-$67 wish-scene (ending) text pages, one per character · free space at the end of $39 (roulette)
+$7D setup screen · $60-$67 wish-scene (ending) text pages, one per character · $68-$6B year-end table headers and battle banner · free space at the end of $39 (roulette)
 and $4F (profiles) · bank 0 $1D28-$3FFF engine/font.
 
 ## Done (verified in the emulator)
@@ -24,7 +24,8 @@ setup, character select, profiles, name keyboard, goal roulette (city codes), in
 step counter, TV-news window (two-line scroll ring at $C0BF), disaster region names (bank $30),
 winner's wish scene text (`script/endings_en.json`, `tools/gfx_endings.py`, loader hook $0C:$4091),
 Other > Assets / Setup screens (1bpp strips in bank $08, `gfx/specs.json`, `tools/gfx_badge.py`), sell-off screen
-(bank $3D strips `tools/gfx_sell.py`, SellAmount/SellHeader big-digit dollars), compact money popup ($C129 = popup up).
+(bank $3D strips `tools/gfx_sell.py`, SellAmount/SellHeader big-digit dollars), compact money popup ($C129 = popup up), month splashes (月 removed), year-end table headers,
+VF Iron Z vs Demon King banner, leftover 萬/元 glyph copies blanked.
 
 ## Open
 - Investment screen prices (game units, big digits), any remaining menus (Other submenu, stock market, card shop),
@@ -32,4 +33,5 @@ Other > Assets / Setup screens (1bpp strips in bank $08, `gfx/specs.json`, `tool
 - Translation review pass (in progress).
 - 臺灣 logo on the roulette panel left as is (TAIWAN already printed under it).
 - Sell-off screen message box sits half off-screen (same in the original), so longer English lines are cut.
+- Title logo 瘋狂大富翁, publisher logo 廣譽科技, February's 恭喜發財 banner: artwork, left as is.
 - 女王 lettering in Penny's ending picture (bank $32 picture, descriptor table $57:$5942) left as artwork.

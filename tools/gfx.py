@@ -233,7 +233,7 @@ def run(names, preview=False):
             print(name, len(spec['raw1bpp']), 'raw 1bpp strips')
             json.dump(dict(sorted(patch.items())), open(pfile, 'w'), indent=1)
             continue
-        scr = Screen(spec['state'])
+        scr = Screen(spec['state']) if 'state' in spec else None   # rebuild specs work from the ROM alone
         mine = {}
         if 'rebuild' in spec:
             rb = Rebuild(int(spec['rebuild']['descriptor'], 16), int(spec['rebuild'].get('bank', '0'), 16))

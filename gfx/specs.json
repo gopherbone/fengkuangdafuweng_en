@@ -470,5 +470,109 @@
     "text": ""
    }
   ]
+ },
+ "yearend_profits": {
+  "_doc": "Year-end table header 產業利潤表 (business profits)",
+  "rebuild": {
+   "descriptor": "112116",
+   "bank": "68"
+  },
+  "regions": [
+   {
+    "rect": [
+     1,
+     5,
+     2,
+     10
+    ],
+    "lines": [
+     "Firm Profits"
+    ],
+    "align": "center",
+    "bold": true,
+    "unshare": true
+   }
+  ]
+ },
+ "yearend_cash": {
+  "_doc": "Ranking header 持金排行榜 (cash ranking)",
+  "rebuild": {
+   "descriptor": "112123",
+   "bank": "69"
+  },
+  "regions": [
+   {
+    "rect": [
+     1,
+     5,
+     2,
+     10
+    ],
+    "lines": [
+     "Cash Ranking"
+    ],
+    "align": "center",
+    "bold": true,
+    "unshare": true
+   }
+  ]
+ },
+ "yearend_assets": {
+  "_doc": "Ranking header 總資產排行 (total assets ranking)",
+  "rebuild": {
+   "descriptor": "15DD52",
+   "bank": "6A"
+  },
+  "regions": [
+   {
+    "rect": [
+     1,
+     5,
+     2,
+     10
+    ],
+    "lines": [
+     "Asset Ranking"
+    ],
+    "align": "center",
+    "bold": true,
+    "unshare": true
+   }
+  ]
+ },
+ "battle_banner": {
+  "_doc": "VF Iron Z vs Poverty Demon King battle banner (VF鐵人 VS 超窮魔神)",
+  "rebuild": {
+   "descriptor": "0B93A0",
+   "bank": "6B"
+  },
+  "regions": [
+   {
+    "rect": [
+     0,
+     3,
+     2,
+     6
+    ],
+    "lines": [
+     "VF Iron Z"
+    ],
+    "align": "center",
+    "unshare": true
+   },
+   {
+    "rect": [
+     0,
+     11,
+     2,
+     6
+    ],
+    "lines": [
+     "Demon King"
+    ],
+    "align": "center",
+    "unshare": true
+   }
+  ]
  }
 }
