@@ -168,16 +168,61 @@ EnBegin:
     ld [EN_DEPTH], a
     ld [EN_INSERT], a
     ld a, c
-    and FLAG_NEWS_MASK | FLAG_NOWRAP_MASK | FLAG_NOMARGIN_MASK
+    and FLAG_NEWS_MASK | FLAG_NOWRAP_MASK | FLAG_NOMARGIN_MASK | FLAG_CENTER8_MASK
     or FLAG_ACTIVE_MASK
     ld [EN_FLAGS], a
     push bc
     call InitLayout
+    ld a, [EN_FLAGS]
+    bit FLAG_NEWS, a
+    jr z, .notnews
+    ld a, [EN_LINE]
+    and a
+    jr nz, .notnews
+    call CurX
+    and a
+    call z, NewsTop          ; fresh news box: start on whichever tile line is displayed on top
+.notnews:
     pop bc
     ld a, [$C0C8]
     ld [EN_SSTART], a
     ld a, [$C0C9]
     ld [EN_SSTART+1], a
+    ld a, [EN_FLAGS]
+    bit FLAG_CENTER8, a
+    jr z, .setptr
+    ; centre a standalone card name in 8 columns: pad (64 - width) / 2 px
+    push bc
+    ld a, [EN_TMP]
+    ld l, a
+    ld a, [EN_TMP+1]
+    ld h, a
+    ld a, b
+    ld [rROMB], a
+    ld c, 0
+.cw:
+    ld a, [hl+]
+    cp $20
+    jr c, .cwd
+    cp $7F
+    jr nc, .cwd
+    push hl
+    call GlyphAdvance
+    pop hl
+    add c
+    ld c, a
+    jr .cw
+.cwd:
+    ld a, [EN_CBANK]
+    ld [rROMB], a
+    ld a, 57                ; centre in the ~56 px the card popup actually shows
+    sub c
+    jr nc, .cpos
+    xor a
+.cpos:
+    srl a
+    call PadBy
+    pop bc
 .setptr:
     ld a, b
     ld [EN_BANK], a
@@ -219,6 +264,7 @@ EnResume::
     res FLAG_PEND_F9, a
     set FLAG_SYNC, a
     ld [EN_FLAGS], a
+    call NewsTop
     ld a, $F9
     jp Delegate
 
@@ -258,6 +304,9 @@ EnRun::
     ld a, [EN_DEPTH]
     and a
     jr nz, EnRun            ; inserts always render instantly
+    ld a, [EN_FLAGS]
+    and FLAG_NOMARGIN_MASK
+    jp nz, EnRun            ; names (labels, card popups) render instantly
     ; typewriter: EN_CPF characters per call (a hanzi was 16 px per frame; letters are ~5 px)
     ld a, [EN_BURST]
     inc a
@@ -284,7 +333,7 @@ EnControl:
     cp $FC
     jp z, .page
     cp $ED
-    jr z, EnRun
+    jp z, EnRun
     cp $F8
     jr z, .tab
     cp $80
@@ -388,6 +437,10 @@ EnControl:
     jp EnRun
 .page:
     call ClearPage
+    ld a, [EN_FLAGS]
+    bit FLAG_NEWS, a
+    jp z, EnRun
+    call NewsTop
     jp EnRun
 .end:
     ld a, [EN_DEPTH]
@@ -408,6 +461,19 @@ EnControl:
     ld a, $FD
     jr Delegate
 .endtop:
+    ld a, [EN_FLAGS]
+    bit FLAG_CENTER8, a
+    jr z, .notc8
+    ; leave the cursor 8 columns after the start (the card popup picks its layout from the end cursor)
+    xor a
+    ld [EN_FLAGS], a
+    ld a, [EN_SSTART+1]
+    inc a
+    ld [$C0C9], a
+    ld a, [EN_SSTART]
+    ld [$C0C8], a
+    jr .endcol
+.notc8:
     xor a
     ld [EN_FLAGS], a
     ld a, [EN_PX]
@@ -633,7 +699,17 @@ CurX::
 NewLine::
     ld a, [EN_FLAGS]
     bit FLAG_NEWS, a
-    jr nz, NewLineNews
+    jr z, NewLinePlain
+    ; news window: two tile lines whose screen order flips on every F9 scroll ($C0BF = tile line shown on top)
+    ld a, [$C0BF]
+    and 1
+    ld b, a
+    ld a, [EN_LINE]
+    cp b
+    jr nz, NewLineNews      ; on the bottom line: wait, then scroll
+    ld a, b
+    xor 1
+    jp GotoLine             ; on the top line: continue on the bottom line
 NewLinePlain::
     ld a, [EN_LINE]
     inc a
@@ -1289,6 +1365,10 @@ BackSpace::
 ; $82 n : advance n blank pixels (centring labels in fixed slots)
 PadPixels::
     call ReadByte
+    call PadBy
+    jp EnRun
+; advance A blank pixels (finishing full columns to VRAM)
+PadBy::
     ld b, a
     ld a, [EN_PX]
     add b
@@ -1314,7 +1394,7 @@ PadPixels::
     jr .lp
 .done:
     ld [EN_PX], a
-    jp EnRun
+    ret
 
 ; cursor += 32
 NextColumnAddr::
@@ -1376,6 +1456,37 @@ WriteColRam:
     ret
 
 ; New page: clear the box like the original FC handler and restart at its top-left.
+; Cursor to the start of the news tile line currently shown on top.
+NewsTop::
+    ld a, [$C0BF]
+    and 1
+; A = line -> cursor to the start of that line of the box
+GotoLine::
+    ld [EN_LINE], a
+    ld b, a
+    ld a, [$D686]
+    ld l, a
+    ld a, [$D687]
+    ld h, a
+    ld a, [EN_LBYTES]
+    ld e, a
+    ld a, [EN_LBYTES+1]
+    ld d, a
+    inc b
+.mul:
+    dec b
+    jr z, .done
+    add hl, de
+    jr .mul
+.done:
+    ld a, l
+    ld [$C0C8], a
+    ld [EN_LSTART], a
+    ld a, h
+    ld [$C0C9], a
+    ld [EN_LSTART+1], a
+    jp FreshColumn
+
 ClearPage::
     ld a, [$D6A2]
     ld l, a

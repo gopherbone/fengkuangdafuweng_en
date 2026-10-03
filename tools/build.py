@@ -156,7 +156,9 @@ def main():
             b += zh_tail(bytes.fromhex(last['raw']))
         flags = 0x02 if any('<F9>' in z['zh'] for z in zhs) else 0
         if x['bank'] in (0x4C, 0x25, 0x38) or x['refs'][0].startswith('T68:1:'):
-            flags |= 0x40       # names (characters, places, cards): drawn into label slots without a margin
+            flags |= 0x40       # names (characters, places, cards): drawn instantly into label slots, no margin
+        if x['refs'][0].startswith('T68:1:'):
+            flags |= 0x80       # card names: centred in 8 columns when drawn standalone (card popup)
         entries.append((sid, b, flags))
 
     # stable string indices: saved games keep F6 redirects in RAM (player names, place names), so an id's index
@@ -232,9 +234,21 @@ def main():
     asm = os.path.join(ROOT, 'asm')
     font_inc(os.path.join(asm, 'font.inc'))
     obj = os.path.join(ROOT, 'build', 'engine.o')
-    subprocess.run(['rgbasm', '-I', asm, '-o', obj, os.path.join(asm, 'engine.asm')], check=True)
-    subprocess.run(['rgblink', '-O', base, '-o', args.o, '-m', args.o.replace('.gbc', '.map'),
-                    '-n', args.o.replace('.gbc', '.sym'), obj], check=True)
+    src = os.path.join(asm, 'engine.asm')
+    for attempt in range(20):
+        subprocess.run(['rgbasm', '-Wno-obsolete', '-I', asm, '-o', obj, src], check=True)
+        r = subprocess.run(['rgblink', '-O', base, '-o', args.o, '-m', args.o.replace('.gbc', '.map'),
+                            '-n', args.o.replace('.gbc', '.sym'), obj], capture_output=True, text=True)
+        if r.returncode == 0: break
+        # relative jumps that grew out of range: turn them into absolute jumps and retry
+        err = re.sub(r'\x1b\[[0-9;]*m', '', r.stderr)
+        bad = [int(m) for m in re.findall(r'engine\.asm\((\d+)\)', err)] if '`JR` target' in err else []
+        if not bad: sys.exit(r.stderr)
+        lines = open(src).read().split('\n')
+        for n in bad:
+            lines[n - 1] = lines[n - 1].replace('jr ', 'jp ', 1)
+            print('  jr->jp at engine.asm:%d' % n)
+        open(src, 'w').write('\n'.join(lines))
     subprocess.run(['rgbfix', '-v', args.o], check=True)
     json.dump({'index': index, 'banks_used': bank_i + 1}, open(os.path.join(ROOT, 'build', 'index.json'), 'w'), indent=0)
     print('entries', len(entries), 'data banks', bank_i + 1, 'problems', len(problems))
