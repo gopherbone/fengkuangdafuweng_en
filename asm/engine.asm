@@ -36,6 +36,14 @@ SECTION "kbd_keys0", ROMX[$42F6], BANK[$07]
 SECTION "kbd_keys1", ROMX[$431A], BANK[$07]
     db "abcdefghijklmnopqrstuvwxyz", 0, "12345678", 0
 
+; HUD: the colon after 持金 (copied to the tile before the cash figure) is not needed with "Cash $..."
+SECTION "hud_colon", ROMX[$4FA3], BANK[$08]
+    ds 16, 0
+
+; HUD: draw the goal city from the start of the 離 ("To") slot so it gets 48 px instead of 32
+SECTION "hud_city", ROMX[$5050], BANK[$08]
+    ld hl, $8B00            ; was $8B40
+
 ; ---------------------------------------------------------------- engine (free ROM0 space)
 SECTION "en_engine", ROM0[$2000]
 

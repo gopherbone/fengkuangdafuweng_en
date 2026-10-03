@@ -114,9 +114,12 @@ def main():
         slots = spec['slots'] if isinstance(spec, dict) else spec
         b = []; col = 0
         for cols, label in slots:
-            if center and label:
+            c1 = center or label.startswith('^')        # '^label' = centre this slot, '>label' = right-align
+            r1 = label.startswith('>')
+            label = label.lstrip('^>')
+            if (c1 or r1) and label:
                 w = sum(GLYPHS[ch][1] + 1 for ch in label) - 1
-                pad = max(0, (cols * 8 - w) // 2)
+                pad = max(0, (cols * 8 - w) // (1 if r1 else 2))
                 if pad: b += [0x82, pad]
             b += encode(label, problems, sid)
             col += cols
