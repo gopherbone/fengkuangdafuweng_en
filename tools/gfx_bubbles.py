@@ -19,6 +19,7 @@ ORDER = ("桃園 台中 彰化 嘉義 台南 高雄 台東 花蓮 宜蘭 基隆 
 SHORT = {'Snow Mtn.': 'Snow Mt', 'Jade Mtn.': 'Jade Mt', 'Green Island': 'Green Is.'}
 X0, X1 = 3, 29          # text may use columns X0..X1 inclusive
 MAXW = X1 - X0 + 1
+YOFF = 1                # glyph row r is drawn on bubble row r + YOFF
 
 def condense(rows, w):
     if w < 4: return rows, w
@@ -90,7 +91,7 @@ def main():
             rows, cw = CF[c]
             for r in range(12):
                 for b in range(cw):
-                    if rows[r] & (0x80 >> b) and 0 <= r < 12: px[r][x + b] = ink   # caps rows 2-9 land inside
+                    if rows[r] & (0x80 >> b): px[r + YOFF][x + b] = ink     # caps on rows 3-10: centred in the fill (rows 1-12)
         out['%06X' % (B3 + block - 0x4000)] = put_px(px).hex()
     pf = os.path.join(ROOT, 'gfx', 'patch.json')
     patch = json.load(open(pf)); patch['bubbles'] = out

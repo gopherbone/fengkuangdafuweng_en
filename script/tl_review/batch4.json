@@ -1,0 +1,18 @@
+{
+ "27:7A33": "Baby~ This just isn't like Mommy's little boy.<PAGE>Leave it all to Mommy!<BOX>",
+ "27:7AEB": "Oh dear~ Miss, I am a disgrace of a butler!<PAGE>I failed to notice your situation!<PAGE>I've let the Master down...<PAGE>Let your butler handle this!<BOX>",
+ "27:7C54": "Pull yourself together!<PAGE>The world hasn't had its fill of your beauty yet!<BOX>",
+ "42:4F76": "Julia:<NL>Teehee~ Be sure to get along nicely~<PAGE>Thank you for watching VF News. See you next time!<BOX>",
+ "42:520D": "Julia:<NL>Yes.<PAGE>You can invest in two things: businesses and land.<PAGE>Businesses pay out profits at the year-end<PAGE>settlement at the end of February.<PAGE>And when you step on someone else's land,<PAGE>you must pay a toll.<BOX>",
+ "42:553A": "Kenshiro:<NL>Yes. Time truly flies. The Crazy Tycoon contest's time limit is up. The judges are now holding their final deliberations. Contestants, thank you for all your hard work!<BOX>",
+ "42:5723": "Julia:<NL>Teeheehee! Director, Cute to the judges, please~ Julia, now head over heels, thanks you all for watching. See you next time.<BOX>",
+ "_notes": {
+  "27:7A33": "Speaker is Queen Sago to Meatball, a boy: 'little girl' -> 'little boy'.",
+  "27:7AEB": "管家該死 is an apologetic idiom, not literal 'deserves to die'.",
+  "27:7C54": "Removed awkward page split mid-sentence ('your<PAGE>beauty'); merged into one beat.",
+  "42:4F76": "Moved page break off 'VF<PAGE>News' mid-name to a natural sentence boundary.",
+  "42:520D": "Merged orphan one-word page 'land.' into the previous beat.",
+  "42:553A": "比賽年限已經到了 = the contest's time limit is up, not 'reached its final year'.",
+  "42:5723": "'Cute to them' unclear; matches 42:4FFE pun and names the judges' room the camera cuts to."
+ }
+}

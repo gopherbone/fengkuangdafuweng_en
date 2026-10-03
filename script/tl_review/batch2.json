@@ -1,0 +1,18 @@
+{
+ "27:4E2F": "Kenshiro:<NL>H...<PAGE>Hello, everyone!<NL>Welcome to VF News.<PAGE>We bring you a terrifying story!<PAGE>Aliens have laid an egg in <NAME_E8>!<NL>A paranormal event!<BOX>",
+ "27:58AC": "Julia:<NL>Yes!<PAGE>Your lovely Julia reminds you: watch<PAGE>those windfalls shrink~<NL>Bye-bye!<BOX>",
+ "27:5013": "Hero Luke springs into action!<BOX>",
+ "27:54B6": "VF Superman springs into action!<BOX>",
+ "27:59D4": "I am the Earth God. It must be fate<NL>that we met.<PAGE>Take this, my fated friend!<BOX>",
+ "27:5BD0": "I see...<NL>All right, I understand!<PAGE><NAME>'s head office is in a financial dispute.<PAGE><NAME> lost<NL>$<END>",
+ "27:5C3B": "I see...<NL>All right, I understand!<PAGE><NAME>'s head office is in a financial dispute.<PAGE><NAME> lost<NL>$<END>",
+ "_notes": {
+  "27:4E2F": "大…大家好 is 'H...hello, everyone', not 'Good evening' (stutter kept on the right word).",
+  "27:58AC": "注意意外之財的損失 = mind your windfalls (Bonus Spots halved), not 'unexpected losses'.",
+  "27:5013": "'sets out' was flat; livelier 'springs into action' (matches 54B6).",
+  "27:54B6": "'sets out' was flat; livelier 'springs into action' (matches 5013).",
+  "27:59D4": "'This is for my destined friend!' was stiff; more natural phrasing.",
+  "27:5BD0": "財務糾紛 = financial dispute; 'money dispute' sounded off.",
+  "27:5C3B": "Same fix as 27:5BD0 (identical line)."
+ }
+}

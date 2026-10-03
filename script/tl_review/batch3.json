@@ -1,0 +1,24 @@
+{
+  "27:632C": "Huh-wha...?<PAGE>Weird... real weird~<NL>I feel all hot...<PAGE>Ooh~ I'm burnin' up all over!<PAGE>...Could it be...<NL>Could it be...<BOX>",
+  "27:6447": "0K on candy.<PAGE>Total cash:<NL>$<NUM>0K.<BOX>",
+  "27:6638": "Okay, we'll hire <END>",
+  "27:716D": "Thief:<NL>Sigh~ someone else already has their eye on that one. Poor sucker... I'll let 'em off.<BOX>",
+  "27:73B2": "Buy Sell<BOX>",
+  "27:75E9": "Land chain complete!<PAGE>Anyone landing here must pay double the toll.<BOX>",
+  "27:7721": "<NAME> rests this turn.<BOX>",
+  "27:77F8": "What?<PAGE>No money?<PAGE>Pfft~ what a broke loser!<BOX>",
+  "27:7897": "<NAME_E1>... is gonna tell Father on you!<BOX>",
+  "27:7983": "...Ugh... such ugliness... it's poison to my eyes... ugh...<BOX>",
+  "_notes": {
+    "27:632C": "'Weird... weird, this~' was stiff; smoother folksy phrasing for 哎唷～俺的身體好熱啊.",
+    "27:6447": "Merged the mid-word page break (糖<PAGE>果) so 'candy' isn't stranded on its own page.",
+    "27:6638": "Added trailing space: the number prints right after <END> with no padding, so 'hire3' would run together.",
+    "27:716D": "他 refers to an arbitrary player; replaced 'Poor guy... him' with gender-neutral wording.",
+    "27:73B2": "買賣 is most likely a two-option Buy/Sell menu at the Card Center (like 27:747E 買進賣出), not a single 'Trade' label; verify on screen.",
+    "27:75E9": "'pay double toll' -> 'pay double the toll' (idiom).",
+    "27:7721": "'rests and doesn't move' was literal; 休息不動 = loses/sits out the turn.",
+    "27:77F8": "'poor pauper' redundant; 窮光蛋 = broke loser.",
+    "27:7897": "要跟父親大人說 = tattling threat; kid voice 'gonna tell Father on you'.",
+    "27:7983": "看見了醜惡的毒藥 = seeing ugliness is poison to the vain Hanamura; old line misread it as seeing literal poison."
+  }
+}

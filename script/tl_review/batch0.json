@@ -1,0 +1,30 @@
+{
+ "06:4B6C": "When short on cash, you won't have to sell businesses.<BOX>",
+ "06:4C7D": "A rally?<NL>Ugh, what a pain!<BOX>",
+ "06:4C92": "Hmph!<NL>Like I'd listen to that!<BOX>",
+ "06:5047": "Seal my cards? Dream on!<BOX>",
+ "06:531F": "Spendthrift:<NL>~Still not satisfied~ I've blown all my family's money~ So why do I still feel so empty inside? I must not have spent enough yet!<BOX>",
+ "06:53E5": "<NAME_E1> had<NL>$<END>",
+ "06:53EC": "0K blown!<PAGE>Spendthrift:<NL>Ha~<PAGE>Now I can feast on an imperial banquet!<BOX>",
+ "06:5416": "<NAME_E1> had<NL>$<END>",
+ "06:541D": "0K blown!<PAGE>Spendthrift:<NL>What a cheapskate~<PAGE>Guess it's just caviar on braised pork rice for me!<BOX>",
+ "06:54D3": "Kenshiro:<NL>Indeed! If the card works, the user goes straight to the goal. But if it fails... What a daredevil <NAME> is!<BOX>",
+ "06:555C": "OK, hit the button! Namo Amitabha...<BOX>",
+ "06:55D4": "We're toast...<NL>But the game goes on.<BOX>",
+ "06:5B2C": "Bonus Spot payouts have doubled.<PAGE><BOX>",
+ "_notes": {
+  "06:4B6C": "'needn't' was stiff; smoother phrasing",
+  "06:4C7D": "removed added 'Again?' not in source (要集合了嗎？真是討厭！)",
+  "06:4C92": "'him' gendered the user (<NAME> can be any player); rephrased",
+  "06:5047": "'years too early' is a stiff Japanese-ism; idiomatic retort",
+  "06:531F": "不甘心 here = unsatisfied/frustrated, not 'unfair'",
+  "06:53E5": "'got splurged out of' was awkward; pair now reads '<NAME_E1> had $X0K blown!'",
+  "06:53EC": "continuation of 06:53E5 rephrase",
+  "06:5416": "same rephrase as 06:53E5",
+  "06:541D": "continuation of 06:5416 rephrase",
+  "06:54D3": "fixed subject ('it goes' -> the user goes); 不怕死 as 'daredevil' instead of stiff 'no fear of death'",
+  "06:555C": "Japanese reading 'Namu Amida Butsu' -> Chinese/English-neutral 'Namo Amitabha' for a Taiwanese game",
+  "06:55D4": "完蛋了 = we're doomed; 'It's over' misleads (game continues)",
+  "06:5B2C": "restored trailing <PAGE> present in zh"
+ }
+}

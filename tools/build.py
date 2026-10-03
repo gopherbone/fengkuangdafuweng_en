@@ -57,11 +57,13 @@ def zh_tail(raw):
     return tail if tail and tail[-1] == 0xFD else [0xFD]
 
 def load_translations():
+    """First draft (script/tl_out) overridden by review corrections (script/tl_review)."""
     tl = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, 'script', 'tl_out', 'batch*.json'))):
-        for k, v in json.load(open(f)).items():
-            if not k.startswith('_'):
-                tl[k] = v
+    for d in ('tl_out', 'tl_review'):
+        for f in sorted(glob.glob(os.path.join(ROOT, 'script', d, 'batch*.json'))):
+            for k, v in json.load(open(f)).items():
+                if not k.startswith('_'):
+                    tl[k] = v
     return tl
 
 def font_inc(path):
@@ -141,6 +143,8 @@ def main():
         # translators marked money as <CODE>0K (or 0,000 for counts of people)
         text = re.sub(r'\$\s+(?=<(END|NUM|EE|EA|EB|EC)>)', '$', text)
         text = re.sub(r'(<(?:END|NUM|EE|EA|EB|EC)>)\s*0(?:K|,000)', r'<M>\1', text)
+        # the engine prints numbers without padding: keep a space between a word and a number
+        text = re.sub(r'([A-Za-z])(<M>)?(<(?:END|NUM|EE|EA|EB|EC)>)', r'\1 \2\3', text)
         last = zhs[-1]
         text = re.sub(r'(\s|<PAGE>)*<BOX>\s*$', '', text)
         text = re.sub(r'<END>\s*$', '<END>', text)
