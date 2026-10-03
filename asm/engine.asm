@@ -16,12 +16,25 @@ SECTION "hook_0a43", ROM0[$0A43]
 ; bank $14 number-field routine (HUD cash, money popups, events): replaced by an English dollar field
 SECTION "hook_14_5914", ROMX[$5914], BANK[$14]
     jp NumField             ; DE = 7-digit buffer (entered from $5907/$590C/$5911)
+SECTION "hook_14_587c", ROMX[$587C], BANK[$14]
+    jp NumFieldPlayer       ; HUD: current player's cash, left-aligned
 SECTION "hook_14_58d3", ROMX[$58D3], BANK[$14]
     jp NumFieldDebt         ; debt variant: 6 digits at $C222
 
 ; the money popup's 萬 glyph (copied after the number field): blank, the field shows full dollars
 SECTION "blank_14_40ef", ROMX[$40EF], BANK[$14]
     ds 32, 0
+
+; name-entry keyboard (bank $07): names are stored as plain ASCII (max 6 letters + FD in the 7-byte field)
+SECTION "kbd_init", ROMX[$4093], BANK[$07]
+    ld a, $FD               ; was: ld a,$F0 / ld [hl+],a  (Chinese page prefix)
+    ld [hl], a
+SECTION "kbd_maxlen", ROMX[$425A], BANK[$07]
+    cp 6                    ; was: cp 3
+SECTION "kbd_keys0", ROMX[$42F6], BANK[$07]
+    db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0, "-.'!?&~ ", 0
+SECTION "kbd_keys1", ROMX[$431A], BANK[$07]
+    db "abcdefghijklmnopqrstuvwxyz", 0, "12345678", 0
 
 ; ---------------------------------------------------------------- engine (free ROM0 space)
 SECTION "en_engine", ROM0[$2000]
@@ -45,9 +58,22 @@ EnHook::
 .notStub:
     ld a, [hl]
     cp $F6
-    jr z, EnStart
+    jp z, EnStart
     cp $F7
     jr z, EnStartInline
+    ; a WRAM string starting with printable ASCII is an English name typed on the keyboard
+    cp $20
+    jr c, .chinese
+    cp $7F
+    jr nc, .chinese
+    ld a, h
+    cp $C0
+    jr c, .chinese
+    cp $E0
+    jr nc, .chinese
+    dec hl                  ; EnStartInline skips one marker byte
+    jr EnStartInline
+.chinese:
     ld a, [EN_TOP]
     and a
     jr z, .orig
@@ -72,7 +98,7 @@ EnStartInline::
     ld a, [$4000]
     ld [EN_CBANK], a
     ld b, a                 ; read from the caller's bank (RAM ignores the bank)
-    ld c, 0                 ; flags
+    ld c, FLAG_NOMARGIN_MASK ; a typed name: no line margin
     jr EnBegin
 
 ; ---- F6 lo hi : redirect to English string table entry
@@ -134,7 +160,7 @@ EnBegin:
     ld [EN_DEPTH], a
     ld [EN_INSERT], a
     ld a, c
-    and FLAG_NEWS_MASK | FLAG_NOWRAP_MASK
+    and FLAG_NEWS_MASK | FLAG_NOWRAP_MASK | FLAG_NOMARGIN_MASK
     or FLAG_ACTIVE_MASK
     ld [EN_FLAGS], a
     push bc
@@ -255,6 +281,8 @@ EnControl:
     jr z, .tab
     cp $80
     jp z, BackSpace
+    cp $82
+    jp z, PadPixels
     cp $81
     jr z, .money
     cp $F9
@@ -562,7 +590,7 @@ FreshColumn::
     ld [EN_WSTART], a
     ; wrapped text gets a left margin at the start of a line (label strips are laid out exactly)
     ld a, [EN_FLAGS]
-    bit FLAG_NOWRAP, a
+    and FLAG_NOWRAP_MASK | FLAG_NOMARGIN_MASK
     ret nz
     call CurX
     and a
@@ -947,12 +975,35 @@ EnNumber::
     jp EnRun.after
 
 ; ---- money field for non-text callers: 9 columns (72 px) at [C0C8], right-aligned "$12,340,000"
+NumFieldPlayer::
+    ld a, 1
+    ld [EN_FALIGN], a
+    ld a, [$C1D8]
+    ld l, a
+    ld a, [$C1D9]
+    ld h, a
+    ld de, $003A
+    add hl, de
+    ld a, [hl]
+    and a
+    ld de, $C221
+    ld b, 7
+    ld c, 0
+    jr z, NumFieldGo
+    ld de, $C222
+    ld b, 6
+    ld c, 1
+    jr NumFieldGo
 NumFieldDebt::
+    xor a
+    ld [EN_FALIGN], a
     ld de, $C222
     ld b, 6
     ld c, 1
     jr NumFieldGo
 NumField::
+    xor a
+    ld [EN_FALIGN], a
     ld b, 7
     ld c, 0
 NumFieldGo:
@@ -1011,6 +1062,21 @@ NumFieldGo:
     jr nz, .clrf
     ld a, 1
     ld [EN_WRAM], a
+    ; columns to write: 9 (right-aligned field) or just enough for the text (left-aligned)
+    ld a, 9
+    ld [EN_FCOLS], a
+    ld a, [EN_FALIGN]
+    and a
+    jr z, .right
+    ld a, c
+    add 7
+    srl a
+    srl a
+    srl a
+    ld [EN_FCOLS], a
+    xor a
+    jr .xok
+.right:
     ; start x = 72 - width (+1 for the trailing spacing of the last glyph)
     ld a, 73
     sub c
@@ -1058,7 +1124,9 @@ NumFieldGo:
     ld a, [EN_FSTART+1]
     ld h, a
     ld de, EN_FIELD
-    ld b, 9*16
+    ld a, [EN_FCOLS]
+    swap a                  ; *16 rows
+    ld b, a
 .cp:
     ldh a, [rSTAT]
     bit 1, a
@@ -1207,6 +1275,36 @@ BackSpace::
     dec b
     jr nz, .c
     ld a, 8 - EN_BACKPX
+    ld [EN_PX], a
+    jp EnRun
+
+; $82 n : advance n blank pixels (centring labels in fixed slots)
+PadPixels::
+    call ReadByte
+    ld b, a
+    ld a, [EN_PX]
+    add b
+.lp:
+    cp 8
+    jr c, .done
+    sub 8
+    push af
+    call WriteCol
+    call NextColumnAddr
+    ld hl, EN_COL+16
+    ld de, EN_COL
+    ld b, 16
+.mv:
+    ld a, [hl]
+    ld [de], a
+    xor a
+    ld [hl+], a
+    inc de
+    dec b
+    jr nz, .mv
+    pop af
+    jr .lp
+.done:
     ld [EN_PX], a
     jp EnRun
 

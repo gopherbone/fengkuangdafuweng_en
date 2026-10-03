@@ -37,6 +37,8 @@ DEF FLAG_PEND_F9   EQU 3
 DEF FLAG_SYNC      EQU 4
 DEF FLAG_NOWRAP    EQU 5
 DEF FLAG_NOWRAP_MASK EQU 1 << FLAG_NOWRAP
+DEF FLAG_NOMARGIN   EQU 6
+DEF FLAG_NOMARGIN_MASK EQU 1 << FLAG_NOMARGIN
 DEF FLAG_ACTIVE_MASK EQU 1 << FLAG_ACTIVE
 DEF FLAG_NEWS_MASK   EQU 1 << FLAG_NEWS
 DEF EN_BACKPX EQU 3       ; how far '0K' tucks back against a printed number
@@ -48,3 +50,5 @@ DEF EN_WRAM   EQU $C823   ; 1: WriteCol targets EN_FIELD instead of VRAM
 DEF EN_FIELD  EQU $C830   ; 144: 9-column money field buffer (1bpp rows)
 DEF EN_BURST  EQU $C824   ; chars drawn in the current typewriter call
 DEF EN_CPF    EQU 3       ; typewriter speed: characters per frame
+DEF EN_FALIGN EQU $C825   ; money field: 0 = right-aligned 9 columns, 1 = left-aligned, minimal
+DEF EN_FCOLS  EQU $C826

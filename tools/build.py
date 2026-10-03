@@ -12,7 +12,7 @@ TBL_BANK = 0x58
 DATA_BANKS = list(range(0x59, 0x7E))
 
 # Entries we must not redirect (fixed-offset label strips, keyboard layouts, bare name inserts)
-SKIP = {'06:43D4', '06:4401', '06:6E50', '06:6E52'}
+SKIP = {'06:6E50', '06:6E52'}
 
 CARD_NAMES = ['No cards', 'Turtle', 'Fart Sage', 'Rally', 'Hibernate', 'Pass-Off', 'Robbery', 'Master Thief',
     'Old Man', 'Seal', 'Scandal', 'Honeymoon', 'Horror', 'Force', 'Landmine', 'Catastrophe', 'Fire', 'Earthquake',
@@ -107,13 +107,19 @@ def main():
     strips = {k: v for k, v in json.load(open(os.path.join(ROOT, 'script', 'strips.json'))).items() if not k.startswith('_')}
     # chain <END> continuations and encode
     entries = []           # (sid, bytes, flags)
-    for sid, slots in strips.items():
+    for sid, spec in strips.items():
+        center = isinstance(spec, dict) and spec.get('center')
+        slots = spec['slots'] if isinstance(spec, dict) else spec
         b = []; col = 0
         for cols, label in slots:
+            if center and label:
+                w = sum(GLYPHS[ch][1] + 1 for ch in label) - 1
+                pad = max(0, (cols * 8 - w) // 2)
+                if pad: b += [0x82, pad]
             b += encode(label, problems, sid)
             col += cols
             b += [0xF8, col]
-        b[-2:] = [0xFD]
+        b += [0xFD]                     # final tab blanks the rest of the last slot
         entries.append((sid, b, 0x20))
         en.pop(sid, None)
     for i, sid in enumerate(order):
@@ -142,6 +148,8 @@ def main():
         if not text.endswith('<END>'):
             b += zh_tail(bytes.fromhex(last['raw']))
         flags = 0x02 if any('<F9>' in z['zh'] for z in zhs) else 0
+        if x['bank'] in (0x4C, 0x25, 0x38) or x['refs'][0].startswith('T68:1:'):
+            flags |= 0x40       # names (characters, places, cards): drawn into label slots without a margin
         entries.append((sid, b, flags))
 
     # stable string indices: saved games keep F6 redirects in RAM (player names, place names), so an id's index
