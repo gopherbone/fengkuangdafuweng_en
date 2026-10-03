@@ -327,5 +327,8 @@
  },
  "intro": {
   "generator": "tools/gfx_intro.py"
+ },
+ "bubbles": {
+  "generator": "tools/gfx_bubbles.py"
  }
 }
