@@ -330,5 +330,35 @@
  },
  "bubbles": {
   "generator": "tools/gfx_bubbles.py"
+ },
+ "shop_header": {
+  "_doc": "card shop / store header 持金：... 元 (tiles exist in banks 15 and 1D)",
+  "state": "runs/big1/f032010.state",
+  "regions": [
+   {
+    "rect": [
+     1,
+     1,
+     2,
+     5
+    ],
+    "lines": [
+     "Cash:"
+    ],
+    "all_sources": true
+   },
+   {
+    "rect": [
+     1,
+     17,
+     2,
+     2
+    ],
+    "lines": [
+     ""
+    ],
+    "all_sources": true
+   }
+  ]
  }
 }

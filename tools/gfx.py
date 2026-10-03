@@ -267,10 +267,20 @@ def run(names, preview=False):
                     src = [i for i in src if i // 0x4000 == reg['src_bank']]
                 if not src:
                     raise SystemExit('%s: tile at cell %s not found in ROM' % (name, cell))
-                allcand.append((cell, src, vaddr, new[cell]))
+                allcand.append((cell, src, vaddr, new[cell], reg.get('all_sources', False)))
         # resolve duplicates against the screen's unambiguous tiles (graphics for one screen sit together)
         anchors = sorted(c[1][0] for c in allcand if len(c[1]) == 1)
-        for cell, src, vaddr, data in allcand:
+        for cell, src, vaddr, data, every in allcand:
+            if every:                       # identical copies used by several screens: one copy per bank
+                for bank in sorted(set(o // 0x4000 for o in src)):
+                    inb = [o for o in src if o // 0x4000 == bank]
+                    ref = [c2[1][0] for c2 in allcand if c2[4] and len([o for o in c2[1] if o // 0x4000 == bank]) == 1]
+                    ref = sorted(o for c2 in allcand if c2[4] for o in c2[1] if o // 0x4000 == bank and
+                                 len([q for q in c2[1] if q // 0x4000 == bank]) == 1)
+                    pick = min(inb, key=lambda o: abs(o - ref[len(ref) // 2])) if ref else inb[0]
+                    if ref and (pick - ref[0]) % 16: continue          # misaligned match inside other data
+                    mine[(vaddr, bank)] = (pick, data)
+                continue
             if len(src) > 1:
                 if not anchors:
                     raise SystemExit('%s: ambiguous tile at %s and no anchor' % (name, cell))
@@ -300,8 +310,9 @@ def make_preview(name, scr, mine):
         for r in range(18):
             for c in range(20):
                 _, vaddr, _ = scr.cell(layer, r, c)
-                if vaddr in mine:
-                    p = tile_px(mine[vaddr][1])
+                hit = mine.get(vaddr) or next((v for k, v in mine.items() if isinstance(k, tuple) and k[0] == vaddr), None)
+                if hit:
+                    p = tile_px(hit[1])
                     for y in range(8):
                         for x in range(8):
                             X, Y = ox + c * 8 + x, oy + r * 8 + y
