@@ -209,5 +209,16 @@
  },
  "profiles": {
   "generator": "tools/gfx_profiles.py"
+ },
+ "step_counter": {
+  "_doc": "1bpp 16x16 glyph 步 copied by bank 08:$43E1 next to the remaining-steps digits",
+  "raw1bpp": [
+   {
+    "offset": "0207B3",
+    "cells": 1,
+    "text": "left",
+    "align": "right"
+   }
+  ]
  }
 }

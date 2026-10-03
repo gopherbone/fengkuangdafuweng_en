@@ -162,7 +162,8 @@ def main():
     json.dump(lock, open(lock_path, 'w'), indent=0, sort_keys=True)
     entries.sort(key=lambda e: lock[e[0]])
     # lay out data banks
-    rom = bytearray(open(ORIG, 'rb').read())
+    ORIG_ROM = open(ORIG, 'rb').read()
+    rom = bytearray(ORIG_ROM)
     nmax = max(lock.values())
     table = bytearray(4 * (nmax + 1))
     bank_i, addr = 0, 0x4001
@@ -186,6 +187,28 @@ def main():
         off = x['bank'] * 0x4000 + x['addr'] - 0x4000
         assert x['end'] - x['addr'] >= 3, sid
         rom[off:off + 3] = bytes([0xF6, n & 0xFF, n >> 8])
+    # other copies of place names (other banks keep their own FD-terminated copies that get copied into the
+    # place-name buffer): point each at the English entry of the same name
+    sys.path.insert(0, os.path.join(ROOT, 'tools'))
+    import fkdfw
+    tab = fkdfw.load_table(); inv = {}
+    for k, v in tab.items(): inv.setdefault(v, k)
+    known = {(x['bank'], x['addr']) for x in S}
+    aliases = 0
+    for x in S:
+        if x['refs'][0] not in ('names38',) or x['id'] not in index: continue
+        name = x['zh'].replace('<BOX>', ''); out = []; page = None
+        for ch in name:
+            g = inv[ch]; pg, c = g >> 8, g & 0xFF
+            out += [0xF0 | pg, c] if pg != page else [c]; page = pg
+        pat = bytes(out + [0xFD]); n = index[x['id']]
+        i = ORIG_ROM.find(pat)
+        while i != -1:
+            bk = i // 0x4000; ad = 0x4000 + i % 0x4000 if i >= 0x4000 else i
+            if (bk, ad) not in known:
+                rom[i:i + 3] = bytes([0xF6, n & 0xFF, n >> 8]); aliases += 1
+            i = ORIG_ROM.find(pat, i + 1)
+    print('place-name aliases redirected:', aliases)
     # graphical text (pre-drawn tiles redrawn in English)
     gp = os.path.join(ROOT, 'gfx', 'patch.json')
     if os.path.exists(gp):

@@ -77,7 +77,7 @@ Cities: 台北 Taipei · 桃園 Taoyuan · 中壢 Zhongli · 台中 Taichung · 
 布袋 Budai · 新營 Xinying · 台南 Tainan · 永康 Yongkang · 高雄 Kaohsiung · 旗山 Qishan · 屏東 Pingtung ·
 雪山 Snow Mountain · 南投 Nantou · 玉山 Jade Mountain · 瑞芳 Ruifang · 基隆 Keelung · 宜蘭 Yilan · 蘇澳 Su'ao ·
 太魯閣 Taroko · 花蓮 Hualien · 池上 Chishang · 台東 Taitung · 綠島 Green Island · 吉貝 Jibei · 馬公 Magong ·
-中賽 (unclear; glyph verified as 賽 — keep "Zhongsai")
+中賽 Zhongliao (the board's sprite label draws it as 中寮, a real Nantou township)
 Businesses: translate descriptively and short (≤ 12 letters), keep real brands as-is (麥當勞 McDonald's,
 肯德雞 KFC-parody "Kentucky Chick'n", 永和豆漿 Yonghe Soy Milk, 圓山飯店 Grand Hotel, 長榮桂冠 Evergreen Laurel,
 福華飯店 Howard Hotel).
