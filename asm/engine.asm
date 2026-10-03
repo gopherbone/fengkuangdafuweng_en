@@ -198,7 +198,16 @@ EnBegin:
     call InitLayout
     ld a, [EN_FLAGS]
     bit FLAG_NEWS, a
+    jr nz, .ringchk
+    ; an ordinary string right after a scrolling one (e.g. narration after the Wealth God or a disaster report)
+    ; finds the scroll ring flipped ($C0BF = 1, set only by F9): put it back too, or its lines come out
+    ; bottom-then-top. Labels and fixed-slot strips never do this.
+    and FLAG_NOWRAP_MASK | FLAG_NOMARGIN_MASK
+    jr nz, .notnews
+    ld a, [$C0BF]
+    and a
     jr z, .notnews
+.ringchk:
     ld a, [EN_LSTART]       ; cursor at a line start? (CurX would include the left margin)
     ld b, a
     ld a, [$C0C8]

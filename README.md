@@ -54,7 +54,7 @@ This patch doesn't include the game. Use your own copy of:
 | SHA-1 | `72d3b05ca1bd08b646c3a3240fcc29f630958825` |
 | Header title | `POKMON'FIGHT` |
 
-The patched ROM has CRC32 `4614544C` (SHA-1 `e11bf3e7e6af35362ed5f678f3dd87408c9e6fd8`). Both header checksums
+The patched ROM has CRC32 `0590E59E` (SHA-1 `9e6dfc9da8d387a30d40d70a8ac168319187066d`). Both header checksums
 are valid.
 
 ## How to patch
