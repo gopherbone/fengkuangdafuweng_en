@@ -324,5 +324,8 @@
     "align": "center"
    }
   ]
+ },
+ "intro": {
+  "generator": "tools/gfx_intro.py"
  }
 }

@@ -6,7 +6,7 @@ prefer short punchy lines over literal ones. US English.
 ## Playable characters (decided with the project owner: "hybrid")
 | zh | EN | notes |
 |---|---|---|
-| 貢丸湯 | Meatball | demon girl from Hell, 10. Name = "pork-ball soup" |
+| 貢丸湯 | Meatball | the little imp (a boy, "he") from Hell, 10 — secret son of the Lord of Heaven and Queen Sago. Name = "pork-ball soup" |
 | 嘟比 | Dubi | angel from Heaven, 10 |
 | 錢美美 | Penny Qian | rich girl, Taiwan, 18 (錢 = money) |
 | 吳氣魄 | Wu No-Guts | gangster boss with henchmen, Taiwan, 31 (pun on 無氣魄 "no guts") |
@@ -27,6 +27,10 @@ prefer short punchy lines over literal ones. US English.
 | 敗家子 | Spendthrift |
 | 屁仙人 | Fart Sage |
 | 天神 | Lord of Heaven |
+| 西米露 | Sago / Queen Sago (Demon Queen of Hell; 西米露 = sago pudding, a food name like Meatball) |
+| 錢多多 | Moneybags Qian (Penny's father) |
+| 龍二 | Ryuji (Sachiko's late husband) |
+| 氣魄大哥 | Boss Guts (Wu's underworld title) |
 | 福神 / 財神 | Blessing God / Wealth God |
 | 餓鬼 | Hungry Ghost |
 | 酷斯拉 | Kodzilla (Godzilla parody) |
