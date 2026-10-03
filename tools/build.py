@@ -159,6 +159,8 @@ def main():
         flags = 0x02 if news else 0
         if x['bank'] in (0x4C, 0x25, 0x38, 0x30) or x['refs'][0].startswith('T68:1:'):
             flags |= 0x40       # names (characters, places, cards): drawn instantly into label slots, no margin
+        if x['bank'] == 0x4C:
+            flags |= 0x04       # character names: small left pad when drawn standalone (portrait label)
         if x['refs'][0].startswith('T68:1:'):
             flags |= 0x80       # card names: centred in 8 columns when drawn standalone (card popup)
         entries.append((sid, b, flags))

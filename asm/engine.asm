@@ -40,6 +40,12 @@ AssetsCount:
     ld a, 1
     ld [EN_FPLAIN], a
     jp $5F6B
+; Sell-off screen (bank $3D): money amounts in big digits as dollars instead of 萬 (金/億 cells hold '-', '$', ',')
+SECTION "sell_amount", ROMX[$56AF], BANK[$3D]
+    jp SellAmount           ; was: call $10AF (HL = field offset, C = digits, value at $D6D1)
+SECTION "sell_header", ROMX[$5746], BANK[$3D]
+    call SellHeader         ; was: ld hl,$0027 / call $10AF ... (cash in $C221, sign in $D6D0)
+    ret
 SECTION "ending_page", ROMX[$4091], BANK[$0C]
     call EndPage            ; was: call $1A31 (load a wish-scene text page)
 SECTION "kbd_init", ROMX[$4093], BANK[$07]
@@ -122,7 +128,7 @@ EnStartInline::
     ld a, [$4000]
     ld [EN_CBANK], a
     ld b, a                 ; read from the caller's bank (RAM ignores the bank)
-    ld c, FLAG_NOMARGIN_MASK ; a typed name: no line margin
+    ld c, FLAG_NOMARGIN_MASK | 4 ; a typed name: no line margin, name pad when standalone
     jr EnBegin
 
 ; ---- F6 lo hi : redirect to English string table entry
@@ -177,9 +183,10 @@ EnBegin:
     ld a, [EN_FLAGS]
     res FLAG_SYNC, a        ; we render the insert ourselves: cursor state stays valid
     ld [EN_FLAGS], a
-    jr .setptr
+    jp .setptr
 .top:
     xor a
+    ld [EN_TIGHT], a
     ld [EN_TOP], a
     ld [EN_DEPTH], a
     ld [EN_INSERT], a
@@ -207,6 +214,51 @@ EnBegin:
     call NewsReset
 .notnews:
     pop bc
+    bit 2, c                ; character name drawn on its own (portrait / HUD label): small left margin
+    jr z, .nopad
+    push bc
+    ld a, [EN_TMP]
+    ld l, a
+    ld a, [EN_TMP+1]
+    ld h, a
+    ld a, b
+    ld [rROMB], a
+    ld c, 0
+.nw:
+    ld a, [hl+]
+    cp $20
+    jr c, .nwd
+    cp $7F
+    jr nc, .nwd
+    push hl
+    call GlyphAdvance
+    pop hl
+    add c
+    ld c, a
+    jr .nw
+.nwd:
+    ld a, [EN_CBANK]
+    ld [rROMB], a
+    ld a, c
+    dec a                   ; A = width in px
+    cp EN_LABELW + 1
+    jr c, .nfits
+    ld a, 1                 ; too wide for the slot: drop the letter gaps
+    ld [EN_TIGHT], a
+    jr .npadded
+.nfits:
+    ld b, a
+    ld a, EN_LABELW
+    sub b                   ; room left
+    cp EN_NAMEPAD
+    jr c, .npd
+    ld a, EN_NAMEPAD
+.npd:
+    and a
+    call nz, PadBy
+.npadded:
+    pop bc
+.nopad:
     ld a, [$C0C8]
     ld [EN_SSTART], a
     ld a, [$C0C9]
@@ -883,8 +935,12 @@ DrawChar::
     ld d, 0
     ld hl, FontWidths
     add hl, de
+    ld a, [EN_TIGHT]
+    cp 1
     ld a, [hl]
+    jr z, .tight
     inc a
+.tight:
     ld [EN_ADV], a
     ; rows = FontRows + idx*12
     ld h, d
@@ -1754,6 +1810,99 @@ PutPair:
     pop de
     pop bc
     ret
+
+; ---- sell-off screen ($3D): 7-digit amounts (units of 10,000) as "$12,340,000" in the screen's big digits
+SellAmount::
+    ld a, c
+    cp 7
+    jr z, .money
+    call $10AF              ; counts / percentages: original routine
+    jp $56B2
+.money:
+    call $10AF
+    push hl
+    ld de, $D6D1
+    ld hl, $7000
+    ld b, $1D
+    rst $30                 ; $1D:$7000: 3-byte value at DE -> 7 decimal digits at $C221
+    pop hl
+    ld c, 0
+    ld b, 11                ; 7 digit columns + the 億 and 萬 cells
+    jr BigMoney
+SellHeader::
+    ld hl, $0025            ; row 1, column 5 (after "Cash")
+    call $10AF
+    ld a, [$D6D0]
+    ld c, a
+    ld b, 14
+; HL = field start (BG map), B = field columns, C = negative flag; digits at $C221. Right-aligned; a longer
+; amount grows to the left.
+BigMoney:
+    push hl
+    push bc
+    ld de, $C221
+    ld b, 7
+    call FormatMoney
+    ld hl, EN_NUMBUF
+    ld e, 0
+.len:
+    ld a, [hl+]
+    and a
+    jr z, .lend
+    inc e
+    jr .len
+.lend:
+    pop bc
+    pop hl
+    ld a, b
+    sub e                   ; free columns
+    jr c, .over
+    jr z, .draw
+    ld b, a
+.blank:
+    ld a, $FF
+    call PutPair
+    dec b
+    jr nz, .blank
+    jr .draw
+.over:
+    cpl
+    inc a
+    ld b, a
+.left:
+    dec l
+    dec b
+    jr nz, .left
+.draw:
+    ld de, EN_NUMBUF
+.ch:
+    ld a, [de]
+    inc de
+    and a
+    ret z
+    cp '$'
+    jr nz, .nd
+    ld a, $D4               ; 億 cell: '$' | ','
+    jr .put
+.nd:
+    cp ','
+    jr nz, .nc
+    ld a, $D6
+    jr .put
+.nc:
+    cp '-'
+    jr nz, .dig
+    ld a, $D0               ; 金 cell: '-' 
+    jr .put
+.dig:
+    sub '0'
+    add a
+    ld b, a
+    ld a, [$C22B]
+    add b
+.put:
+    call PutPair
+    jr .ch
 
 PriceGlyphs:
     ; '$' (8x16, matches the bold 7px digits)

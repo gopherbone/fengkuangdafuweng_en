@@ -56,3 +56,6 @@ DEF EN_FALIGN EQU $C825   ; money field: 0 = right-aligned 9 columns, 1 = left-a
 DEF EN_FCOLS  EQU $C826
 DEF ENDING_BANK EQU $60         ; wish-scene text pages, one bank per character ($60-$67)
 DEF EN_FPLAIN EQU $C82F   ; 1: next money field prints a plain count (no $, no x10,000)
+DEF EN_NAMEPAD EQU 3          ; px of left margin before a standalone character name
+DEF EN_TIGHT EQU $C82E    ; 1: no gap between letters (a long name squeezed into a label slot)
+DEF EN_LABELW EQU 48         ; px: portrait / label name slot (3 Chinese glyphs)
