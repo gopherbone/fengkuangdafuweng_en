@@ -435,5 +435,40 @@
     "text": "Slow"
    }
   ]
+ },
+ "money_units": {
+  "_doc": "Remaining 1bpp 萬 / 元 glyph copies appended after amounts by some screens (card shop header after a purchase, etc.): blank, all money is shown as dollars",
+  "raw1bpp": [
+   {
+    "offset": "029B61",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "029B81",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "03C18E",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "04C888",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "0561E3",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "05010F",
+    "cells": 1,
+    "text": ""
+   }
+  ]
  }
 }
