@@ -15,15 +15,18 @@
 
 ## Bank map (new data)
 $58 string table · $59-$5C English text · $70-$77 intro pages (one per character) · $7C profile per-character tiles ·
-$7D setup screen · free space at the end of $39 (roulette) and $4F (profiles) · bank 0 $1D28-$3FFF engine/font.
+$7D setup screen · $60-$67 wish-scene (ending) text pages, one per character · free space at the end of $39 (roulette)
+and $4F (profiles) · bank 0 $1D28-$3FFF engine/font.
 
 ## Done (verified in the emulator)
 Dialogue/news/portrait boxes, names (preset + typed), places, cards, money ($), HUD, popups, title menu, save slots,
 setup, character select, profiles, name keyboard, goal roulette (city codes), intro stories, town bubbles,
-step counter.
+step counter, TV-news window (two-line scroll ring at $C0BF), disaster region names (bank $30),
+winner's wish scene text (`script/endings_en.json`, `tools/gfx_endings.py`, loader hook $0C:$4091).
 
 ## Open
 - Investment screen prices (game units, big digits), any remaining menus (Other submenu, stock market, card shop),
   endings / year-end screens — being surveyed.
 - Translation review pass (in progress).
 - 臺灣 logo on the roulette panel left as is (TAIWAN already printed under it).
+- 女王 lettering in Penny's ending picture (bank $32 picture, descriptor table $57:$5942) left as artwork.
