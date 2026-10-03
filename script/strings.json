@@ -12217,6 +12217,54 @@
   "inside": []
  },
  {
+  "bank": 48,
+  "addr": 17219,
+  "refs": [
+   "regions30"
+  ],
+  "end": 17223,
+  "raw": "f08283fd",
+  "zh": "北部<BOX>",
+  "id": "30:4343",
+  "inside": []
+ },
+ {
+  "bank": 48,
+  "addr": 17223,
+  "refs": [
+   "regions30"
+  ],
+  "end": 17227,
+  "raw": "f08483fd",
+  "zh": "中部<BOX>",
+  "id": "30:4347",
+  "inside": []
+ },
+ {
+  "bank": 48,
+  "addr": 17227,
+  "refs": [
+   "regions30"
+  ],
+  "end": 17231,
+  "raw": "f08583fd",
+  "zh": "南部<BOX>",
+  "id": "30:434B",
+  "inside": []
+ },
+ {
+  "bank": 48,
+  "addr": 17231,
+  "refs": [
+   "regions30"
+  ],
+  "end": 17235,
+  "raw": "f08683fd",
+  "zh": "東部<BOX>",
+  "id": "30:434F",
+  "inside": []
+ },
+ {
   "bank": 56,
   "addr": 29214,
   "refs": [

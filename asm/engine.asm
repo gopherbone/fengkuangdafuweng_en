@@ -176,12 +176,19 @@ EnBegin:
     ld a, [EN_FLAGS]
     bit FLAG_NEWS, a
     jr z, .notnews
-    ld a, [EN_LINE]
-    and a
+    ld a, [EN_LSTART]       ; cursor at a line start? (CurX would include the left margin)
+    ld b, a
+    ld a, [$C0C8]
+    cp b
     jr nz, .notnews
-    call CurX
-    and a
-    call z, NewsTop          ; fresh news box: start on whichever tile line is displayed on top
+    ld a, [EN_LSTART+1]
+    ld b, a
+    ld a, [$C0C9]
+    cp b
+    jr nz, .notnews
+    ; a new news string starts in a cleared box on whichever tile line is displayed on top
+    ; (the original's line breaks always left the box in that state; our reflowed text may not)
+    call NewsReset
 .notnews:
     pop bc
     ld a, [$C0C8]
@@ -386,7 +393,7 @@ EnControl:
     ld [EN_NUMMODE], a
     jp EnRun
 .nl:
-    call NewLinePlain
+    call NewLine            ; news window: line order follows the scroll ring
     jp EnRun
 .tab:
     call ReadByte           ; column index
@@ -440,7 +447,7 @@ EnControl:
     ld a, [EN_FLAGS]
     bit FLAG_NEWS, a
     jp z, EnRun
-    call NewsTop
+    call NewsReset
     jp EnRun
 .end:
     ld a, [EN_DEPTH]
@@ -534,11 +541,8 @@ UnreadByte::
 ; ---------------------------------------------------------------- layout
 ; Geometry from the game's box variables: page start $D686, line-2 start $C12E, box tiles $D66D.
 InitLayout::
-    ; line bytes = [$C12E] - [$D686]
-    ld a, [$D686]
-    ld e, a
-    ld a, [$D687]
-    ld d, a
+    ; line bytes = [$C12E] - page base
+    call PageBase
     ld a, [$C12E]
     sub e
     ld l, a
@@ -598,11 +602,8 @@ InitLayout::
 
 ; Recompute line / column state from the cursor $C0C8 (start a fresh column).
 SyncCursor::
-    ; offset = c0c8 - d686 ; line = offset / lbytes ; linestart = d686 + line*lbytes
-    ld a, [$D686]
-    ld e, a
-    ld a, [$D687]
-    ld d, a
+    ; offset = c0c8 - base ; line = offset / lbytes ; linestart = base + line*lbytes
+    call PageBase
     ld a, [$C0C8]
     sub e
     ld l, a
@@ -1456,6 +1457,37 @@ WriteColRam:
     ret
 
 ; New page: clear the box like the original FC handler and restart at its top-left.
+; Fresh news box: clear it and put the line ring back in its initial order ($C0BF = 0, tile line 0 on top),
+; re-sending the box map the way the game's F9 handler ($0CBA) does.
+NewsReset::
+    call ClearPage
+    xor a
+    ld [$C0BF], a
+    push bc
+    ld de, $D860
+    ld a, [$C0BE]
+    and a
+    jr z, .main
+    ld bc, $0E04
+    ld hl, $01A5
+    call $10AF
+    jr .send
+.main:
+    ld bc, $1204
+    ldh a, [$FF4A]
+    and a
+    jr nz, .win
+    ld hl, $9DA1
+    jr .send
+.win:
+    ld hl, $01A1
+    call $10AF
+.send:
+    call $0E40
+    pop bc
+    xor a
+    jr GotoLine
+
 ; Cursor to the start of the news tile line currently shown on top.
 NewsTop::
     ld a, [$C0BF]
@@ -1463,11 +1495,11 @@ NewsTop::
 ; A = line -> cursor to the start of that line of the box
 GotoLine::
     ld [EN_LINE], a
-    ld b, a
-    ld a, [$D686]
-    ld l, a
-    ld a, [$D687]
-    ld h, a
+    push af
+    call PageBase
+    pop bc
+    ld h, d
+    ld l, e
     ld a, [EN_LBYTES]
     ld e, a
     ld a, [EN_LBYTES+1]
@@ -1486,6 +1518,24 @@ GotoLine::
     ld [$C0C9], a
     ld [EN_LSTART+1], a
     jp FreshColumn
+
+; DE = start of the box's tile buffer. The news window's F9 scroll moves $D686 to the line it just cleared,
+; so there lines are counted from the fixed buffer start $D6A2 instead.
+PageBase::
+    ld a, [EN_FLAGS]
+    bit FLAG_NEWS, a
+    jr nz, .news
+    ld a, [$D686]
+    ld e, a
+    ld a, [$D687]
+    ld d, a
+    ret
+.news:
+    ld a, [$D6A2]
+    ld e, a
+    ld a, [$D6A3]
+    ld d, a
+    ret
 
 ClearPage::
     ld a, [$D6A2]

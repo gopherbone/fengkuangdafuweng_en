@@ -21,9 +21,9 @@
  "27:438F": "<NAME> handed all their cash over to the robbers!<PAGE><NAME>'s total cash:<NL>$<NUM>0K.<BOX>",
  "27:4525": "Hohoho~<NL>Hey there, youngster~<PAGE>......Huh?<PAGE>What!<PAGE>I haven't said a thing,<NL>and you already know I'm a thief... Waah~<PAGE>Waah~<PAGE>The boss always says I'm the most useless of his boys......<PAGE>Waah~ Waah~<BOX>",
  "27:4610": "......<NL>......?<PAGE>Boo-hoo~<PAGE>I'm crying my heart out, and you don't care at all?<PAGE>You heartless person! Waah~ Waah~<BOX>",
- "27:467F": "Kenshiro:<NL>Good day! We interrupt with breaking news.<PAGE>Just moments ago, a massive earthquake struck the <NAME_E8> area!<BOX>",
- "27:46C9": "Julia:<NL>That's right.<PAGE>Ten minutes ago, a magnitude 12 earthquake struck the <NAME_E8> area.<PAGE>Reports of heavy damage are coming in from all over.<BOX>",
- "27:471F": "Kenshiro:<NL>Indeed. Businesses in the <NAME_E8> area were especially hard hit.<PAGE>Here is our tally of business losses:<BOX>",
+ "27:467F": "Kenshiro:<NL>Good day! We interrupt with breaking news.<PAGE>Just moments ago, a massive earthquake struck <NAME_E8>!<BOX>",
+ "27:46C9": "Julia:<NL>That's right.<PAGE>Ten minutes ago, a magnitude 12 earthquake struck <NAME_E8>.<PAGE>Reports of heavy damage are coming in from all over.<BOX>",
+ "27:471F": "Kenshiro:<NL>Indeed. Businesses in <NAME_E8> were especially hard hit.<PAGE>Here is our tally of business losses:<BOX>",
  "27:47BE": "0K in insurance payouts.<PAGE><NAME_E1>'s cash:<NL>$<NUM>0K.<BOX>",
  "27:4875": "0K in insurance payouts.<PAGE><NAME_E1>'s cash:<NL>$<NUM>0K.<BOX>",
  "_notes": {

@@ -97,7 +97,7 @@ def main():
             en[sid] = CHAR_NAMES[int(refs[0].split(':')[1])] + '<BOX>'
         elif refs[0].startswith('T68:1:'):
             en[sid] = CARD_NAMES[int(refs[0].split(':')[2])] + '<BOX>'
-        elif refs[0] in ('names25', 'names38'):
+        elif refs[0] in ('names25', 'names38', 'regions30'):
             zh = x['zh'].replace('<BOX>', '')
             if zh in places:
                 en[sid] = places[zh] + '<BOX>'
@@ -154,8 +154,10 @@ def main():
         b = encode(text, problems, sid)
         if not text.endswith('<END>'):
             b += zh_tail(bytes.fromhex(last['raw']))
-        flags = 0x02 if any('<F9>' in z['zh'] for z in zhs) else 0
-        if x['bank'] in (0x4C, 0x25, 0x38) or x['refs'][0].startswith('T68:1:'):
+        # TV-news window: strings that scroll (F9) or open with a news anchor's label
+        news = any('<F9>' in z['zh'] for z in zhs) or zhs[0]['zh'].startswith(('尤莉雅：', '拳四郎：'))
+        flags = 0x02 if news else 0
+        if x['bank'] in (0x4C, 0x25, 0x38, 0x30) or x['refs'][0].startswith('T68:1:'):
             flags |= 0x40       # names (characters, places, cards): drawn instantly into label slots, no margin
         if x['refs'][0].startswith('T68:1:'):
             flags |= 0x80       # card names: centred in 8 columns when drawn standalone (card popup)

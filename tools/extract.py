@@ -54,6 +54,10 @@ for lst, n in ((0x71E4, 29), (0x72A5, 31)):
     for i in range(n):
         add(0x38, w(0x38, lst + 2 * i), 'names38')
 
+# Bank $30: region names (North/Central/South/East) for disaster events, table $433B, copied 7 bytes to $D6D4.
+for i in range(4):
+    add(0x30, w(0x30, 0x433B + 2 * i), 'regions30')
+
 # Bank $25: property-name strings (record table at $455E). Take every FD-terminated name in the name block.
 b = 0x25; a = 0x4785
 while a < 0x4C1D:
