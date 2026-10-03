@@ -1,0 +1,20 @@
+# ROMs, save states and build outputs (copyrighted / regenerable)
+*.gbc
+*.gb
+*.sav
+*.state
+build/
+orig/
+runs/
+shots/
+st/
+snaps/
+.venv/
+__pycache__/
+asm/font.inc
+.DS_Store
+font/*.png
+font/ocr.json
+font/hints_p*.tsv
+script/review_part_*
+script/static_dump.tsv

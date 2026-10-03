@@ -1,0 +1,1402 @@
+[
+ {
+  "id": "27:6174",
+  "zh": "哇啦～<NL>鼻子…鼻子好癢！<WAIT><PAGE>哇～哈～哈～<WAIT><PAGE>哈…哈～哈啾！<WAIT><BOX>",
+  "refs": [
+   "T51:5:128"
+  ]
+ },
+ {
+  "id": "27:61A4",
+  "zh": "<NAME>被吹跑了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:129"
+  ]
+ },
+ {
+  "id": "27:61AF",
+  "zh": "哎喲～<NL>不妙咧！<WAIT><PAGE>喂～<NAME>！<WAIT><PAGE><NAME_E8>的<E9>快倒了！<WAIT><PAGE>這樣子不行咧，要快點賣掉才行！<WAIT><PAGE>俺看，要便宜的賣才可以！<WAIT><PAGE>就<NL>　<END>",
+  "refs": [
+   "T51:5:130"
+  ],
+  "continues_into": "27:6210"
+ },
+ {
+  "id": "27:6210",
+  "zh": "萬咧！<WAIT><PAGE>窮神賣掉了<NAME_E8>的<E9>！<WAIT><PAGE><NAME>得到了<NL>　　<END>",
+  "refs": [
+   "orphan"
+  ],
+  "continues_into": "27:6234",
+  "continuation_of": "27:61AF"
+ },
+ {
+  "id": "27:6234",
+  "zh": "萬。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><PAGE>哈哈哈～<WAIT><PAGE>俺好像做了大善事！不要太感謝俺咧！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6210"
+ },
+ {
+  "id": "27:6274",
+  "zh": "好…好～冷～咧～<NL>俺好冷咧～<WAIT><PAGE>點把火來取暖咧…………！！<WAIT><PAGE>啊～啊！<WAIT><PAGE>燒到手了！<NL>痛痛痛痛痛！<WAIT><BOX>",
+  "refs": [
+   "T51:5:131"
+  ]
+ },
+ {
+  "id": "27:62C4",
+  "zh": "<NAME_E8>的樓房被燒掉一層了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:132"
+  ]
+ },
+ {
+  "id": "27:62DB",
+  "zh": "<NAME_E8>的樓房被燒掉一層了！<WAIT><PAGE><NAME>得到保險理賠金<END>",
+  "refs": [
+   "T51:5:133"
+  ],
+  "continues_into": "27:6300"
+ },
+ {
+  "id": "27:6300",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:62DB"
+ },
+ {
+  "id": "27:6318",
+  "zh": "哇咧～<NL>白白燒到手咧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:134"
+  ]
+ },
+ {
+  "id": "27:632C",
+  "zh": "啊啦啦……？<WAIT><PAGE>奇怪…奇怪咧～<NL>身體熱熱的…<WAIT><PAGE>哎唷～俺的身體好熱啊！<WAIT><PAGE>……難道……<NL>難道是………<WAIT><BOX>",
+  "refs": [
+   "T51:5:135"
+  ]
+ },
+ {
+  "id": "27:637A",
+  "zh": "哇～哇～姆姆～<NL>姆姆～<WAIT><PAGE>窮神變成嬰兒了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:136"
+  ]
+ },
+ {
+  "id": "27:639C",
+  "zh": "卡滋～卡滋！<NL>嘴巴癢～卡滋！<WAIT><PAGE>窮神變成貪吃鬼了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:137"
+  ]
+ },
+ {
+  "id": "27:63CB",
+  "zh": "哇哈哈哈～<WAIT><PAGE>俺的封印終於解除啦！<WAIT><PAGE>哈哈哈哈哈～<WAIT><PAGE><NAME>，你放心！<NL>俺會很溫柔的！<WAIT><PAGE>窮神變身成超窮魔神了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:138"
+  ]
+ },
+ {
+  "id": "27:641E",
+  "zh": "哇哇～哇～<NL>姆姆～姆～糖糖～<WAIT><PAGE>姆姆～<NL>哇～<WAIT><PAGE><NAME>花了<NL><END>",
+  "refs": [
+   "T51:5:139"
+  ],
+  "continues_into": "27:6447"
+ },
+ {
+  "id": "27:6447",
+  "zh": "萬元買糖<WAIT><PAGE>果。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:641E"
+ },
+ {
+  "id": "27:6468",
+  "zh": "……姆姆……<NL>…姆…姆？！<WAIT><BOX>",
+  "refs": [
+   "T51:5:140"
+  ]
+ },
+ {
+  "id": "27:647F",
+  "zh": "……俺怎麼咧？<WAIT><PAGE>這是怎麼回事咧？<WAIT><PAGE>小嬰兒變回窮神了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:141"
+  ]
+ },
+ {
+  "id": "27:64AE",
+  "zh": "卡滋～卡滋～<NL>嘴巴癢得受不了！<WAIT><PAGE>卡滋～卡滋～<WAIT><PAGE>嗯～嗯呃嗯～卡滋卡滋！<WAIT><PAGE>哇～真好吃！<WAIT><PAGE>貪吃鬼吃掉<NAME_E8>了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:142"
+  ]
+ },
+ {
+  "id": "27:650B",
+  "zh": "卡滋～卡滋～<WAIT><PAGE>怎…<NL>怎麼回事…？<WAIT><PAGE>卡滋～卡滋……<WAIT><BOX>",
+  "refs": [
+   "T51:5:143"
+  ]
+ },
+ {
+  "id": "27:6537",
+  "zh": "這是怎麼回事咧？<WAIT><PAGE>貪吃鬼變回窮神了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:144"
+  ]
+ },
+ {
+  "id": "27:6557",
+  "zh": "……這種感覺…<WAIT><PAGE>…難道…！<WAIT><PAGE>俺～不～要～啊！<WAIT><PAGE>………！<WAIT><BOX>",
+  "refs": [
+   "T51:5:145"
+  ]
+ },
+ {
+  "id": "27:6586",
+  "zh": "這是麼回事咧？<WAIT><PAGE>超窮魔神變回窮神了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:146"
+  ]
+ },
+ {
+  "id": "27:65A6",
+  "zh": "卡滋～卡滋～<WAIT><PAGE>什麼？<WAIT><PAGE>沒東西可以吃了！<NL>肚子好餓呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:147"
+  ]
+ },
+ {
+  "id": "27:65D6",
+  "zh": "…嗯？<WAIT><PAGE><NAME>的公司太冷清咧！<WAIT><PAGE>不行不行～<NL>太沒有生氣了！<WAIT><PAGE>俺來想想辦法！<WAIT><PAGE>…就來招考員工好咧！<WAIT><PAGE>投投骰子決定人數咧～<WAIT><BOX>",
+  "refs": [
+   "T51:5:148"
+  ]
+ },
+ {
+  "id": "27:6638",
+  "zh": "好咧，就決定錄取<END>",
+  "refs": [
+   "T51:5:149"
+  ],
+  "continues_into": "27:6648"
+ },
+ {
+  "id": "27:6648",
+  "zh": "萬人好咧！<WAIT><PAGE>這樣就熱鬧多咧！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6638"
+ },
+ {
+  "id": "27:6663",
+  "zh": "<NAME>付了薪水<NL>　　<END>",
+  "refs": [
+   "T51:5:150"
+  ],
+  "continues_into": "27:6671"
+ },
+ {
+  "id": "27:6671",
+  "zh": "萬！<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6663"
+ },
+ {
+  "id": "27:6688",
+  "zh": "<NAME>付了薪水<NL>　　<END>",
+  "refs": [
+   "T51:5:151"
+  ],
+  "continues_into": "27:6696"
+ },
+ {
+  "id": "27:6696",
+  "zh": "萬！<WAIT><PAGE>節源卡發揮了功效，損失降為一半。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6688"
+ },
+ {
+  "id": "27:66C6",
+  "zh": "喂～<WAIT><PAGE>你忘了上次答應俺的事了嗎？<WAIT><PAGE>就是『開‧舞‧會』！<WAIT><PAGE>要超級無敵豪華的咧！<WAIT><PAGE>好期待好期待咧～<WAIT><PAGE>要給俺多少錢去辦咧？<WAIT><BOX>",
+  "refs": [
+   "T51:5:152"
+  ]
+ },
+ {
+  "id": "27:6738",
+  "zh": "哇！要給俺<NL>　<END>",
+  "refs": [
+   "T51:5:153"
+  ],
+  "continues_into": "27:6746"
+ },
+ {
+  "id": "27:6746",
+  "zh": "萬呀？<WAIT><PAGE>真‧是‧高‧興‧咧！<WAIT><PAGE><NAME>最棒了！<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6738"
+ },
+ {
+  "id": "27:6780",
+  "zh": "哇！要給俺<NL>　<END>",
+  "refs": [
+   "T51:5:154"
+  ],
+  "continues_into": "27:678E"
+ },
+ {
+  "id": "27:678E",
+  "zh": "萬呀？<WAIT><PAGE>真‧是‧高‧興‧咧！<WAIT><PAGE><NAME>最棒了！<WAIT><PAGE>節卡發揮了功效，損失降為一半。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6780"
+ },
+ {
+  "id": "27:67E0",
+  "zh": "<NAME>～<WAIT><PAGE>怎麼搞的，錢怎麼變得這麼少咧？<WAIT><PAGE>真是沒有辨法咧～<NL>我來幫幫你吧！<WAIT><PAGE>我看～<NL>賣掉這個好了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:155"
+  ]
+ },
+ {
+  "id": "27:6831",
+  "zh": "什麼？<NL>沒有卡片了？<WAIT><PAGE>喂～你還真窮呀！<NL>真是不好玩咧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:156"
+  ]
+ },
+ {
+  "id": "27:6861",
+  "zh": "…？<WAIT><PAGE>俺的身體老是不舒服！<WAIT><PAGE>一定是生病了！<WAIT><PAGE>吸吸～深呼吸～吸～吸～吸～吸～<WAIT><BOX>",
+  "refs": [
+   "T51:5:157"
+  ]
+ },
+ {
+  "id": "27:68A9",
+  "zh": "呀～這樣好咧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:158"
+  ]
+ },
+ {
+  "id": "27:68B5",
+  "zh": "……啊咧？<WAIT><PAGE>俺的身體老是不舒服…<WAIT><PAGE>一定又生病了！<WAIT><PAGE>吸吸～深呼吸～吸～吸～吸～吸～<WAIT><BOX>",
+  "refs": [
+   "T51:5:159"
+  ]
+ },
+ {
+  "id": "27:6903",
+  "zh": "窮神爆炸了！<WAIT><PAGE><NAME>被吹跑了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:160"
+  ]
+ },
+ {
+  "id": "27:691C",
+  "zh": "哇哈哈～<NL>哈哈哈！<WAIT><PAGE>雖然俺只要一根手指頭就可以殺死你了！<WAIT><PAGE>但俺可是很民主的！<NL>讓你自己決定吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:161"
+  ]
+ },
+ {
+  "id": "27:696E",
+  "zh": "你投出了<NL>　　<END>",
+  "refs": [
+   "T51:5:162"
+  ],
+  "continues_into": "27:697A"
+ },
+ {
+  "id": "27:697A",
+  "zh": "點！<WAIT><PAGE>真是幸運的逃過死罪！<WAIT><PAGE>不過還是要給點小小的懲罰才行！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:696E"
+ },
+ {
+  "id": "27:69AF",
+  "zh": "<NAME>被罰了<NL>　　<END>",
+  "refs": [
+   "T51:5:163"
+  ],
+  "continues_into": "27:69BA"
+ },
+ {
+  "id": "27:69BA",
+  "zh": "萬！<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:69AF"
+ },
+ {
+  "id": "27:69D2",
+  "zh": "<NAME>被罰了<NL>　　<END>",
+  "refs": [
+   "T51:5:164"
+  ],
+  "continues_into": "27:69DD"
+ },
+ {
+  "id": "27:69DD",
+  "zh": "萬！<WAIT><PAGE>節源卡發揮了功效，損失降為一半。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:69D2"
+ },
+ {
+  "id": "27:6A0E",
+  "zh": "哇啊～<NL>真是煩人呀！<WAIT><PAGE>什麼小東西的，真是煩人！<WAIT><PAGE>看我的！<WAIT><PAGE>丟～丟～丟～<WAIT><PAGE><NAME>的卡片全被丟掉了！<WAIT><PAGE>這樣清爽多了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:165"
+  ]
+ },
+ {
+  "id": "27:6A6A",
+  "zh": "什麼？<WAIT><PAGE>沒卡片可讓本大魔王丟？<WAIT><PAGE>真是生氣啊！<WAIT><BOX>",
+  "refs": [
+   "T51:5:166"
+  ]
+ },
+ {
+  "id": "27:6A8F",
+  "zh": "<NAME>啊～<WAIT><PAGE>怎麼看來如此傷心的樣子？<WAIT><PAGE>放心，雖然早就決定了你的死罪，<WAIT><PAGE>但還會讓你輕鬆的走的。<WAIT><PAGE>這些產業根本就是累贅，丟掉吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:167"
+  ]
+ },
+ {
+  "id": "27:6AFA",
+  "zh": "很好，你很有氣魄的丟出<END>",
+  "refs": [
+   "T51:5:168"
+  ],
+  "continues_into": "27:6B0F"
+ },
+ {
+  "id": "27:6B0F",
+  "zh": "點！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6AFA"
+ },
+ {
+  "id": "27:6B14",
+  "zh": "丟掉了<NAME_E8>的<E9>！<WAIT><BOX>",
+  "refs": [
+   "T51:5:169"
+  ]
+ },
+ {
+  "id": "27:6B21",
+  "zh": "丟掉了<NAME_E8>的<E9>！<WAIT><PAGE><NAME>得到保險理賠金<END>",
+  "refs": [
+   "T51:5:170"
+  ],
+  "continues_into": "27:6B3C"
+ },
+ {
+  "id": "27:6B3C",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6B21"
+ },
+ {
+  "id": "27:6B54",
+  "zh": "這下子少了負擔，輕鬆多了吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:171"
+  ]
+ },
+ {
+  "id": "27:6B70",
+  "zh": "重回世界的感覺真好！<WAIT><PAGE>只有俺一個享受的話，實在太自私了！<WAIT><PAGE>我的座騎啊，聽俺的召喚出來吧！<WAIT><PAGE>哇哈哈哈哈～<WAIT><BOX>",
+  "refs": [
+   "T51:5:172"
+  ]
+ },
+ {
+  "id": "27:6BC7",
+  "zh": "<NAME>啊～<WAIT><PAGE>不要老是露出懼怕的表情！<WAIT><PAGE>雖然說你的死罪是早就註定的。<WAIT><PAGE>俺就網開一面好了！<WAIT><PAGE>送你去渡假後，再處死也不遲！<WAIT><PAGE>哇哈哈哈～<WAIT><BOX>",
+  "refs": [
+   "T51:5:173"
+  ]
+ },
+ {
+  "id": "27:6C38",
+  "zh": "<NAME>被送到<NAME_E8>了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:174"
+  ]
+ },
+ {
+  "id": "27:6C44",
+  "zh": "什麼？！<WAIT><PAGE>沒有產業了？<NL>真令人不甘心～<WAIT><BOX>",
+  "refs": [
+   "T51:5:175"
+  ]
+ },
+ {
+  "id": "27:6C66",
+  "zh": "<NAME>呀～<NL>有錢是件痛苦的事。<WAIT><PAGE>雖然你沒有多少時間可活了，但是也總得<WAIT><PAGE>及時行樂一下。<WAIT><PAGE>讓俺來替處理那些土地吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:176"
+  ]
+ },
+ {
+  "id": "27:6CCA",
+  "zh": "什麼？<WAIT><PAGE>沒有土地了？<NL>真是無趣呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:177"
+  ]
+ },
+ {
+  "id": "27:6CEA",
+  "zh": "看俺的！<WAIT><BOX>",
+  "refs": [
+   "T51:5:178"
+  ]
+ },
+ {
+  "id": "27:6CF3",
+  "zh": "俺投出了<NL>　　<END>",
+  "refs": [
+   "T51:5:179"
+  ],
+  "continues_into": "27:6D00"
+ },
+ {
+  "id": "27:6D00",
+  "zh": "點！<WAIT><PAGE>輪到你了！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6CF3"
+ },
+ {
+  "id": "27:6D10",
+  "zh": "你投出了<NL>　　<END>",
+  "refs": [
+   "T51:5:180"
+  ],
+  "continues_into": "27:6D1C"
+ },
+ {
+  "id": "27:6D1C",
+  "zh": "點！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6D10"
+ },
+ {
+  "id": "27:6D21",
+  "zh": "丟掉了～<NAME_E8>的土地！<WAIT><BOX>",
+  "refs": [
+   "T51:5:181"
+  ]
+ },
+ {
+  "id": "27:6D31",
+  "zh": "丟掉了～<NAME_E8>的土地！<WAIT><PAGE><NAME>得到保險理賠金<END>",
+  "refs": [
+   "T51:5:182"
+  ],
+  "continues_into": "27:6D4F"
+ },
+ {
+  "id": "27:6D4F",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6D31"
+ },
+ {
+  "id": "27:6D67",
+  "zh": "什麼？<WAIT><PAGE>你竟敢無視俺少有的好意？<WAIT><PAGE>真是令人生氣呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:183"
+  ]
+ },
+ {
+  "id": "27:6D96",
+  "zh": "啊啦～<WAIT><PAGE><NAME>看起來很寂寞…<WAIT><PAGE>有俺陪你也會這樣嗎？<WAIT><PAGE>這個任性的小子！<NL>真沒辦法咧！<WAIT><PAGE>介紹俺的好朋友給你認識！<WAIT><PAGE>要好好相處咧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:184"
+  ]
+ },
+ {
+  "id": "27:6E03",
+  "zh": "<NAME_E1>被吹跑了。<WAIT><BOX>",
+  "refs": [
+   "T51:5:185"
+  ]
+ },
+ {
+  "id": "27:6E0E",
+  "zh": "<NAME>踏到了卡片點！<WAIT><BOX>",
+  "refs": [
+   "T51:5:186"
+  ]
+ },
+ {
+  "id": "27:6E1D",
+  "zh": "您的卡片欄滿了！<NL>要丟掉一張卡片嗎？<BOX>",
+  "refs": [
+   "T51:5:187"
+  ]
+ },
+ {
+  "id": "27:6E3D",
+  "zh": "您的卡片欄滿了！<NL>要丟掉一張卡片喔。<WAIT><BOX>",
+  "refs": [
+   "T51:5:188"
+  ]
+ },
+ {
+  "id": "27:6E5C",
+  "zh": "卡滋～卡滋～<NL>嘴巴癢得受不了！<WAIT><PAGE>卡滋～卡滋～<WAIT><PAGE>嗯～嗯呃嗯～卡滋卡滋！<WAIT><PAGE>哇～真好吃！<WAIT><PAGE>貪吃鬼吃掉<NAME_E8>了！<WAIT><PAGE><NAME>得到了保險理賠<END>",
+  "refs": [
+   "T51:5:189"
+  ],
+  "continues_into": "27:6EC7"
+ },
+ {
+  "id": "27:6EC7",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6E5C"
+ },
+ {
+  "id": "27:6EDF",
+  "zh": "<NAME>踏到了賺錢點！<WAIT><BOX>",
+  "refs": [
+   "T51:5:190"
+  ]
+ },
+ {
+  "id": "27:6EED",
+  "zh": "<NAME>得到了<NL>　　<END>",
+  "refs": [
+   "T51:5:191"
+  ],
+  "continues_into": "27:6EF8"
+ },
+ {
+  "id": "27:6EF8",
+  "zh": "萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6EED"
+ },
+ {
+  "id": "27:6EFE",
+  "zh": "<NAME>踏到了罰錢點！<WAIT><BOX>",
+  "refs": [
+   "T51:5:192"
+  ]
+ },
+ {
+  "id": "27:6F0C",
+  "zh": "<NAME>損失了<NL>　　<END>",
+  "refs": [
+   "T51:5:193"
+  ],
+  "continues_into": "27:6F17"
+ },
+ {
+  "id": "27:6F17",
+  "zh": "萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6F0C"
+ },
+ {
+  "id": "27:6F1D",
+  "zh": "總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:194"
+  ]
+ },
+ {
+  "id": "27:6F2F",
+  "zh": "福神顯靈，取消罰緩！<WAIT><BOX>",
+  "refs": [
+   "T51:5:195"
+  ]
+ },
+ {
+  "id": "27:6F41",
+  "zh": "太幸運了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:196"
+  ]
+ },
+ {
+  "id": "27:6F4C",
+  "zh": "大危機！<WAIT><PAGE>可怕的超窮魔神盯上你了！<WAIT><PAGE>你要使用VF鐵人卡來對抗牠嗎？<BOX>",
+  "refs": [
+   "T51:5:197"
+  ]
+ },
+ {
+  "id": "27:6F83",
+  "zh": "出動吧～<WAIT><PAGE>VF鐵人Z，全看你的了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:198"
+  ]
+ },
+ {
+  "id": "27:6F9F",
+  "zh": "超窮魔神：<NL>你又是哪個不怕死的<WAIT><F9>傢伙！<WAIT><F9>敢來阻撓俺！<WAIT><PAGE>VF鐵人Z：<NL>納命來吧！<WAIT><PAGE>我就是正義的代表～VF‧鐵‧人‧Z！<WAIT><BOX>",
+  "refs": [
+   "T51:5:199"
+  ]
+ },
+ {
+  "id": "27:7006",
+  "zh": "超窮魔神出招了！<BOX>",
+  "refs": [
+   "T51:5:200"
+  ]
+ },
+ {
+  "id": "27:7016",
+  "zh": "VF鐵人Z出招了！<BOX>",
+  "refs": [
+   "T51:5:201"
+  ]
+ },
+ {
+  "id": "27:7024",
+  "zh": "超窮魔神不當一回事的閃過了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:202"
+  ]
+ },
+ {
+  "id": "27:703E",
+  "zh": "VF鐵人看穿了招式～靈巧的閃過了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:203"
+  ]
+ },
+ {
+  "id": "27:705E",
+  "zh": "命中目標！<WAIT><BOX>",
+  "refs": [
+   "T51:5:204"
+  ]
+ },
+ {
+  "id": "27:706A",
+  "zh": "超窮魔神被擊敗了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:205"
+  ]
+ },
+ {
+  "id": "27:707D",
+  "zh": "VF鐵人Z：<NL>維護地球和平，是鐵<WAIT><F9>人的責任！<WAIT><F9><PAGE>喝～<WAIT><BOX>",
+  "refs": [
+   "T51:5:206"
+  ]
+ },
+ {
+  "id": "27:70A9",
+  "zh": "超窮魔神變回窮神了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:207"
+  ]
+ },
+ {
+  "id": "27:70BC",
+  "zh": "VF鐵人Z被擊敗了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:208"
+  ]
+ },
+ {
+  "id": "27:70CD",
+  "zh": "哈哈哈哈～<WAIT><PAGE>就只有這種程度而已嗎？<WAIT><PAGE>哈哈哈哈～<WAIT><BOX>",
+  "refs": [
+   "T51:5:209"
+  ]
+ },
+ {
+  "id": "27:70F4",
+  "zh": "VF鐵人Z損壞了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:210"
+  ]
+ },
+ {
+  "id": "27:7102",
+  "zh": "窮神：<NL>咦？<WAIT><F9>怎麼又是你？<WAIT><F9>這麼想念我嗎？<WAIT><PAGE>以後也要好好相處喔。<WAIT><BOX>",
+  "refs": [
+   "T51:5:211"
+  ]
+ },
+ {
+  "id": "27:7136",
+  "zh": "窮神：<NL>………！！<WAIT><PAGE>呀！<NL>那是什麼光？<WAIT><PAGE>好刺眼！<NL>我還是回去好了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:212"
+  ]
+ },
+ {
+  "id": "27:716D",
+  "zh": "小偷：<NL>唉～<WAIT><F9>那個人已經被別人盯<WAIT><F9>上了。<WAIT><F9>真是可憐的傢伙…<WAIT><F9>還是饒了他吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:213"
+  ]
+ },
+ {
+  "id": "27:71B2",
+  "zh": "<NAME>的現金不足了！<WAIT><PAGE><NAME>必需變賣事業了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:214"
+  ]
+ },
+ {
+  "id": "27:71D2",
+  "zh": "這樣會破壞連鎖！<WAIT><BOX>",
+  "refs": [
+   "T51:5:215"
+  ]
+ },
+ {
+  "id": "27:71E0",
+  "zh": "確定要賣掉<NAME_E8>的土地嗎？<BOX>",
+  "refs": [
+   "T51:5:216"
+  ]
+ },
+ {
+  "id": "27:71F5",
+  "zh": "<NAME>賣掉了<NAME_E8>的土地！<WAIT><PAGE>得到了<NL>　　<END>",
+  "refs": [
+   "T51:5:217"
+  ],
+  "continues_into": "27:7210"
+ },
+ {
+  "id": "27:7210",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:71F5"
+ },
+ {
+  "id": "27:7228",
+  "zh": "土地的連鎖被破壞了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:218"
+  ]
+ },
+ {
+  "id": "27:723B",
+  "zh": "這樣會破壞壟斷！<WAIT><BOX>",
+  "refs": [
+   "T51:5:219"
+  ]
+ },
+ {
+  "id": "27:724A",
+  "zh": "確定要賣掉<NAME_E8>的<E9>？<BOX>",
+  "refs": [
+   "T51:5:220"
+  ]
+ },
+ {
+  "id": "27:725B",
+  "zh": "<NAME>賣掉了<NAME_E8>的<E9>！<WAIT><PAGE>得到了<NL>　　<END>",
+  "refs": [
+   "T51:5:221"
+  ],
+  "continues_into": "27:7274"
+ },
+ {
+  "id": "27:7274",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:725B"
+ },
+ {
+  "id": "27:728C",
+  "zh": "產業的壟斷被破壞了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:222"
+  ]
+ },
+ {
+  "id": "27:729E",
+  "zh": "<NAME>的負債還清了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:223"
+  ]
+ },
+ {
+  "id": "27:72AC",
+  "zh": "<NAME>的產業都變賣完了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:224"
+  ]
+ },
+ {
+  "id": "27:72BD",
+  "zh": "<NAME>的土地都變賣完了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:225"
+  ]
+ },
+ {
+  "id": "27:72D0",
+  "zh": "<NAME>的財產都變賣完了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:226"
+  ]
+ },
+ {
+  "id": "27:72E3",
+  "zh": "確定要自動變賣產業？<BOX>",
+  "refs": [
+   "T51:5:227"
+  ]
+ },
+ {
+  "id": "27:72F4",
+  "zh": "您好～<NL>這裡是VF卡片中心。<WAIT><PAGE>我是卡片小姐～<NL>露露。<WAIT><PAGE>需要露露的服務嗎？<BOX>",
+  "refs": [
+   "T51:5:228"
+  ]
+ },
+ {
+  "id": "27:732E",
+  "zh": "不行哪～<NL>您的卡片滿了喲！<WAIT><BOX>",
+  "refs": [
+   "T51:5:229"
+  ]
+ },
+ {
+  "id": "27:7344",
+  "zh": "不行哪～<NL>您的錢不夠喲～<WAIT><BOX>",
+  "refs": [
+   "T51:5:230"
+  ]
+ },
+ {
+  "id": "27:735A",
+  "zh": "這張卡片價值：<BOX>",
+  "refs": [
+   "T51:5:231"
+  ]
+ },
+ {
+  "id": "27:7367",
+  "zh": "呃…<WAIT><PAGE>這張卡片露露不能收喲！<WAIT><BOX>",
+  "refs": [
+   "T51:5:232"
+  ]
+ },
+ {
+  "id": "27:7380",
+  "zh": "咦～<NL>不要再買了嗎？<WAIT><PAGE>真是可惜…<WAIT><PAGE>露露期待您再次利用喲！<WAIT><BOX>",
+  "refs": [
+   "T51:5:233"
+  ]
+ },
+ {
+  "id": "27:73B2",
+  "zh": "買賣<BOX>",
+  "refs": [
+   "T51:5:234"
+  ]
+ },
+ {
+  "id": "27:73B6",
+  "zh": "還有什麼需要嗎？<BOX>",
+  "refs": [
+   "T51:5:235"
+  ]
+ },
+ {
+  "id": "27:73C5",
+  "zh": "確定要賣給露露嗎？<BOX>",
+  "refs": [
+   "T51:5:236"
+  ]
+ },
+ {
+  "id": "27:73D7",
+  "zh": "您現在沒有卡片喲！<WAIT><BOX>",
+  "refs": [
+   "T51:5:237"
+  ]
+ },
+ {
+  "id": "27:73E6",
+  "zh": "您好～<NL>這裡是VF股市中心。<WAIT><PAGE>我是股市小姐～<NL>娜娜。<WAIT><PAGE>Oh～需要娜娜的服務嗎？<BOX>",
+  "refs": [
+   "T51:5:238"
+  ]
+ },
+ {
+  "id": "27:7425",
+  "zh": "Oh～真是抱歉…<WAIT><PAGE>您的現金不足喲～<WAIT><BOX>",
+  "refs": [
+   "T51:5:239"
+  ]
+ },
+ {
+  "id": "27:7443",
+  "zh": "Oh～不需要娜娜的服務了嗎？<WAIT><PAGE>娜娜好難過…<WAIT><PAGE>娜娜期待與您再次見面喲！<WAIT><BOX>",
+  "refs": [
+   "T51:5:240"
+  ]
+ },
+ {
+  "id": "27:747E",
+  "zh": "買進賣出億<BOX>",
+  "refs": [
+   "T51:5:241"
+  ]
+ },
+ {
+  "id": "27:7487",
+  "zh": "您現在未持有股票喲～<WAIT><BOX>",
+  "refs": [
+   "T51:5:242"
+  ]
+ },
+ {
+  "id": "27:749C",
+  "zh": "已持有最大值了喲～<WAIT><BOX>",
+  "refs": [
+   "T51:5:243"
+  ]
+ },
+ {
+  "id": "27:74AF",
+  "zh": "此地為<NAME_E1>私人所有！<WAIT><PAGE>過路費：<NL>　　<END>",
+  "refs": [
+   "T51:5:244"
+  ],
+  "continues_into": "27:74CF"
+ },
+ {
+  "id": "27:74CF",
+  "zh": "萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:74AF"
+ },
+ {
+  "id": "27:74D5",
+  "zh": "<NAME>損失了：<NL>　　<END>",
+  "refs": [
+   "T51:5:245"
+  ],
+  "continues_into": "27:74E2"
+ },
+ {
+  "id": "27:74E2",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:74D5"
+ },
+ {
+  "id": "27:74FA",
+  "zh": "<NAME_E1>得到了：<NL>　　<END>",
+  "refs": [
+   "T51:5:246"
+  ],
+  "continues_into": "27:7507"
+ },
+ {
+  "id": "27:7507",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:74FA"
+ },
+ {
+  "id": "27:751F",
+  "zh": "<NAME>踏到了土地點。<WAIT><BOX>",
+  "refs": [
+   "T51:5:247"
+  ]
+ },
+ {
+  "id": "27:7530",
+  "zh": "你的房子已經蓋到最高層了。<WAIT><BOX>",
+  "refs": [
+   "T51:5:248"
+  ]
+ },
+ {
+  "id": "27:754B",
+  "zh": "要加蓋房子嗎？<BOX>",
+  "refs": [
+   "T51:5:249"
+  ]
+ },
+ {
+  "id": "27:755A",
+  "zh": "這樣需要：<NL>　　<END>",
+  "refs": [
+   "T51:5:250"
+  ],
+  "continues_into": "27:7568"
+ },
+ {
+  "id": "27:7568",
+  "zh": "萬。<BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:755A"
+ },
+ {
+  "id": "27:756D",
+  "zh": "<NAME>加蓋了房子！<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:251"
+  ]
+ },
+ {
+  "id": "27:758E",
+  "zh": "財神顯靈，樓層加倍！<WAIT><BOX>",
+  "refs": [
+   "T51:5:252"
+  ]
+ },
+ {
+  "id": "27:75A2",
+  "zh": "要買下這塊土地嗎？<BOX>",
+  "refs": [
+   "T51:5:253"
+  ]
+ },
+ {
+  "id": "27:75B5",
+  "zh": "<NAME_E8>的土地要<NL>　　<END>",
+  "refs": [
+   "T51:5:254"
+  ],
+  "continues_into": "27:75C2"
+ },
+ {
+  "id": "27:75C2",
+  "zh": "萬。<BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:75B5"
+ },
+ {
+  "id": "27:75C7",
+  "zh": "<NAME>買下了<NAME_E8>的土地。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:255"
+  ]
+ },
+ {
+  "id": "27:75E9",
+  "zh": "土地達成了連鎖！<WAIT><PAGE>凡踏到此地的人必需付出2倍的過路費。<WAIT><BOX>",
+  "refs": [
+   "T51:4:0"
+  ]
+ },
+ {
+  "id": "27:761B",
+  "zh": "投資自動取消<BOX>",
+  "refs": [
+   "T51:4:1"
+  ]
+ },
+ {
+  "id": "27:7627",
+  "zh": "<NAME>踏到了產業點！<WAIT><PAGE>請決定投資的項目。<BOX>",
+  "refs": [
+   "T51:4:2"
+  ]
+ },
+ {
+  "id": "27:7648",
+  "zh": "此項產業已為<NAME_E1>所擁有了。<WAIT><BOX>",
+  "refs": [
+   "T51:4:3"
+  ]
+ },
+ {
+  "id": "27:765F",
+  "zh": "<NAME>的持金：<NL>　　<NUM>萬。<WAIT><PAGE>這項產業需要：<NL>　　<END>",
+  "refs": [
+   "T51:4:4"
+  ],
+  "continues_into": "27:7683"
+ },
+ {
+  "id": "27:7683",
+  "zh": "萬。<BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:765F"
+ },
+ {
+  "id": "27:7688",
+  "zh": "<NAME>買下<E9>。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:4:5"
+  ]
+ },
+ {
+  "id": "27:76A4",
+  "zh": "<NAME>增資了<E9>。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:4:6"
+  ]
+ },
+ {
+  "id": "27:76C1",
+  "zh": "財神顯靈，增資加倍！<WAIT><BOX>",
+  "refs": [
+   "T51:4:7"
+  ]
+ },
+ {
+  "id": "27:76D4",
+  "zh": "<NAME_E8>的產業被壟斷了！<WAIT><PAGE><NAME>在年度決算時，此地的收入可達2<WAIT><PAGE>倍！<WAIT><BOX>",
+  "refs": [
+   "T51:4:8"
+  ]
+ },
+ {
+  "id": "27:7709",
+  "zh": "此項產業已經增資到最大了。<WAIT><BOX>",
+  "refs": [
+   "T51:4:9"
+  ]
+ },
+ {
+  "id": "27:7721",
+  "zh": "<NAME>休息不動了。<WAIT><BOX>",
+  "refs": [
+   "T51:4:10"
+  ]
+ },
+ {
+  "id": "27:772E",
+  "zh": "拳四郎：<NL>各位好！<WAIT><F9>為您插播一則最新的<WAIT><F9>消息。<WAIT><F9>就在剛才發生了大地<WAIT><F9>震了！<WAIT><BOX>",
+  "refs": [
+   "T51:4:11"
+  ]
+ },
+ {
+  "id": "27:7772",
+  "zh": "尤莉雅：<NL>是的。<WAIT><F9>而在震央5步範圍內<WAIT><F9>的土地建設方面，超<WAIT><F9>過二樓的建築，全都<WAIT><F9>往下降了一級。<WAIT><F9>真是可怕的損失！<WAIT><F9>VF新聞還會為您做最<WAIT><F9>新的追蹤報導，再會<WAIT><F9>。<WAIT><BOX>",
+  "refs": [
+   "T51:4:12"
+  ]
+ },
+ {
+  "id": "27:77F8",
+  "zh": "什麼？<WAIT><PAGE>沒有錢？<WAIT><PAGE>呿～可憐的窮光蛋！<WAIT><BOX>",
+  "refs": [
+   "T51:4:13"
+  ]
+ },
+ {
+  "id": "27:7819",
+  "zh": "<NAME_E1>已經沒有卡片了。<WAIT><BOX>",
+  "refs": [
+   "T51:4:14"
+  ]
+ },
+ {
+  "id": "27:7828",
+  "zh": "哼！等著吧，我一定會報復的！<WAIT><BOX>",
+  "refs": [
+   "T51:4:15"
+  ]
+ },
+ {
+  "id": "27:7841",
+  "zh": "嗚～人家只是個小孩子嘛…<WAIT><BOX>",
+  "refs": [
+   "T51:4:16"
+  ]
+ },
+ {
+  "id": "27:7859",
+  "zh": "可可可惡惡惡！給我記住！<WAIT><BOX>",
+  "refs": [
+   "T51:4:17"
+  ]
+ },
+ {
+  "id": "27:786E",
+  "zh": "<NAME_E1>是個倒楣的天使嗎？<WAIT><BOX>",
+  "refs": [
+   "T51:4:18"
+  ]
+ },
+ {
+  "id": "27:7882",
+  "zh": "嗚～嗚～你們都欺負<NAME_E1>…<WAIT><BOX>",
+  "refs": [
+   "T51:4:19"
+  ]
+ },
+ {
+  "id": "27:7897",
+  "zh": "<NAME_E1>……要跟父親大人說啦！<WAIT><BOX>",
+  "refs": [
+   "T51:4:20"
+  ]
+ },
+ {
+  "id": "27:78AE",
+  "zh": "…女…王…被陷害了！<WAIT><BOX>",
+  "refs": [
+   "T51:4:21"
+  ]
+ },
+ {
+  "id": "27:78C0",
+  "zh": "艷麗美少女的我是個錯嗎…<WAIT><BOX>",
+  "refs": [
+   "T51:4:22"
+  ]
+ },
+ {
+  "id": "27:78D8",
+  "zh": "嗚～我是無辜的～<WAIT><BOX>",
+  "refs": [
+   "T51:4:23"
+  ]
+ },
+ {
+  "id": "27:78E8",
+  "zh": "竟敢這樣對俺！<WAIT><BOX>",
+  "refs": [
+   "T51:4:24"
+  ]
+ },
+ {
+  "id": "27:78F6",
+  "zh": "王…王八蛋！<WAIT><BOX>",
+  "refs": [
+   "T51:4:25"
+  ]
+ },
+ {
+  "id": "27:7903",
+  "zh": "俺一定會挖洞將你給埋掉的！<WAIT><BOX>",
+  "refs": [
+   "T51:4:26"
+  ]
+ },
+ {
+  "id": "27:7919",
+  "zh": "…這真是個殘忍的世界…<WAIT><BOX>",
+  "refs": [
+   "T51:4:27"
+  ]
+ },
+ {
+  "id": "27:792F",
+  "zh": "<NAME_E1>是個可憐的女人…<WAIT><BOX>",
+  "refs": [
+   "T51:4:28"
+  ]
+ },
+ {
+  "id": "27:7940",
+  "zh": "啊娜達，<NAME_E1>不行了…<WAIT><BOX>",
+  "refs": [
+   "T51:4:29"
+  ]
+ },
+ {
+  "id": "27:7951",
+  "zh": "哦～美形的我，註定被嫉妒嗎<WAIT><BOX>",
+  "refs": [
+   "T51:4:30"
+  ]
+ },
+ {
+  "id": "27:7969",
+  "zh": "我的美，是造物者的不公～<WAIT><BOX>",
+  "refs": [
+   "T51:4:31"
+  ]
+ },
+ {
+  "id": "27:7983",
+  "zh": "…呃…看見了醜惡的毒藥…呃…<WAIT><BOX>",
+  "refs": [
+   "T51:4:32"
+  ]
+ },
+ {
+  "id": "27:799F",
+  "zh": "哇～竟敢惹我！<WAIT><BOX>",
+  "refs": [
+   "T51:4:33"
+  ]
+ },
+ {
+  "id": "27:79AD",
+  "zh": "這是怎麼一回事兒？<WAIT><BOX>",
+  "refs": [
+   "T51:4:34"
+  ]
+ },
+ {
+  "id": "27:79BD",
+  "zh": "哼！下次不要讓我碰到！<WAIT><BOX>",
+  "refs": [
+   "T51:4:35"
+  ]
+ }
+]

@@ -1,0 +1,201 @@
+    0b32: LD [$d678], a
+    0b35: XOR a
+    0b36: LD [$c22e], a
+    0b39: LD hl, $0b78
+    0b3c: DI
+    0b3d: LDH a, [$41]
+    0b3f: AND $03
+    0b41: JR nz, $0b3d
+    0b43: LD a, $b0
+    0b45: LDH [$6a], a
+    0b47: EI
+    0b48: LD b, $08
+    0b4a: DI
+    0b4b: LDH a, [$41]
+    0b4d: AND $03
+    0b4f: JR nz, $0b4b
+    0b51: LD a, [hli]
+    0b52: LDH [$6b], a
+    0b54: EI
+    0b55: DEC b
+    0b56: JR nz, $0b4a
+    0b58: LD hl, $8600
+    0b5b: LD de, $0b8b
+    0b5e: LD bc, $0020
+    0b61: CALL $0445
+    0b64: LD hl, $c068
+    0b67: LD de, $0b80
+    0b6a: LD bc, $8f9e
+    0b6d: CALL $0ff3
+    0b70: XOR a
+    0b71: LD [$d6ab], a
+    0b74: LD [$d6ac], a
+    0b77: RET
+    0b78: XOR d
+    0b79: LD d, [hl]
+    0b7a: RST $38
+    0b7b: INC bc
+    0b7c: ADD hl, de
+    0b7d: NOP
+    0b7e: NOP
+    0b7f: NOP
+    0b80: LD bc, $0000
+    0b83: LD h, b
+    0b84: LD b, $8b
+    0b86: DEC bc
+    0b87: XOR e
+    0b88: DEC bc
+    0b89: RRC e
+    0b8b: NOP
+    0b8c: NOP
+    0b8d: NOP
+    0b8e: NOP
+    0b8f: NOP
+    0b90: NOP
+    0b91: NOP
+    0b92: NOP
+    0b93: NOP
+    0b94: NOP
+    0b95: NOP
+    0b96: NOP
+    0b97: NOP
+    0b98: NOP
+    0b99: NOP
+    0b9a: NOP
+    0b9b: RST $38
+    0b9c: RST $38
+    0b9d: RST $38
+    0b9e: RST $38
+    0b9f: ADD c
+    0ba0: RST $38
+    0ba1: RST $38
+    0ba2: ADD c
+    0ba3: RST $38
+    0ba4: RST $38
+    0ba5: LD b, d
+    0ba6: LD a, [hl]
+    0ba7: INC a
+    0ba8: INC h
+    0ba9: JR $0bc3
+    0bab: NOP
+    0bac: NOP
+    0bad: NOP
+    0bae: NOP
+    0baf: NOP
+    0bb0: NOP
+    0bb1: NOP
+    0bb2: NOP
+    0bb3: NOP
+    0bb4: NOP
+    0bb5: NOP
+    0bb6: NOP
+    0bb7: NOP
+    0bb8: NOP
+    0bb9: NOP
+    0bba: NOP
+    0bbb: RST $38
+    0bbc: RST $38
+    0bbd: RST $38
+    0bbe: ADD c
+    0bbf: RST $38
+    0bc0: RST $38
+    0bc1: ADD c
+    0bc2: RST $38
+    0bc3: RST $38
+    0bc4: ADD c
+    0bc5: LD a, [hl]
+    0bc6: LD a, [hl]
+    0bc7: INC h
+    0bc8: INC a
+    0bc9: JR $0be3
+    0bcb: NOP
+    0bcc: NOP
+    0bcd: NOP
+    0bce: NOP
+    0bcf: NOP
+    0bd0: NOP
+    0bd1: NOP
+    0bd2: NOP
+    0bd3: NOP
+    0bd4: NOP
+    0bd5: NOP
+    0bd6: NOP
+    0bd7: NOP
+    0bd8: NOP
+    0bd9: NOP
+    0bda: NOP
+    0bdb: RST $38
+    0bdc: RST $38
+    0bdd: ADD c
+    0bde: RST $38
+    0bdf: RST $38
+    0be0: ADD c
+    0be1: RST $38
+    0be2: RST $38
+    0be3: ADD c
+    0be4: RST $38
+    0be5: LD a, [hl]
+    0be6: LD b, d
+    0be7: INC a
+    0be8: INC a
+    0be9: JR $0c03
+    0beb: LD a, [$d6ab]
+    0bee: INC a
+    0bef: LD [$d6ab], a
+    0bf2: CP $08
+    0bf4: RET nz
+    0bf5: XOR a
+    0bf6: LD [$d6ab], a
+    0bf9: LD a, [$d6ac]
+    0bfc: LD l, a
+    0bfd: LD h, $00
+    0bff: INC a
+    0c00: CP $03
+    0c02: JR c, $0c05
+    0c04: XOR a
+    0c05: LD [$d6ac], a
+    0c08: ADD hl, hl
+    0c09: LD de, $0b85
+    0c0c: ADD hl, de
+    0c0d: LD a, [hli]
+    0c0e: LD e, a
+    0c0f: LD a, [hli]
+    0c10: LD d, a
+    0c11: LD hl, $8600
+    0c14: LD bc, $0020
+    0c17: CALL $0445
+    0c1a: RET
+    0c1b: LD a, [$d678]
+    0c1e: CP $fa
+    0c20: RET nz
+    0c21: CALL $0beb
+    0c24: LD a, [$c127]
+    0c27: CP $01
+    0c29: RET z
+    0c2a: LD a, [$c20f]
+    0c2d: AND a
+    0c2e: JR nz, $0c75
+    0c30: LD a, [$c127]
+    0c33: CP $02
+    0c35: JR nz, $0c3b
+    0c37: LDH a, [$a4]
+    0c39: JR $0c3d
+    0c3b: LDH a, [$a3]
+    0c3d: BIT a, 0
+    0c3f: JR nz, $0c4b
+    0c41: LD a, [$c11c]
+    0c44: INC a
+    0c45: LD [$c11c], a
+    0c48: CP $ff
+    0c4a: RET nz
+    0c4b: XOR a
+    0c4c: LD [$c127], a
+    0c4f: LD [$d678], a
+    0c52: LD [$c11c], a
+    0c55: LD a, [$c0de]
+    0c58: LD l, a
+    0c59: LD a, [$c0df]
+    0c5c: LD h, a
+    0c5d: INC hl
+    0c5e: LD a, l
+

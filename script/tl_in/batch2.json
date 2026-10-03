@@ -1,0 +1,886 @@
+[
+ {
+  "id": "27:4899",
+  "zh": "<NAME_E1>於<NAME_E8>地方<NL>的產業投資，<WAIT><PAGE>共計損失了：<NL>　　<EA>萬！<WAIT><PAGE><NAME_E1>的持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:21"
+  ]
+ },
+ {
+  "id": "27:48D7",
+  "zh": "尤莉雅：<NL>是的。<WAIT><F9>而在<NAME_E8>地方的土<WAIT><F9>地建設方面，超過二<WAIT><F9>樓的建築，全都往下<WAIT><F9>降了一級。<WAIT><F9>真是可怕的損失！<WAIT><F9>VF新聞還會為您做最<WAIT><F9>新的追蹤報導，再會<WAIT><F9>。<WAIT><BOX>",
+  "refs": [
+   "T51:5:22"
+  ]
+ },
+ {
+  "id": "27:4958",
+  "zh": "<NAME_E8>發生火災了！<NL>消防車趕來救火了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:23"
+  ]
+ },
+ {
+  "id": "27:4976",
+  "zh": "尤莉雅：<NL>午安，歡迎收看這節<WAIT><F9>的VF新聞。<WAIT><F9><PAGE>為您插播一則意外的消息。<WAIT><PAGE><NAME_E1>位於<NAME_E8>的房子意外失火了。<WAIT><BOX>",
+  "refs": [
+   "T51:5:24"
+  ]
+ },
+ {
+  "id": "27:49CC",
+  "zh": "拳四郎：<NL>是的。<WAIT><F9>消防隊員雖及時趕到<WAIT><F9>，但房子已被燒掉一<WAIT><F9>層了！<WAIT><F9><PAGE>究竟是不是人為的縱火，VF蒐証小組正在<WAIT><PAGE>調查中。<WAIT><BOX>",
+  "refs": [
+   "T51:5:25"
+  ]
+ },
+ {
+  "id": "27:4A36",
+  "zh": "拳四郎：<NL>是的。<WAIT><F9>消防隊員雖及時趕到<WAIT><F9>，但房子已被燒掉一<WAIT><F9>層了！<WAIT><F9><PAGE><NAME_E1>得到了<NL><END>",
+  "refs": [
+   "T51:5:26"
+  ],
+  "continues_into": "27:4A7C"
+ },
+ {
+  "id": "27:4A7C",
+  "zh": "的保險理<WAIT><PAGE>賠。<NAME_E1>的總持金：<NL>　　<NUM>萬。<WAIT><PAGE>究竟是不是人為的縱火，VF蒐証小組正在<WAIT><PAGE>調查中。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:4A36"
+ },
+ {
+  "id": "27:4ACA",
+  "zh": "尤莉雅：<NL>是的。<WAIT><F9>這個意外的災害使得<WAIT><F9><NAME_E1>位於<NAME_E8>地<WAIT><F9>的樓房下降了一層。<WAIT><F9>希望大家用火時要格<WAIT><PAGE>外的小心。<WAIT><BOX>",
+  "refs": [
+   "T51:5:27"
+  ]
+ },
+ {
+  "id": "27:4B24",
+  "zh": "拳四郎：<NL>是的。<WAIT><PAGE>本節新聞播報完畢，下回見！<WAIT><BOX>",
+  "refs": [
+   "T51:5:28"
+  ]
+ },
+ {
+  "id": "27:4B4D",
+  "zh": "好～冷～哦～<WAIT><PAGE><NAME_E8>地發生寒害了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:29"
+  ]
+ },
+ {
+  "id": "27:4B69",
+  "zh": "拳四郎：<NL>歡迎收看VF新聞。<WAIT><PAGE>為您播報一則天然災害消息。<WAIT><PAGE>在寒冷的冬天，<NAME_E8>傳出了寒害的消息<WAIT><PAGE>。<WAIT><BOX>",
+  "refs": [
+   "T51:5:30"
+  ]
+ },
+ {
+  "id": "27:4BBB",
+  "zh": "尤莉雅：<NL>是的。<WAIT><PAGE><NAME_E8>的寒害，為當地的產業帶來了不小<WAIT><PAGE>的損失！<WAIT><BOX>",
+  "refs": [
+   "T51:5:31"
+  ]
+ },
+ {
+  "id": "27:4BEF",
+  "zh": "拳四郎：<NL>是的！<WAIT><PAGE>上就是這節VF新聞所做的報導。<WAIT><PAGE>我們再會！<WAIT><BOX>",
+  "refs": [
+   "T51:5:32"
+  ]
+ },
+ {
+  "id": "27:4C21",
+  "zh": "<NAME_E8>發生颱風了！<WAIT><PAGE>快…<NL>快被吹走了…<WAIT><BOX>",
+  "refs": [
+   "T51:5:33"
+  ]
+ },
+ {
+  "id": "27:4C41",
+  "zh": "尤莉雅：<NL>歡迎收看VF新聞。<WAIT><PAGE>為您播報一則天然災害消息。<WAIT><PAGE><NAME_E8>傳出了颱風的損害消息。<WAIT><PAGE>就連本台的採訪記者，也險遭颱風吹走！<WAIT><BOX>",
+  "refs": [
+   "T51:5:34"
+  ]
+ },
+ {
+  "id": "27:4CAE",
+  "zh": "拳四郎：<NL>是的。<WAIT><PAGE><NAME_E8>地的颱風，為當地的產業帶來了不<WAIT><F9>小的損失！<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:35"
+  ]
+ },
+ {
+  "id": "27:4CE4",
+  "zh": "尤莉雅：<NL>是的！<WAIT><PAGE>上就是這節VF新聞所做的報導。<WAIT><PAGE>我們再會！<WAIT><BOX>",
+  "refs": [
+   "T51:5:36"
+  ]
+ },
+ {
+  "id": "27:4D18",
+  "zh": "<NAME_E8>火山爆發了！<NL>快點逃命呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:37"
+  ]
+ },
+ {
+  "id": "27:4D34",
+  "zh": "尤莉雅：<NL>歡迎收看VF新聞。<WAIT><PAGE>為您播報一則天然災害消息。<WAIT><PAGE><NAME_E8>傳出了火山爆發的損害消息。<WAIT><PAGE>造成了<NAME_E8>難一得的奇景！<WAIT><BOX>",
+  "refs": [
+   "T51:5:38"
+  ]
+ },
+ {
+  "id": "27:4D96",
+  "zh": "拳四郎：<NL>是的。<WAIT><PAGE><NAME_E8>地的火山爆發，為當地的產業帶來<WAIT><F9>了不小的損失！<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:39"
+  ]
+ },
+ {
+  "id": "27:4DCF",
+  "zh": "尤莉雅：<NL>是的！<WAIT><PAGE>上就是這節VF新聞所做的報導。<WAIT><PAGE>我們再會！<WAIT><BOX>",
+  "refs": [
+   "T51:5:40"
+  ]
+ },
+ {
+  "id": "27:4E03",
+  "zh": "<NAME_E8>出現了不明的飛行物！<WAIT><PAGE>並且產下了一枚巨大的蛋形物！<WAIT><BOX>",
+  "refs": [
+   "T51:5:41"
+  ]
+ },
+ {
+  "id": "27:4E2F",
+  "zh": "拳四郎：<NL>大…<WAIT><PAGE>大家好！<NL>歡迎收看VF新聞台。<WAIT><PAGE>為大家播報一起恐怖事件！<WAIT><PAGE><NAME_E8>出現了外星人下蛋的超自然事件！<WAIT><BOX>",
+  "refs": [
+   "T51:5:42"
+  ]
+ },
+ {
+  "id": "27:4E88",
+  "zh": "尤莉雅：<NL>是的！<WAIT><PAGE>究竟外星人的目的為何呢？<WAIT><PAGE>這是外星人的陰謀嗎？<WAIT><PAGE>外星人要統治地球了嗎？<WAIT><BOX>",
+  "refs": [
+   "T51:5:43"
+  ]
+ },
+ {
+  "id": "27:4ED7",
+  "zh": "拳四郎：<NL>這…<WAIT><PAGE>這真是個恐怖的事情！<WAIT><PAGE>能拯救這個危機的，就只有路克英雄了！<WAIT><PAGE>路克英雄～<NL>你在哪裡呢？<WAIT><PAGE>路克英雄～<NL>快來拯救地球吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:44"
+  ]
+ },
+ {
+  "id": "27:4F43",
+  "zh": "拳四郎：<NL>您…您好！<WAIT><PAGE>為您做外星人不明蛋體的後續報導！<WAIT><PAGE>外星人的蛋產下已一段時日了！<WAIT><PAGE>居民陷入了前所未有的恐慌！<WAIT><BOX>",
+  "refs": [
+   "T51:5:45"
+  ]
+ },
+ {
+  "id": "27:4FA4",
+  "zh": "尤莉雅：<NL>是…是的！<WAIT><PAGE>這到底是外星人的什麼陰謀呢？<WAIT><PAGE>真是無法想像…<WAIT><BOX>",
+  "refs": [
+   "T51:5:46"
+  ]
+ },
+ {
+  "id": "27:4FE0",
+  "zh": "拳四郎：<NL>路克英雄呀～<WAIT><PAGE>你到底在哪裡……<WAIT><BOX>",
+  "refs": [
+   "T51:5:47"
+  ]
+ },
+ {
+  "id": "27:5002",
+  "zh": "<NAME_E1>要使用路克英雄卡嗎？<BOX>",
+  "refs": [
+   "T51:5:48"
+  ]
+ },
+ {
+  "id": "27:5013",
+  "zh": "路克英雄出動了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:49"
+  ]
+ },
+ {
+  "id": "27:5022",
+  "zh": "外星人在蛋上面架了防護罩！<WAIT><PAGE>路克英雄被打敗了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:50"
+  ]
+ },
+ {
+  "id": "27:504B",
+  "zh": "路克英雄將外星人的蛋打爆了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:51"
+  ]
+ },
+ {
+  "id": "27:5062",
+  "zh": "拳四郎：<NL>為您做外星人的最新<WAIT><F9>報導！<WAIT><F9>就在剛才，路克英雄<WAIT><F9>已經祕密的出動了！<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:52"
+  ]
+ },
+ {
+  "id": "27:50A5",
+  "zh": "尤莉雅：<NL>是的！<WAIT><PAGE>路克英雄成功的破壞了外星人的不明蛋體<WAIT><PAGE>，成功的粉碎了外星人的陰謀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:53"
+  ]
+ },
+ {
+  "id": "27:50ED",
+  "zh": "拳四郎：<NL>路克英雄～<WAIT><PAGE>你再次拯救了地球！<WAIT><BOX>",
+  "refs": [
+   "T51:5:54"
+  ]
+ },
+ {
+  "id": "27:510E",
+  "zh": "外星人的蛋孵化了！<WAIT><PAGE>孵化成一個巨大的不明生物……<WAIT><PAGE>在<NAME_E8>進行破壞了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:55"
+  ]
+ },
+ {
+  "id": "27:5148",
+  "zh": "拳四郎：<NL>孵…孵…孵化了！<WAIT><PAGE>外星人的蛋終於孵化了！<WAIT><PAGE>地球就要滅亡了嗎？<WAIT><BOX>",
+  "refs": [
+   "T51:5:56"
+  ]
+ },
+ {
+  "id": "27:5185",
+  "zh": "尤莉雅：<NL>這…雍容華貴的女主<WAIT><F9>播還沒出嫁前，怎麼<WAIT><F9>可以發生這種事……<WAIT><BOX>",
+  "refs": [
+   "T51:5:57"
+  ]
+ },
+ {
+  "id": "27:51C2",
+  "zh": "拳四郎：<NL>外星人在<NAME_E8>進行<WAIT><F9>了大規模的破壞力造<WAIT><F9>成了產業的損失。<WAIT><BOX>",
+  "refs": [
+   "T51:5:58"
+  ]
+ },
+ {
+  "id": "27:51F4",
+  "zh": "尤莉雅：<NL>嗚～地球要滅亡了～<WAIT><PAGE>嗚～人家不要呀～<NL>嗚～嗚～<WAIT><BOX>",
+  "refs": [
+   "T51:5:59"
+  ]
+ },
+ {
+  "id": "27:5226",
+  "zh": "啊！？<WAIT><PAGE>這…是怎麼回事？<WAIT><PAGE>怪物被接回去了？<WAIT><PAGE>就只有這樣而已嗎？<WAIT><PAGE>真是可惜……<NL>不…！<WAIT><PAGE>外星怪物幸運的被接走了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:60"
+  ]
+ },
+ {
+  "id": "27:5283",
+  "zh": "酷斯拉出現在<NAME_E8>了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:61"
+  ]
+ },
+ {
+  "id": "27:5294",
+  "zh": "酷斯拉出現了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:62"
+  ]
+ },
+ {
+  "id": "27:52A2",
+  "zh": "尤莉雅：<NL>新聞快報！<WAIT><PAGE>為各位插播一則緊急消息。<WAIT><PAGE>酷斯拉！<NL>酷斯拉登陸了！<WAIT><PAGE>在稍早時，酷斯拉於<NAME_E8>登陸了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:63"
+  ]
+ },
+ {
+  "id": "27:5303",
+  "zh": "尤莉雅：<NL>新聞快報！<WAIT><PAGE>為各位插播一則緊急消息。<WAIT><PAGE>酷斯拉！<NL>酷斯拉登陸了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:64"
+  ]
+ },
+ {
+  "id": "27:5348",
+  "zh": "拳四郎：<NL>是的！<WAIT><PAGE>帶有強大破壞力的酷斯拉又出現了！<WAIT><PAGE>這次會帶給<NAME_E8>什麼樣的威脅呢？<WAIT><PAGE>看來只有VF超人才能阻止了。<WAIT><PAGE>VF超人呀～<NL>請您快出來吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:65"
+  ]
+ },
+ {
+  "id": "27:53BB",
+  "zh": "拳四郎：<NL>是的！<WAIT><PAGE>帶有強大破壞力的酷斯拉又出現了！<WAIT><PAGE>看來只有VF超人才能阻止了。<WAIT><PAGE>VF超人呀～<NL>請您快出來吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:66"
+  ]
+ },
+ {
+  "id": "27:5413",
+  "zh": "尤莉雅：<NL>各位好，為你播報酷<WAIT><F9>斯拉後續消息。<WAIT><F9>酷斯拉看來相當的疲<WAIT><F9>倦，現在似乎正在休<WAIT><F9>息中…<WAIT><BOX>",
+  "refs": [
+   "T51:5:67"
+  ]
+ },
+ {
+  "id": "27:5469",
+  "zh": "拳四郎：<NL>是的！<WAIT><F9>在酷斯拉還沒有做出<WAIT><F9>可怕的事前，VF超人<WAIT><F9>，您快點出來吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:68"
+  ]
+ },
+ {
+  "id": "27:54A6",
+  "zh": "<NAME_E1>要使用VF超人卡嗎？<BOX>",
+  "refs": [
+   "T51:5:69"
+  ]
+ },
+ {
+  "id": "27:54B6",
+  "zh": "VF超人出動了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:70"
+  ]
+ },
+ {
+  "id": "27:54C4",
+  "zh": "酷斯拉閃過了攻擊！<WAIT><PAGE>VF超人被擊敗了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:71"
+  ]
+ },
+ {
+  "id": "27:54E8",
+  "zh": "VF超人成功的打跑了酷斯拉！<WAIT><PAGE>世界又回復和平了。<WAIT><BOX>",
+  "refs": [
+   "T51:5:72"
+  ]
+ },
+ {
+  "id": "27:5514",
+  "zh": "拳四郎：<NL>為您做酷斯拉的最新<WAIT><F9>報導！<WAIT><F9>就在剛才，VF超人已<WAIT><F9>經祕密的出動了！<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:73"
+  ]
+ },
+ {
+  "id": "27:5557",
+  "zh": "尤莉雅：<NL>是的！<WAIT><F9>VF超人成功擊潰了可<WAIT><F9>怕的酷斯拉了。<WAIT><F9>再一次的拯救了世界<WAIT><F9>的和平！<WAIT><BOX>",
+  "refs": [
+   "T51:5:74"
+  ]
+ },
+ {
+  "id": "27:55A3",
+  "zh": "拳四郎：<NL>VF超人～謝謝你！<WAIT><BOX>",
+  "refs": [
+   "T51:5:75"
+  ]
+ },
+ {
+  "id": "27:55B9",
+  "zh": "酷斯拉吐出了憤怒的火焰！<WAIT><PAGE><NAME_E8>完全陷於火海之中！<WAIT><BOX>",
+  "refs": [
+   "T51:5:76"
+  ]
+ },
+ {
+  "id": "27:55E5",
+  "zh": "酷斯拉吐出了憤怒的火焰！<WAIT><BOX>",
+  "refs": [
+   "T51:5:77"
+  ]
+ },
+ {
+  "id": "27:55FE",
+  "zh": "酷斯拉朝<NAME_E8>前進了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:78"
+  ]
+ },
+ {
+  "id": "27:5611",
+  "zh": "尤莉雅：<NL>行…行動了！<WAIT><PAGE>酷斯拉終於行動了！<WAIT><PAGE>酷斯拉向<NAME_E8>吐出了憤怒的火焰了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:79"
+  ]
+ },
+ {
+  "id": "27:5657",
+  "zh": "拳四郎：<NL><NAME_E8>被酷斯拉催殘後<WAIT><F9>，宛如一座死城。<WAIT><F9><NAME_E8>所有的土地及<WAIT><F9>產業都化為烏有了！<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:80"
+  ]
+ },
+ {
+  "id": "27:569F",
+  "zh": "災後<NAME_E1>得到了<NL><END>",
+  "refs": [
+   "T51:5:81"
+  ],
+  "continues_into": "27:56AB"
+ },
+ {
+  "id": "27:56AB",
+  "zh": "萬的保險<WAIT><PAGE>理賠。<WAIT><PAGE><NAME_E1>的持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:569F"
+ },
+ {
+  "id": "27:56CF",
+  "zh": "尤莉雅：<NL>酷斯拉又朝著其他地<WAIT><F9>方前進了！<WAIT><F9><PAGE>酷斯拉朝著<NAME_E8>前進了！<WAIT><PAGE>VF超人呀～<NL>趕快出動吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:82"
+  ]
+ },
+ {
+  "id": "27:5721",
+  "zh": "酷斯拉看起來很累的回到大海裡了！<WAIT><PAGE>世界莫名奇妙的恢復和平了。<WAIT><BOX>",
+  "refs": [
+   "T51:5:83"
+  ]
+ },
+ {
+  "id": "27:5759",
+  "zh": "尤莉雅：<NL>酷斯拉又朝著其他地<WAIT><F9>方前進了！<WAIT><F9>VF超人呀～<WAIT><F9>趕快出動吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:84"
+  ]
+ },
+ {
+  "id": "27:5796",
+  "zh": "唉～<NL>今年真是不景氣呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:85"
+  ]
+ },
+ {
+  "id": "27:57AD",
+  "zh": "拳四郎：<NL>各位好，這裡是VF新<WAIT><F9>聞台！<WAIT><F9>又到了新的年度了。<WAIT><PAGE>為各位做今年度的財經分析。<WAIT><BOX>",
+  "refs": [
+   "T51:5:86"
+  ]
+ },
+ {
+  "id": "27:57FE",
+  "zh": "尤莉雅：<NL>是的。<WAIT><PAGE>今年的經濟發展相當的不景氣，百業蕭條<WAIT><PAGE>…<WAIT><BOX>",
+  "refs": [
+   "T51:5:87"
+  ]
+ },
+ {
+  "id": "27:5836",
+  "zh": "拳四郎：<NL>是的。<WAIT><PAGE>在面臨經濟的壓力下，物價紛紛上漲了。<WAIT><PAGE>賺錢點變為原來的一半。<WAIT><PAGE>連終點的獎金也縮減為原來的一半了…<WAIT><PAGE>但各地的罰錢點卻變為原本的2倍！<WAIT><BOX>",
+  "refs": [
+   "T51:5:88"
+  ]
+ },
+ {
+  "id": "27:58AC",
+  "zh": "尤莉雅：<NL>是的！<WAIT><PAGE>可愛的尤莉雅提醒您，注意意外之財的損<WAIT><PAGE>失喲～<NL>再會！<WAIT><BOX>",
+  "refs": [
+   "T51:5:89"
+  ]
+ },
+ {
+  "id": "27:58E8",
+  "zh": "<NAME_E8>埋藏的寶藏被發現了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:90"
+  ]
+ },
+ {
+  "id": "27:58FE",
+  "zh": "我是十億仙人，當現金超過10億元時，<WAIT><F9>我就會出現。<WAIT><F9><PAGE>努力的人呀，這個東西就給你吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:91"
+  ]
+ },
+ {
+  "id": "27:5947",
+  "zh": "<NAME>得到了<FE>。<WAIT><BOX>",
+  "refs": [
+   "T51:5:92"
+  ]
+ },
+ {
+  "id": "27:5952",
+  "zh": "呵呵呵，我也該走了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:93"
+  ]
+ },
+ {
+  "id": "27:5965",
+  "zh": "謝謝您！<WAIT><BOX>",
+  "refs": [
+   "T51:5:94"
+  ]
+ },
+ {
+  "id": "27:596D",
+  "zh": "我是十億仙人的哥哥～百億仙人。<WAIT><PAGE>當現金超過100億元時，我就會出現。<WAIT><PAGE>努力的人呀，這個東西就給你吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:95"
+  ]
+ },
+ {
+  "id": "27:59C4",
+  "zh": "我走了，再見！<WAIT><BOX>",
+  "refs": [
+   "T51:5:96"
+  ]
+ },
+ {
+  "id": "27:59D4",
+  "zh": "我是土地公，我們還真是有緣。<WAIT><PAGE>這個東西就給有緣人了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:97"
+  ]
+ },
+ {
+  "id": "27:5A04",
+  "zh": "再會了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:98"
+  ]
+ },
+ {
+  "id": "27:5A0E",
+  "zh": "我就是事業仙人，看來你的事業相當的成<WAIT><F9>功喲！<WAIT><F9>為了獎勵你，這個就<WAIT><F9>給你了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:99"
+  ]
+ },
+ {
+  "id": "27:5A51",
+  "zh": "我走了，加油呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:100"
+  ]
+ },
+ {
+  "id": "27:5A63",
+  "zh": "水田大豐收了！<WAIT><PAGE><NAME_E1>位於<NAME_E8>的水田大豐收了！<WAIT><PAGE>一年內，可陸續收到水田所帶來的利潤。<WAIT><PAGE>真是恭喜呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:101"
+  ]
+ },
+ {
+  "id": "27:5AB7",
+  "zh": "水田發生災害了！<WAIT><PAGE><NAME_E1>位於<NAME_E8>的水田發生災害了！<WAIT><PAGE>一年內，<NAME_E1>都要賠償水田的損失。<WAIT><PAGE>真是不幸呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:102"
+  ]
+ },
+ {
+  "id": "27:5B05",
+  "zh": "年度最佳企業獎出爐了！<WAIT><PAGE>得獎的產業是………<WAIT><PAGE><NAME_E8>的<E9>！<WAIT><PAGE>恭喜<NAME_E1>！<WAIT><PAGE><NAME_E1>在一年之內，可陸續獲得<E9><WAIT><F9>所帶來的利潤。<WAIT><BOX>",
+  "refs": [
+   "T51:5:103"
+  ]
+ },
+ {
+  "id": "27:5B5B",
+  "zh": "喂～喂～<WAIT><PAGE><NAME>董事長嗎？<NL>我是祕書長。<WAIT><PAGE>是這樣的，於<NAME_E8>的總公司發生危機糾<WAIT><F9>紛了！<WAIT><F9><PAGE>您一定要親自過來處理才行！<BOX>",
+  "refs": [
+   "T51:5:104"
+  ]
+ },
+ {
+  "id": "27:5BBB",
+  "zh": "<NAME>到<NAME_E8>處理公司危機了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:105"
+  ]
+ },
+ {
+  "id": "27:5BD0",
+  "zh": "是這樣的呀…<NL>那我知道了！<WAIT><PAGE><NAME>的總公司發生財務糾紛。<WAIT><PAGE><NAME>損失了<NL>　　<END>",
+  "refs": [
+   "T51:5:106"
+  ],
+  "continues_into": "27:5C0A"
+ },
+ {
+  "id": "27:5C0A",
+  "zh": "萬。<WAIT><PAGE>節源卡發揮了功效，損失降為一半。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5BD0"
+ },
+ {
+  "id": "27:5C3B",
+  "zh": "是這樣的呀…<NL>那我知道了！<WAIT><PAGE><NAME>的總公司發生財務糾紛。<WAIT><PAGE><NAME>損失了<NL>　　<END>",
+  "refs": [
+   "T51:5:107"
+  ],
+  "continues_into": "27:5C75"
+ },
+ {
+  "id": "27:5C75",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5C3B"
+ },
+ {
+  "id": "27:5C8D",
+  "zh": "怎麼會這樣！<WAIT><BOX>",
+  "refs": [
+   "T51:5:108"
+  ]
+ },
+ {
+  "id": "27:5C99",
+  "zh": "<NAME_E8>的<E9>大獲好評！<WAIT><PAGE>經過VF中心財經小組的認証後，特頒給產<WAIT><F9>業進步獎的殊榮。<WAIT><F9><PAGE><NAME_E1>得到了<NL>　<END>",
+  "refs": [
+   "T51:5:109"
+  ],
+  "continues_into": "27:5CE6"
+ },
+ {
+  "id": "27:5CE6",
+  "zh": "萬元！<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5C99"
+ },
+ {
+  "id": "27:5CFE",
+  "zh": "<NAME_E8>的<E9>出現了大批的渡假人潮<WAIT><F9>，經過VF娛樂小組的<WAIT><F9>採訪及認証後，特頒<WAIT><F9>給最佳旅遊勝地殊榮<WAIT><F9>。<WAIT><PAGE><NAME_E1>得到了<NL>　<END>",
+  "refs": [
+   "T51:5:110"
+  ],
+  "continues_into": "27:5D5B"
+ },
+ {
+  "id": "27:5D5B",
+  "zh": "萬元！<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5CFE"
+ },
+ {
+  "id": "27:5D73",
+  "zh": "<NAME_E8>的<E9>賺錢了！<WAIT><PAGE><NAME>得到<NL>　　<END>",
+  "refs": [
+   "T51:5:111"
+  ],
+  "continues_into": "27:5D89"
+ },
+ {
+  "id": "27:5D89",
+  "zh": "萬。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5D73"
+ },
+ {
+  "id": "27:5DA0",
+  "zh": "<NAME_E8>的水田豐收了！<WAIT><PAGE><NAME>得到<NL>　　<END>",
+  "refs": [
+   "T51:5:112"
+  ],
+  "continues_into": "27:5DBA"
+ },
+ {
+  "id": "27:5DBA",
+  "zh": "萬。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5DA0"
+ },
+ {
+  "id": "27:5DD1",
+  "zh": "<NAME_E8>的水田發生災害！<WAIT><PAGE><NAME>損失<NL>　　<END>",
+  "refs": [
+   "T51:5:113"
+  ],
+  "continues_into": "27:5DEA"
+ },
+ {
+  "id": "27:5DEA",
+  "zh": "萬。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5DD1"
+ },
+ {
+  "id": "27:5E01",
+  "zh": "<NAME_E1>董事長！<WAIT><PAGE>廣譽科技又推出新遊戲的企劃案了，<WAIT><PAGE>遊戲名稱：<E9><WAIT><PAGE>開發資本：<NL>　　<END>",
+  "refs": [
+   "T51:5:114"
+  ],
+  "continues_into": "27:5E43"
+ },
+ {
+  "id": "27:5E43",
+  "zh": "萬元<WAIT><PAGE>你要提供此遊戲企劃開發案的資本嗎？<BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5E01"
+ },
+ {
+  "id": "27:5E69",
+  "zh": "那真是太可惜了…<WAIT><PAGE>這麼好的一個遊戲……<WAIT><BOX>",
+  "refs": [
+   "T51:5:115"
+  ]
+ },
+ {
+  "id": "27:5E8C",
+  "zh": "真的！<WAIT><PAGE>那真是太感謝您了！<WAIT><PAGE><NAME_E1>提供了<NL><END>",
+  "refs": [
+   "T51:5:116"
+  ],
+  "continues_into": "27:5EAD"
+ },
+ {
+  "id": "27:5EAD",
+  "zh": "萬的贊助<WAIT><PAGE>金！<WAIT><PAGE>持有金：<NL>　　　<NUM>萬<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5E8C"
+ },
+ {
+  "id": "27:5ECC",
+  "zh": "<NAME_E1>董事長！<WAIT><PAGE><E9>遊戲已開發完成！<WAIT><PAGE>但是銷售狀況卻不是很理想……<WAIT><PAGE>真的很抱歉……<WAIT><PAGE><NAME_E1>損失了<NL>　<END>",
+  "refs": [
+   "T51:5:117"
+  ],
+  "continues_into": "27:5F1A"
+ },
+ {
+  "id": "27:5F1A",
+  "zh": "萬！<WAIT><PAGE>節源卡發揮了功效，損失降為一半。<WAIT><PAGE>持有金：<NL>　　　<NUM>萬<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5ECC"
+ },
+ {
+  "id": "27:5F49",
+  "zh": "<NAME_E1>董事長！<WAIT><PAGE><E9>遊戲已開發完成！<WAIT><PAGE>但是銷售狀況卻不是很理想……<WAIT><PAGE>真的很抱歉……<WAIT><PAGE><NAME_E1>損失了<NL>　　<END>",
+  "refs": [
+   "T51:5:118"
+  ],
+  "continues_into": "27:5F98"
+ },
+ {
+  "id": "27:5F98",
+  "zh": "萬！<WAIT><PAGE>持有金：<NL>　　　<NUM>萬<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5F49"
+ },
+ {
+  "id": "27:5FAE",
+  "zh": "唉～<NL>真是流年不利！<WAIT><BOX>",
+  "refs": [
+   "T51:5:119"
+  ]
+ },
+ {
+  "id": "27:5FC2",
+  "zh": "<NAME_E1>董事長！<NL>遊戲已開發完成！<WAIT><PAGE>而且銷售的狀況空前熱烈！<WAIT><PAGE>第一版二百萬套已銷售完畢。大成功！<WAIT><PAGE><NAME_E1>得到了<NL>　　<END>",
+  "refs": [
+   "T51:5:120"
+  ],
+  "continues_into": "27:6022"
+ },
+ {
+  "id": "27:6022",
+  "zh": "萬！<WAIT><PAGE>持有金：<NL>　　　<NUM>萬<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:5FC2"
+ },
+ {
+  "id": "27:6038",
+  "zh": "真是太棒了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:121"
+  ]
+ },
+ {
+  "id": "27:6044",
+  "zh": "我是掌管幸福的仙子！<WAIT><PAGE>嘻嘻～你真是個不幸的人！<WAIT><PAGE>我最喜歡幫助不幸的人了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:122"
+  ]
+ },
+ {
+  "id": "27:6083",
+  "zh": "<NAME>的罰錢得到了豁免。<WAIT><PAGE><NAME>得到了<NL>　　<END>",
+  "refs": [
+   "T51:5:123"
+  ],
+  "continues_into": "27:609F"
+ },
+ {
+  "id": "27:609F",
+  "zh": "萬。<WAIT><PAGE>持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:6083"
+ },
+ {
+  "id": "27:60B6",
+  "zh": "真是太幸福了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:124"
+  ]
+ },
+ {
+  "id": "27:60C4",
+  "zh": "在各地引起了通貨膨脹效應…<WAIT><BOX>",
+  "refs": [
+   "T51:5:125"
+  ]
+ },
+ {
+  "id": "27:60DC",
+  "zh": "您好～<WAIT><PAGE>這裡是VF終點決定中心。<WAIT><PAGE>我是特報員酷酷。<WAIT><PAGE>現在，就請按下A鍵決定終點吧！<WAIT><BOX>",
+  "refs": [
+   "T51:5:126"
+  ]
+ },
+ {
+  "id": "27:6124",
+  "zh": "…啊！<WAIT><PAGE>決定了是嗎？<WAIT><PAGE>就是<NAME_E8>了！<WAIT><PAGE>首先到達<NAME_E8>的玩家，會有筆豐富的賞<WAIT><PAGE>金哦。<WAIT><PAGE>加油了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:127"
+  ]
+ }
+]

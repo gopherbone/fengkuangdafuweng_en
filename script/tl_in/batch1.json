@@ -1,0 +1,1097 @@
+[
+ {
+  "id": "06:5FB3",
+  "zh": "小惡魔：<NL>你就是我的新主人嗎<WAIT><F9>？<WAIT><F9>呵呵呵～<WAIT><F9>請多指教了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:131"
+  ]
+ },
+ {
+  "id": "06:5FE4",
+  "zh": "小惡魔：<NL>主人哪～賺太多錢是<WAIT><F9>件辛苦的事。<WAIT><F9>由我來替你分擔吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:132"
+  ]
+ },
+ {
+  "id": "06:601B",
+  "zh": "<NAME>損失了<NL><END>",
+  "refs": [
+   "T68:3:133"
+  ],
+  "continues_into": "06:6023"
+ },
+ {
+  "id": "06:6023",
+  "zh": "萬元了。<WAIT><PAGE><NAME>現在的持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:601B"
+ },
+ {
+  "id": "06:6041",
+  "zh": "小惡魔：<NL>時間到了，真是捨不<WAIT><F9>得離開呀！<WAIT><BOX>",
+  "refs": [
+   "T68:3:134"
+  ]
+ },
+ {
+  "id": "06:6063",
+  "zh": "<NAME_E8>離開了<NAME>。<WAIT><BOX>",
+  "refs": [
+   "T68:3:135"
+  ]
+ },
+ {
+  "id": "06:606D",
+  "zh": "惡魔：<NL>你就是那個人嗎？<WAIT><F9>哈哈哈～恐懼吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:136",
+   "T68:3:137"
+  ]
+ },
+ {
+  "id": "06:6093",
+  "zh": "惡魔：<NL>哈哈哈～恐懼吧！<WAIT><F9>你看起來太虛弱了，<WAIT><F9>一定是錢太重的關係<WAIT><F9>！<WAIT><F9>丟掉吧～丟掉吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:138"
+  ]
+ },
+ {
+  "id": "06:60DD",
+  "zh": "惡魔：<NL>契約時間到了，下次<WAIT><F9>再見！<WAIT><BOX>",
+  "refs": [
+   "T68:3:139"
+  ]
+ },
+ {
+  "id": "06:60FB",
+  "zh": "撒旦：<NL>誰？<WAIT><F9>是誰召喚我？<WAIT><F9>是你這個不知死活的<WAIT><F9>小子嗎！<WAIT><F9>哈哈哈哈～<WAIT><BOX>",
+  "refs": [
+   "T68:3:140",
+   "T68:3:141",
+   "T68:3:142"
+  ]
+ },
+ {
+  "id": "06:6133",
+  "zh": "撒旦：<NL>哈哈哈～！<WAIT><F9>失敗吧，在我撒旦面<WAIT><F9>前，是不可能成功的<WAIT><F9>！<WAIT><F9>哈哈哈哈～<WAIT><BOX>",
+  "refs": [
+   "T68:3:143"
+  ]
+ },
+ {
+  "id": "06:6173",
+  "zh": "撒旦：<NL>契約到了嗎，這次就<WAIT><F9>饒你一命！<WAIT><BOX>",
+  "refs": [
+   "T68:3:144"
+  ]
+ },
+ {
+  "id": "06:6196",
+  "zh": "福神：<NL>哈哈～<NL>我是福神～<WAIT><F9>我就是代表著幸運的<WAIT><F9>神。<WAIT><F9>主人哪～<WAIT><F9>請多指教了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:145",
+   "T68:3:146",
+   "T68:3:147"
+  ]
+ },
+ {
+  "id": "06:61D9",
+  "zh": "福神：<NL>幸運啊～<WAIT><F9>幸運啊～<WAIT><F9>降臨在主人的身上吧<WAIT><F9>！<WAIT><F9><BOX>",
+  "refs": [
+   "T68:3:148"
+  ]
+ },
+ {
+  "id": "06:6207",
+  "zh": "從天空掉下了滿地的錢～<WAIT><PAGE><NAME>得到<NL><END>",
+  "refs": [
+   "T68:3:149"
+  ],
+  "continues_into": "06:6221"
+ },
+ {
+  "id": "06:6221",
+  "zh": "萬元了。<WAIT><PAGE><NAME>現在的持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6207"
+ },
+ {
+  "id": "06:623F",
+  "zh": "福神：<NL>主人怎麼被罰錢了？<WAIT><F9>幸運啊～降臨吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:150",
+   "T68:3:151"
+  ]
+ },
+ {
+  "id": "06:6266",
+  "zh": "<NAME>的罰錢幸運的被豁免了。<WAIT><BOX>",
+  "refs": [
+   "T68:3:152"
+  ]
+ },
+ {
+  "id": "06:627B",
+  "zh": "福神：<NL>和主人在一起的時間<WAIT><F9>，我很高興。<WAIT><F9>但離別的時候到了，<WAIT><F9>再見了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:153"
+  ]
+ },
+ {
+  "id": "06:62BA",
+  "zh": "福神：<NL>……怎麼回事？<WAIT><F9>全身充滿了力量…<WAIT><BOX>",
+  "refs": [
+   "T68:3:154",
+   "T68:3:155"
+  ]
+ },
+ {
+  "id": "06:62DA",
+  "zh": "天神：<NL><NAME>啊，我聽到你<WAIT><F9>的呼喚了。<WAIT><F9>讓我守護你吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:156"
+  ]
+ },
+ {
+  "id": "06:6308",
+  "zh": "財神：<NL>您好～<WAIT><F9>我的主人。<WAIT><F9>就讓我財神來助您一<WAIT><F9>臂之力吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:157"
+  ]
+ },
+ {
+  "id": "06:633D",
+  "zh": "財神：<NL>噹噹～<WAIT><F9>噹噹～<WAIT><F9>主人哪～您聽到了金<WAIT><F9>幣的聲音了嗎？<WAIT><F9><BOX>",
+  "refs": [
+   "T68:3:158"
+  ]
+ },
+ {
+  "id": "06:6372",
+  "zh": "<NAME>的口袋莫名奇妙的裝滿了錢。<WAIT><PAGE><NAME>得到<NL><END>",
+  "refs": [
+   "T68:3:159"
+  ],
+  "continues_into": "06:6394"
+ },
+ {
+  "id": "06:6394",
+  "zh": "萬元了。<WAIT><PAGE><NAME>現在的持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6372"
+ },
+ {
+  "id": "06:63B2",
+  "zh": "財神：<NL>以我財神的力量，保<WAIT><F9>佑主人事業成功吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:160"
+  ]
+ },
+ {
+  "id": "06:63DA",
+  "zh": "<NAME>的投資幸運的加倍了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:161"
+  ]
+ },
+ {
+  "id": "06:63F1",
+  "zh": "財神：<NL>我的時間到了，真是<WAIT><F9>捨不得～<WAIT><BOX>",
+  "refs": [
+   "T68:3:162"
+  ]
+ },
+ {
+  "id": "06:6412",
+  "zh": "財神：<NL>……這個力量…<WAIT><F9>這是……<WAIT><BOX>",
+  "refs": [
+   "T68:3:163",
+   "T68:3:164"
+  ]
+ },
+ {
+  "id": "06:642D",
+  "zh": "天神：<NL>四方的財神，萬物主<WAIT><F9>宰的我，命令你們～<WAIT><F9>守護著<NAME>吧！<WAIT><BOX>",
+  "refs": [
+   "T68:3:165"
+  ]
+ },
+ {
+  "id": "06:6464",
+  "zh": "<NAME>的眼前堆起了一座金山！<WAIT><PAGE><NAME>得到<NL><END>",
+  "refs": [
+   "T68:3:166"
+  ],
+  "continues_into": "06:6482"
+ },
+ {
+  "id": "06:6482",
+  "zh": "萬元了。<WAIT><PAGE><NAME>現在的持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6464"
+ },
+ {
+  "id": "06:64A0",
+  "zh": "天神：<NL>該是我離開的時候了<WAIT><F9>！<WAIT><F9>再會了～<WAIT><BOX>",
+  "refs": [
+   "T68:3:167"
+  ]
+ },
+ {
+  "id": "06:64C3",
+  "zh": "天神離開了<NAME>。<WAIT><BOX>",
+  "refs": [
+   "T68:3:168"
+  ]
+ },
+ {
+  "id": "06:64CF",
+  "zh": "祝你生日快樂～<NL>祝你生日快樂～<WAIT><PAGE><NAME>的生日到了～<WAIT><PAGE>所有的人都趕來為<NAME>慶生了！<WAIT><PAGE>為了表示祝賀的誠意：<WAIT><BOX>",
+  "refs": [
+   "T68:3:169"
+  ]
+ },
+ {
+  "id": "06:6525",
+  "zh": "<NAME_E1>給了<NAME><NL><END>",
+  "refs": [
+   "T68:3:170"
+  ],
+  "continues_into": "06:652D"
+ },
+ {
+  "id": "06:652D",
+  "zh": "萬紅包。<WAIT><PAGE><NAME_E1>總持金：<NL>　　<EE>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6525"
+ },
+ {
+  "id": "06:654A",
+  "zh": "<NAME>總共收到了<END>",
+  "refs": [
+   "T68:3:171"
+  ],
+  "continues_into": "06:6555"
+ },
+ {
+  "id": "06:6555",
+  "zh": "萬元的紅包。<WAIT><PAGE>總持金：<NL>　<EE>萬元。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:654A"
+ },
+ {
+  "id": "06:6574",
+  "zh": "謝謝大家！<WAIT><BOX>",
+  "refs": [
+   "T68:3:172"
+  ]
+ },
+ {
+  "id": "06:657E",
+  "zh": "所有人都過來賭博了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:173"
+  ]
+ },
+ {
+  "id": "06:6592",
+  "zh": "這是一次公平公正的賭局！<WAIT><PAGE>每個人需出賭金<NL>　<EE>萬元。<WAIT><PAGE>遊戲的規則是每人投擲三個骰子。<WAIT><PAGE>由點數最大的人，獨贏所有的獎金。<WAIT><BOX>",
+  "refs": [
+   "T68:3:174"
+  ]
+ },
+ {
+  "id": "06:65FE",
+  "zh": "<NAME_E1>：<NL>就由我先來吧！<WAIT><F9>十八啦～<WAIT><PAGE><F9><BOX>",
+  "refs": [
+   "T68:3:175"
+  ]
+ },
+ {
+  "id": "06:661D",
+  "zh": "<NAME_E1>：<NL>輪到我了～<WAIT><F9>加油啦～<WAIT><PAGE><F9><BOX>",
+  "refs": [
+   "T68:3:176"
+  ]
+ },
+ {
+  "id": "06:6637",
+  "zh": "<NAME_E1>：<NL>看我的！<WAIT><BOX>",
+  "refs": [
+   "T68:3:177"
+  ]
+ },
+ {
+  "id": "06:6643",
+  "zh": "<NAME_E1>：<NL>我才是最大贏家。<WAIT><F9>去吧～<WAIT><PAGE><F9><BOX>",
+  "refs": [
+   "T68:3:178"
+  ]
+ },
+ {
+  "id": "06:665F",
+  "zh": "經過公平的勝負後，最後由<NAME_E1>獲勝。<WAIT><PAGE><NAME_E1>獨得賭金<NL>　　<END>",
+  "refs": [
+   "T68:3:179"
+  ],
+  "continues_into": "06:6689"
+ },
+ {
+  "id": "06:6689",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<EE>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:665F"
+ },
+ {
+  "id": "06:66A1",
+  "zh": "我是散財仙子，是您召喚我的嗎？<WAIT><PAGE>哦～我聽見了大家貧窮的吶喊了！<WAIT><PAGE>真是可憐呀～<WAIT><BOX>",
+  "refs": [
+   "T68:3:180"
+  ]
+ },
+ {
+  "id": "06:66E4",
+  "zh": "願大家都幸福。<WAIT><BOX>",
+  "refs": [
+   "T68:3:181"
+  ]
+ },
+ {
+  "id": "06:66F1",
+  "zh": "我就是財運仙人～<WAIT><PAGE>什麼？<WAIT><PAGE>你看得見我嗎？<WAIT><PAGE>看來我們之間有相當的緣份。<WAIT><PAGE>照慣例看得見我的人，我就賜予他財運～<WAIT><BOX>",
+  "refs": [
+   "T68:3:182"
+  ]
+ },
+ {
+  "id": "06:6751",
+  "zh": "請賜予這個人財運吧！<WAIT><PAGE>幸運的人呀～<NL>再見了～<WAIT><BOX>",
+  "refs": [
+   "T68:3:183"
+  ]
+ },
+ {
+  "id": "06:677A",
+  "zh": "<NAME>共得到了<NL>　<END>",
+  "refs": [
+   "T68:3:184"
+  ],
+  "continues_into": "06:6786"
+ },
+ {
+  "id": "06:6786",
+  "zh": "萬元。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:677A"
+ },
+ {
+  "id": "06:679F",
+  "zh": "<NAME>使用了聖誕卡！<WAIT><PAGE>叮叮噹～叮叮噹～<NL>鈴聲多響亮～<WAIT><PAGE>聖誕老公公帶著禮物出現了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:185",
+   "T68:3:186"
+  ]
+ },
+ {
+  "id": "06:67DD",
+  "zh": "呼呼～<NL>呼呼～<WAIT><PAGE>我的麋鹿昨天感冒了…<WAIT><PAGE>只好用跑的…<WAIT><PAGE>呼呼～<NL>老骨頭都快要散了！<WAIT><PAGE>這個禮物就給你了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:187"
+  ]
+ },
+ {
+  "id": "06:6834",
+  "zh": "一想到還要跑回遙遠的北方，腳就軟了起<WAIT><F9>來…<WAIT><F9>呼呼～<WAIT><F9>呼～<WAIT><BOX>",
+  "refs": [
+   "T68:3:188"
+  ]
+ },
+ {
+  "id": "06:6869",
+  "zh": "<NAME>使用了寶藏卡！<WAIT><PAGE>VF寶藏調查小組出動了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:189"
+  ]
+ },
+ {
+  "id": "06:688D",
+  "zh": "找到了！<WAIT><PAGE>找到了！<WAIT><PAGE>呼叫本部～<NL>呼叫本部～<WAIT><PAGE>找到了寶藏的地點！就在<NAME_E8>！<WAIT><PAGE>重覆～<WAIT><PAGE>在<NAME_E8>埋有隱藏的寶藏！<WAIT><BOX>",
+  "refs": [
+   "T68:3:190"
+  ]
+ },
+ {
+  "id": "06:68E9",
+  "zh": "拳四郎：<NL>各位好，歡迎收看VF<WAIT><F9>新聞。<WAIT><F9>為各位插播一則最新<WAIT><F9>消息。<WAIT><PAGE><F9><BOX>",
+  "refs": [
+   "T68:3:191"
+  ]
+ },
+ {
+  "id": "06:6926",
+  "zh": "尤莉雅：<NL>是的！<WAIT><F9>就在剛才VF中心的寶<WAIT><F9>藏調查小組在<NAME_E8><WAIT><F9>發現了埋藏已久的寶<WAIT><F9>藏。<WAIT><BOX>",
+  "refs": [
+   "T68:3:192"
+  ]
+ },
+ {
+  "id": "06:6970",
+  "zh": "拳四郎：<NL>是的。<WAIT><F9>從現在起一年內，只<WAIT><F9>要先到達<NAME_E8>的人<WAIT><F9>，就可得到這批寶藏<WAIT><F9>！<WAIT><BOX>",
+  "refs": [
+   "T68:3:193"
+  ]
+ },
+ {
+  "id": "06:69B4",
+  "zh": "尤莉雅：<NL>是的！<WAIT><F9>只有一年喲～<WAIT><F9>國色天香的尤莉雅提<WAIT><F9>醒大家，快到<NAME_E8><WAIT><F9>尋找寶藏吧！<WAIT><F9>再會。<WAIT><BOX>",
+  "refs": [
+   "T68:3:194"
+  ]
+ },
+ {
+  "id": "06:6A05",
+  "zh": "<NAME>找到了失落已久的寶藏了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:195"
+  ]
+ },
+ {
+  "id": "06:6A1E",
+  "zh": "尤莉雅：<NL>您好，歡迎收看VF新<WAIT><F9>聞。<WAIT><F9>為各位播報一則最新<WAIT><F9>消息。<WAIT><F9>失落已久的寶藏，於<WAIT><F9>日前由<NAME>所尋獲<WAIT><F9>了。<WAIT><BOX>",
+  "refs": [
+   "T68:3:196"
+  ]
+ },
+ {
+  "id": "06:6A7F",
+  "zh": "拳四郎：<NL>是的！<WAIT><F9><NAME>尋獲寶藏後，<WAIT><F9>將之捐給了VF博物館<WAIT><F9>，供大家欣賞。<WAIT><F9><PAGE><BOX>",
+  "refs": [
+   "T68:3:197"
+  ]
+ },
+ {
+  "id": "06:6ABC",
+  "zh": "尤莉雅：<NL>是的。<WAIT><F9>而VF中心為了表揚此<WAIT><F9>項行為，發給了獎金<WAIT><F9>　<END>",
+  "refs": [
+   "T68:3:198"
+  ],
+  "continues_into": "06:6AF5"
+ },
+ {
+  "id": "06:6AF5",
+  "zh": "萬元。<WAIT><F9><PAGE><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6ABC"
+ },
+ {
+  "id": "06:6AFE",
+  "zh": "拳四郎：<NL>是的！<WAIT><F9>我們在此恭喜<NAME><WAIT><F9>，也感謝各位收看這<WAIT><F9>節的VF新聞。<WAIT><F9>再會。<WAIT><BOX>",
+  "refs": [
+   "T68:3:199"
+  ]
+ },
+ {
+  "id": "06:6B3D",
+  "zh": "可惡的窮神，看我的厲害！<WAIT><BOX>",
+  "refs": [
+   "T68:3:200"
+  ]
+ },
+ {
+  "id": "06:6B55",
+  "zh": "窮神：<NL>哦～滿天的星星～～<WAIT><PAGE>窮神被敲昏了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:201"
+  ]
+ },
+ {
+  "id": "06:6B79",
+  "zh": "窮神：<NL>哼～想要害我！<WAIT><F9>門兒都沒有！<WAIT><PAGE><F9>窮神看穿了<NAME>的陷害行為了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:202",
+   "T68:3:203"
+  ]
+ },
+ {
+  "id": "06:6BB3",
+  "zh": "怎麼會這樣…<WAIT><BOX>",
+  "refs": [
+   "T68:3:204",
+   "T68:3:205"
+  ]
+ },
+ {
+  "id": "06:6BBF",
+  "zh": "哇～我不要～<WAIT><BOX>",
+  "refs": [
+   "T68:3:206"
+  ]
+ },
+ {
+  "id": "06:6BCA",
+  "zh": "可惡～可惡！<WAIT><BOX>",
+  "refs": [
+   "T68:3:207"
+  ]
+ },
+ {
+  "id": "06:6BD8",
+  "zh": "全部人都變成烏龜了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:208"
+  ]
+ },
+ {
+  "id": "06:6BED",
+  "zh": "<NAME>使用卡片後，任性的改變了目的地<WAIT><F9>！<WAIT><BOX>",
+  "refs": [
+   "T68:3:209"
+  ]
+ },
+ {
+  "id": "06:6C0E",
+  "zh": "<NAME>使用卡片後，士氣大振的前進20<WAIT><F9>步！<WAIT><BOX>",
+  "refs": [
+   "T68:3:210"
+  ]
+ },
+ {
+  "id": "06:6C2E",
+  "zh": "<NAME>使用卡片後，往股市中心出發了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:211"
+  ]
+ },
+ {
+  "id": "06:6C49",
+  "zh": "<NAME>使用卡片後，往卡片中心出發了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:212"
+  ]
+ },
+ {
+  "id": "06:6C64",
+  "zh": "眼皮好重…<WAIT><BOX>",
+  "refs": [
+   "T68:3:213"
+  ]
+ },
+ {
+  "id": "06:6C6F",
+  "zh": "不行～快…睡著了…<WAIT><BOX>",
+  "refs": [
+   "T68:3:214"
+  ]
+ },
+ {
+  "id": "06:6C80",
+  "zh": "我…不能…這麼睡…著…<WAIT><BOX>",
+  "refs": [
+   "T68:3:215"
+  ]
+ },
+ {
+  "id": "06:6C95",
+  "zh": "<NAME>使用卡片後，全部人的都睡著了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:216"
+  ]
+ },
+ {
+  "id": "06:6CAE",
+  "zh": "<NAME>使用卡片後，全部人的現金都被偷<WAIT><F9>走了！<WAIT><F9><BOX>",
+  "refs": [
+   "T68:3:217"
+  ]
+ },
+ {
+  "id": "06:6CD1",
+  "zh": "<NAME>使用卡片後，所有人的卡片都被封<WAIT><F9>印了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:218"
+  ]
+ },
+ {
+  "id": "06:6CF3",
+  "zh": "<NAME>使用卡片後，撿到了<WAIT><F9>　　<EE>萬！<WAIT><BOX>",
+  "refs": [
+   "T68:3:219"
+  ]
+ },
+ {
+  "id": "06:6D0F",
+  "zh": "大逆轉～大逆轉～<NL><NAME>使用了大逆轉<WAIT><F9>卡！<WAIT><F9><NAME>能不能逆轉成<WAIT><F9>功呢？<WAIT><F9>加油了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:220"
+  ]
+ },
+ {
+  "id": "06:6D4A",
+  "zh": "恭喜～恭喜！<WAIT><PAGE><NAME>得到了<NL><EE>萬獎金！<WAIT><PAGE>恭喜了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:221"
+  ]
+ },
+ {
+  "id": "06:6D71",
+  "zh": "唉～真是可惜呀！<WAIT><BOX>",
+  "refs": [
+   "T68:3:222"
+  ]
+ },
+ {
+  "id": "06:6D81",
+  "zh": "所有人的現金平分了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:223"
+  ]
+ },
+ {
+  "id": "06:6D95",
+  "zh": "<NAME_E1>被餓鬼趕走了。<WAIT><BOX>",
+  "refs": [
+   "T68:3:224"
+  ]
+ },
+ {
+  "id": "06:6DA6",
+  "zh": "餓鬼：<NL>肚子好餓哦～<WAIT><F9>主人哪～<WAIT><F9>肚子好餓哦！<WAIT><BOX>",
+  "refs": [
+   "T68:3:225"
+  ]
+ },
+ {
+  "id": "06:6DCF",
+  "zh": "餓鬼：<NL>肚子好餓哦～！<WAIT><F9>我來看看有什麼好吃<WAIT><F9>的！<WAIT><F9>哦～！<WAIT><F9>就是這個了！<WAIT><F9>卡滋～卡滋～<WAIT><F9><BOX>",
+  "refs": [
+   "T68:3:226"
+  ]
+ },
+ {
+  "id": "06:6E1E",
+  "zh": "餓鬼吃掉了<FE>了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:227"
+  ]
+ },
+ {
+  "id": "06:6E2E",
+  "zh": "餓鬼餓得把自己吃掉了！<WAIT><PAGE>餓鬼離開了<NAME>。<WAIT><BOX>",
+  "refs": [
+   "T68:3:228"
+  ]
+ },
+ {
+  "id": "06:6E54",
+  "zh": "行動卡片其他第年離終點步持金<BOX>",
+  "refs": [
+   "T68:3:231"
+  ]
+ },
+ {
+  "id": "06:6E6A",
+  "zh": "檢視全體資產設定<BOX>",
+  "refs": [
+   "T68:3:232"
+  ]
+ },
+ {
+  "id": "06:6E78",
+  "zh": "萬元<BOX>",
+  "refs": [
+   "T68:3:233"
+  ]
+ },
+ {
+  "id": "06:6E7C",
+  "zh": "變烏龜？<NL>哈哈～<WAIT><PAGE>那種事對我怎麼可能有效！<WAIT><BOX>",
+  "refs": [
+   "T68:3:234"
+  ]
+ },
+ {
+  "id": "06:6EA0",
+  "zh": "屁仙人：<NL>……………<WAIT><F9>……………！！<WAIT><F9>怎麼了？？<WAIT><F9>塞住了嗎？<WAIT><F9>真是不好意思。<WAIT><BOX>",
+  "refs": [
+   "T68:3:235"
+  ]
+ },
+ {
+  "id": "06:6ED9",
+  "zh": "使用<FE>嗎？<BOX>",
+  "refs": [
+   "T68:3:236"
+  ]
+ },
+ {
+  "id": "06:6EE2",
+  "zh": "要對誰使用呢？<BOX>",
+  "refs": [
+   "T68:3:237"
+  ]
+ },
+ {
+  "id": "06:6EEE",
+  "zh": "確定是<NAME_E1>嗎？<BOX>",
+  "refs": [
+   "T68:3:238"
+  ]
+ },
+ {
+  "id": "06:6EFA",
+  "zh": "現在無法使用喔。<WAIT><BOX>",
+  "refs": [
+   "T68:3:239"
+  ]
+ },
+ {
+  "id": "06:6F08",
+  "zh": "<NAME>使用了<FE>！<WAIT><PAGE><NAME>所中的詛咒被驅散了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:240"
+  ]
+ },
+ {
+  "id": "06:6F26",
+  "zh": "尤莉雅：<NL>是的。<WAIT><F9>罰錢點的金額都將提<WAIT><F9>昇為2倍。<WAIT><F9>美麗的主播在此提醒<WAIT><F9>您，行進時千萬要小<WAIT><F9>心喲～<WAIT><PAGE><F9><BOX>",
+  "refs": [
+   "T68:3:241"
+  ]
+ },
+ {
+  "id": "06:6F7C",
+  "zh": "<NAME_E1>得到了<NL>　　<END>",
+  "refs": [
+   "T68:3:242"
+  ],
+  "continues_into": "06:6F87"
+ },
+ {
+  "id": "06:6F87",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<EE>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:6F7C"
+ },
+ {
+  "id": "06:6F9F",
+  "zh": "<NAME_E1>總持金：<NL>　　<EE>萬。<WAIT><BOX>",
+  "refs": [
+   "T68:3:243"
+  ]
+ },
+ {
+  "id": "06:6FB2",
+  "zh": "啊吉：<NL>報告主人，那人是個<WAIT><F9>窮光蛋。<WAIT><F9>一毛錢也沒有！<WAIT><BOX>",
+  "refs": [
+   "T68:3:244"
+  ]
+ },
+ {
+  "id": "06:6FE3",
+  "zh": "啊吉：<NL>…報…告主人，任務<WAIT><F9>失敗了…<WAIT><F9>真是抱歉～<WAIT><BOX>",
+  "refs": [
+   "T68:3:245"
+  ]
+ },
+ {
+  "id": "06:700F",
+  "zh": "<NAME>得到了<FE>！<WAIT><BOX>",
+  "refs": [
+   "T68:3:246"
+  ]
+ },
+ {
+  "id": "06:701A",
+  "zh": "喔！<NL>你的卡片滿了耶～<WAIT><PAGE>我看就丟掉<FE>好了。<WAIT><BOX>",
+  "refs": [
+   "T68:3:247"
+  ]
+ },
+ {
+  "id": "06:703E",
+  "zh": "喂～<NAME>。<WAIT><PAGE>俺發現了大‧好‧事‧咧！<WAIT><PAGE>俺買了<FE>咧！<WAIT><PAGE>那個人說這張卡很好用咧！<WAIT><PAGE>只收俺2倍的錢咧！<WAIT><PAGE>一共是<NL>　　<END>",
+  "refs": [
+   "T68:3:248"
+  ],
+  "continues_into": "06:70A4"
+ },
+ {
+  "id": "06:70A4",
+  "zh": "萬！<WAIT><PAGE><NAME>的持有金：<NL>　　　<NUM>萬<WAIT><PAGE>哈哈哈～<WAIT><PAGE>千萬不要太感謝俺。俺會不好意思咧！<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:703E"
+ },
+ {
+  "id": "06:70E6",
+  "zh": "窮神賣掉了<FE>！<WAIT><PAGE>得到了<NL>　　<END>",
+  "refs": [
+   "T68:3:249"
+  ],
+  "continues_into": "06:70FE"
+ },
+ {
+  "id": "06:70FE",
+  "zh": "萬。<WAIT><PAGE>總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:70E6"
+ },
+ {
+  "id": "06:7116",
+  "zh": "確定要放棄<FE>嗎？<BOX>",
+  "refs": [
+   "T68:3:250"
+  ]
+ },
+ {
+  "id": "06:7126",
+  "zh": "<NAME>丟掉了<FE>。<WAIT><BOX>",
+  "refs": [
+   "T68:3:251"
+  ]
+ },
+ {
+  "id": "06:7131",
+  "zh": "確定是<FE>嗎？<BOX>",
+  "refs": [
+   "T68:3:252"
+  ]
+ },
+ {
+  "id": "06:713D",
+  "zh": "<FE>啊～需要<NL>　<END>",
+  "refs": [
+   "T68:3:253"
+  ],
+  "continues_into": "06:7149"
+ },
+ {
+  "id": "06:7149",
+  "zh": "萬喔？<BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "06:713D"
+ },
+ {
+  "id": "06:7150",
+  "zh": "你要使用<FE>來折價嗎？<BOX>",
+  "refs": [
+   "T68:3:254"
+  ]
+ },
+ {
+  "id": "06:7160",
+  "zh": "啊！<FE>飛走了！<WAIT><BOX>",
+  "refs": [
+   "T68:3:255"
+  ]
+ },
+ {
+  "id": "27:42F1",
+  "zh": "呵呵呵～少年仔～<NL>想看看好貨嗎？<WAIT><PAGE>什麼？<WAIT><PAGE>你叫我離你遠一點！<WAIT><PAGE>真是令怪盜老大我生氣！<WAIT><PAGE>小弟們，把他的手腳給我砍斷！<WAIT><BOX>",
+  "refs": [
+   "T51:5:0"
+  ]
+ },
+ {
+  "id": "27:4353",
+  "zh": "………<WAIT><PAGE>你說什麼？<WAIT><PAGE>這些錢要給我當成是賠罪的禮物！<WAIT><PAGE>嗯～這還差不多！<WAIT><BOX>",
+  "refs": [
+   "T51:5:1"
+  ]
+ },
+ {
+  "id": "27:438F",
+  "zh": "<NAME>將所有現金給了強盜！<WAIT><PAGE><NAME>的總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:2"
+  ]
+ },
+ {
+  "id": "27:43B9",
+  "zh": "你…<NL>你說什麼？<WAIT><PAGE>你已經報警了！<WAIT><PAGE>哼！算你狠！<NL>下次不要讓我碰到！<WAIT><BOX>",
+  "refs": [
+   "T51:5:3"
+  ]
+ },
+ {
+  "id": "27:43F6",
+  "zh": "<NAME>的防盜卡發揮了作用！<WAIT><BOX>",
+  "refs": [
+   "T51:5:4"
+  ]
+ },
+ {
+  "id": "27:4409",
+  "zh": "真是好險呀！<WAIT><BOX>",
+  "refs": [
+   "T51:5:5"
+  ]
+ },
+ {
+  "id": "27:4415",
+  "zh": "哎唷～<WAIT><PAGE>人家被你這麼一撞，好痛唷～<WAIT><PAGE>人家就是三隻手小姐啦～<WAIT><PAGE>你看看嘛～人家這裡～好痛唷～<WAIT><PAGE>呵呵呵～<NL>好癢喲～<WAIT><PAGE>不要亂摸嘛～<NL>呵呵呵～<WAIT><BOX>",
+  "refs": [
+   "T51:5:6"
+  ]
+ },
+ {
+  "id": "27:4483",
+  "zh": "嗯～<NL>到手了～<WAIT><PAGE>啊？！<WAIT><PAGE>人家什麼都沒有做嘛～<WAIT><PAGE>人家突然不痛了，謝謝了！<WAIT><PAGE>啾～！<WAIT><BOX>",
+  "refs": [
+   "T51:5:7"
+  ]
+ },
+ {
+  "id": "27:44C9",
+  "zh": "<NAME>被偷走了<NL>　　<END>",
+  "refs": [
+   "T51:5:8"
+  ],
+  "continues_into": "27:44D6"
+ },
+ {
+  "id": "27:44D6",
+  "zh": "萬！<WAIT><PAGE><NAME>的總持金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:44C9"
+ },
+ {
+  "id": "27:44F1",
+  "zh": "啊！<WAIT><PAGE>前面的警察好像…<WAIT><PAGE>人…<NL>人家突然有事…<WAIT><PAGE>再見了……<WAIT><BOX>",
+  "refs": [
+   "T51:5:9"
+  ]
+ },
+ {
+  "id": "27:4525",
+  "zh": "呵呵呵～<NL>年輕人～<WAIT><PAGE>……啊？<WAIT><PAGE>什麼！<WAIT><PAGE>我什麼都還沒有說，<NL>你就知道我是小偷了<WAIT><F9>……<WAIT><F9>嗚～<WAIT><PAGE>嗚～<WAIT><PAGE>大哥老說我是最沒有用的小弟……<WAIT><PAGE>嗚～嗚～<WAIT><BOX>",
+  "refs": [
+   "T51:5:10"
+  ]
+ },
+ {
+  "id": "27:459E",
+  "zh": "……<NL>………啊！<WAIT><PAGE>你說這些錢要給我？<WAIT><PAGE>嗚～嗚～<WAIT><PAGE>你真是個好心的人……<WAIT><PAGE>謝謝你！<WAIT><BOX>",
+  "refs": [
+   "T51:5:11"
+  ]
+ },
+ {
+  "id": "27:45E4",
+  "zh": "<NAME>給了怪盜老三<NL>　　<END>",
+  "refs": [
+   "T51:5:12"
+  ],
+  "continues_into": "27:45F4"
+ },
+ {
+  "id": "27:45F4",
+  "zh": "萬。<WAIT><PAGE><NAME>的持有金為：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:45E4"
+ },
+ {
+  "id": "27:4610",
+  "zh": "………<NL>………？<WAIT><PAGE>嗚嗚～<WAIT><PAGE>我都哭得這麼傷心了，你還是無動於衷嗎<WAIT><F9>？<WAIT><F9>真是無情的人！<WAIT><F9>嗚～嗚～<WAIT><BOX>",
+  "refs": [
+   "T51:5:13"
+  ]
+ },
+ {
+  "id": "27:4664",
+  "zh": "地…地震了！<NL>發生了大地震了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:14"
+  ]
+ },
+ {
+  "id": "27:467F",
+  "zh": "拳四郎：<NL>各位好！<WAIT><F9>為您插播一則最新的<WAIT><F9>消息。<WAIT><F9>就在剛才，<NAME_E8>地<WAIT><F9>方發生了大地震了！<WAIT><BOX>",
+  "refs": [
+   "T51:5:15"
+  ]
+ },
+ {
+  "id": "27:46C9",
+  "zh": "尤莉雅：<NL>是的。<WAIT><PAGE>在十分鐘前，於<NAME_E8>地方發生了12級的<WAIT><F9>大地震。<WAIT><F9>各地都傳來的災情都<WAIT><F9>相當的慘重。<WAIT><F9><BOX>",
+  "refs": [
+   "T51:5:16"
+  ]
+ },
+ {
+  "id": "27:471F",
+  "zh": "拳四郎：<NL>是的。<WAIT><F9>尤其<NAME_E8>地方的產<WAIT><F9>業損失，特別嚴重。<WAIT><F9>我們在此統計了產業<WAIT><F9>的損失報告：<WAIT><BOX>",
+  "refs": [
+   "T51:5:17"
+  ]
+ },
+ {
+  "id": "27:4769",
+  "zh": "<NAME_E1>於<NAME_E8>地方<NL>的產業投資，<WAIT><PAGE>共計損失了：<NL>　　<EA>萬！<WAIT><PAGE>但保險卡的作用，只損失了1／2。<WAIT><PAGE>災後<NAME_E1>得到了<NL><END>",
+  "refs": [
+   "T51:5:18"
+  ],
+  "continues_into": "27:47BE"
+ },
+ {
+  "id": "27:47BE",
+  "zh": "萬的保險<WAIT><PAGE>理賠。<WAIT><PAGE><NAME_E1>的持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:4769"
+ },
+ {
+  "id": "27:47E2",
+  "zh": "<NAME_E1>於<NAME_E8>地方<NL>的產業投資，<WAIT><PAGE>共計損失了：<NL>　　<EA>萬！<WAIT><PAGE>但節源卡的作用，只損失了1／2。<WAIT><PAGE><NAME_E1>的持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "T51:5:19"
+  ]
+ },
+ {
+  "id": "27:483E",
+  "zh": "<NAME_E1>於<NAME_E8>地方<NL>的產業投資，<WAIT><PAGE>共計損失了：<NL>　　<EA>萬！<WAIT><PAGE>災後<NAME_E1>得到了<NL><END>",
+  "refs": [
+   "T51:5:20"
+  ],
+  "continues_into": "27:4875"
+ },
+ {
+  "id": "27:4875",
+  "zh": "萬的保險<WAIT><PAGE>理賠。<WAIT><PAGE><NAME_E1>的持有金：<NL>　　<NUM>萬。<WAIT><BOX>",
+  "refs": [
+   "orphan"
+  ],
+  "continuation_of": "27:483E"
+ }
+]

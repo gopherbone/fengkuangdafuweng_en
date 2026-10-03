@@ -1,0 +1,7 @@
+{
+  "475": {"from": "獸", "to": "嚴", "why": "特別嚴重; bitmap shows 吅 over 厂+敢 (嚴), not 獸"},
+  "50B": {"from": "曖", "to": "暖", "why": "取暖; right side is 爰 (no 冖/心), i.e. 暖"},
+  "528": {"from": "徵", "to": "懲", "why": "懲罰; bitmap has 心 along the bottom under 彳/攵, so it is 懲 not 徵"},
+  "530": {"from": "運", "to": "遲", "why": "再處死也不遲; 辶 + 尸 + 羊/牛 body (犀), not 冖+車"},
+  "558": {"from": "控", "to": "挖", "why": "挖洞將你給埋掉; 扌 + 穴 + 乙 (挖), not 空"}
+}

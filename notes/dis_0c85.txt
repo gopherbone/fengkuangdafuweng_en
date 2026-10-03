@@ -1,0 +1,301 @@
+    0c85: PUSH hl
+    0c86: LD a, [$d6a2]
+    0c89: LD l, a
+    0c8a: LD a, [$d6a3]
+    0c8d: LD h, a
+    0c8e: LD a, [$d66d]
+    0c91: SRL a
+    0c93: LD e, a
+    0c94: LD d, $00
+    0c96: PUSH hl
+    0c97: LD a, $01
+    0c99: LD hl, $c0bf
+    0c9c: SUB [hl]
+    0c9d: LD [hli], a
+    0c9e: POP hl
+    0c9f: AND a
+    0ca0: JR nz, $0cb5
+    0ca2: PUSH de
+    0ca3: SLA e
+    0ca5: RL d
+    0ca7: SLA e
+    0ca9: RL d
+    0cab: SLA e
+    0cad: RL d
+    0caf: SLA e
+    0cb1: RL d
+    0cb3: ADD hl, de
+    0cb4: POP de
+    0cb5: LD d, $01
+    0cb7: CALL $0a0b
+    0cba: LD a, [$c0bf]
+    0cbd: AND a
+    0cbe: JR nz, $0cc5
+    0cc0: LD de, $d860
+    0cc3: JR $0cc8
+    0cc5: LD de, $d8a8
+    0cc8: LD a, [$c0be]
+    0ccb: AND a
+    0ccc: JR z, $0cd9
+    0cce: LD bc, $0e04
+    0cd1: LD hl, $01a5
+    0cd4: CALL $10af
+    0cd7: JR $0cec
+    0cd9: LD bc, $1204
+    0cdc: LDH a, [$4a]
+    0cde: AND a
+    0cdf: JR nz, $0ce6
+    0ce1: LD hl, $9da1
+    0ce4: JR $0cec
+    0ce6: LD hl, $01a1
+    0ce9: CALL $10af
+    0cec: CALL $0e40
+    0cef: POP hl
+    0cf0: JP $0b2e
+    0cf3: PUSH hl
+    0cf4: LD a, [$d6a2]
+    0cf7: LD l, a
+    0cf8: LD a, [$d6a3]
+    0cfb: LD h, a
+    0cfc: LD a, [$d66d]
+    0cff: LD d, a
+    0d00: LD e, $01
+    0d02: CALL $0a0b
+    0d05: LD a, [$d686]
+    0d08: LD [$c0c8], a
+    0d0b: LD a, [$d687]
+    0d0e: LD [$c0c9], a
+    0d11: POP hl
+    0d12: JP $0b2e
+    0d15: PUSH hl
+    0d16: LD a, [$c12e]
+    0d19: LD l, a
+    0d1a: LD a, [$c12f]
+    0d1d: LD h, a
+    0d1e: LD bc, $0020
+    0d21: ADD hl, bc
+    0d22: LD a, l
+    0d23: LD [$c0c8], a
+    0d26: LD a, h
+    0d27: LD [$c0c9], a
+    0d2a: LD hl, $58be
+    0d2d: LD b, $14
+    0d2f: RST $30
+    0d30: POP hl
+    0d31: JP $0a43
+    0d34: PUSH hl
+    0d35: LD a, [$c0c8]
+    0d38: LD l, a
+    0d39: LD a, [$c0c9]
+    0d3c: LD h, a
+    0d3d: LD bc, $0020
+    0d40: ADD hl, bc
+    0d41: LD a, l
+    0d42: LD [$c0c8], a
+    0d45: LD a, h
+    0d46: LD [$c0c9], a
+    0d49: LD hl, $58c7
+    0d4c: LD b, $14
+    0d4e: RST $30
+    0d4f: POP hl
+    0d50: JP $0a43
+    0d53: PUSH hl
+    0d54: LD a, [$c12e]
+    0d57: LD l, a
+    0d58: LD a, [$c12f]
+    0d5b: LD h, a
+    0d5c: LD bc, $0020
+    0d5f: ADD hl, bc
+    0d60: LD a, l
+    0d61: LD [$c0c8], a
+    0d64: LD a, h
+    0d65: LD [$c0c9], a
+    0d68: LD hl, $70c2
+    0d6b: LD b, $14
+    0d6d: RST $30
+    0d6e: POP hl
+    0d6f: JP $0a43
+    0d72: LD de, $5907
+    0d75: JR $0d7f
+    0d77: LD de, $590c
+    0d7a: JR $0d7f
+    0d7c: LD de, $5911
+    0d7f: PUSH hl
+    0d80: LD a, [$c0c8]
+    0d83: LD l, a
+    0d84: LD a, [$c0c9]
+    0d87: LD h, a
+    0d88: LD bc, $0020
+    0d8b: ADD hl, bc
+    0d8c: LD a, l
+    0d8d: LD [$c0c8], a
+    0d90: LD a, h
+    0d91: LD [$c0c9], a
+    0d94: PUSH de
+    0d95: POP hl
+    0d96: LD b, $14
+    0d98: RST $30
+    0d99: POP hl
+    0d9a: JP $0a43
+    0d9d: PUSH hl
+    0d9e: LD a, [$d690]
+    0da1: LD l, a
+    0da2: LD a, [$d691]
+    0da5: LD h, a
+    0da6: LD a, [$c0c4]
+    0da9: PUSH af
+    0daa: LD a, $81
+    0dac: LD [$c0c4], a
+    0daf: CALL $0a43
+    0db2: POP af
+    0db3: LD [$c0c4], a
+    0db6: POP hl
+    0db7: XOR a
+    0db8: LD [$d678], a
+    0dbb: LD a, l
+    0dbc: LD [$c0de], a
+    0dbf: LD a, h
+    0dc0: LD [$c0df], a
+    0dc3: JP $0a43
+    0dc6: PUSH hl
+    0dc7: LD hl, $c210
+    0dca: JR $0da6
+    0dcc: PUSH hl
+    0dcd: LD a, [$c1d8]
+    0dd0: LD l, a
+    0dd1: LD a, [$c1d9]
+    0dd4: JR $0da5
+    0dd6: PUSH hl
+    0dd7: LD hl, $c17b
+    0dda: JR $0da6
+    0ddc: PUSH hl
+    0ddd: LD hl, $d6d4
+    0de0: JR $0da6
+    0de2: PUSH hl
+    0de3: SUB $02
+    0de5: AND $0f
+    0de7: LD e, a
+    0de8: LD a, [$c0d3]
+    0deb: LD l, a
+    0dec: LD h, $00
+    0dee: ADD hl, hl
+    0def: PUSH hl
+    0df0: ADD hl, hl
+    0df1: ADD hl, hl
+    0df2: POP bc
+    0df3: ADD hl, bc
+    0df4: LD bc, $0e04
+    0df7: ADD hl, bc
+    0df8: PUSH hl
+    0df9: POP bc
+    0dfa: LD l, e
+    0dfb: LD h, $00
+    0dfd: ADD hl, hl
+    0dfe: ADD hl, bc
+    0dff: LD a, [hli]
+    0e00: LD h, [hl]
+    0e01: LD l, a
+    0e02: JR $0da6
+    0e04: LD [hli], a
+    0e05: LD c, $27
+    0e07: LD c, $2c
+    0e09: LD c, $31
+    0e0b: LD c, $36
+    0e0d: LD c, $3a
+    0e0f: LD c, $3a
+    0e11: LD c, $3a
+    0e13: LD c, $3a
+    0e15: LD c, $3a
+    0e17: LD c, $3a
+    0e19: LD c, $3a
+    0e1b: LD c, $3a
+    0e1d: LD c, $3a
+    0e1f: LD c, $3a
+    0e21: LD c, $f1
+    0e23: OR l
+    0e24: LDH a, [$82]
+    0e26: .BYTE $fd
+    0e27: POP af
+    0e28: OR l
+    0e29: LDH a, [$84]
+    0e2b: .BYTE $fd
+    0e2c: POP af
+    0e2d: OR [hl]
+    0e2e: LDH a, [$bd]
+    0e30: .BYTE $fd
+    0e31: POP af
+    0e32: OR l
+    0e33: LDH a, [$86]
+    0e35: .BYTE $fd
+    0e36: POP af
+    0e37: OR a
+    0e38: CP b
+    0e39: .BYTE $fd
+    0e3a: LD a, [de]
+    0e3b: INC de
+    0e3c: LD b, a
+    0e3d: LD a, [de]
+    0e3e: INC de
+    0e3f: LD c, a
+    0e40: PUSH bc
+    0e41: PUSH hl
+    0e42: LD a, [de]
+    0e43: INC de
+    0e44: CALL $045c
+    0e47: CALL $0e56
+    0e4a: DEC b
+    0e4b: JR nz, $0e42
+    0e4d: POP hl
+    0e4e: CALL $1024
+    0e51: POP bc
+    0e52: DEC c
+    0e53: JR nz, $0e40
+    0e55: RET
+    0e56: PUSH af
+    0e57: LD a, l
+    0e58: AND $e0
+    0e5a: PUSH af
+    0e5b: LD a, l
+    0e5c: INC a
+    0e5d: AND $1f
+    0e5f: LD l, a
+    0e60: POP af
+    0e61: OR l
+    0e62: LD l, a
+    0e63: POP af
+    0e64: RET
+    0e65: LD a, [$4000]
+    0e68: PUSH af
+    0e69: LD a, [$c0ec]
+    0e6c: RST $20
+    0e6d: CALL $0445
+    0e70: POP af
+    0e71: RST $20
+    0e72: RET
+    0e73: LD a, [$c110]
+    0e76: AND a
+    0e77: RET nz
+    0e78: LD a, [$d66b]
+    0e7b: CP $01
+    0e7d: RET z
+    0e7e: CP $02
+    0e80: RET z
+    0e81: LD a, [$4000]
+    0e84: PUSH af
+    0e85: LDH a, [$9e]
+    0e87: RST $20
+    0e88: CALL $0ea5
+    0e8b: LD a, [hl]
+    0e8c: LD [$c130], a
+    0e8f: ADD hl, bc
+    0e90: LD a, [hli]
+    0e91: LD [$d60a], a
+    0e94: LD a, [hld]
+    0e95: LD [$c133], a
+    0e98: DEC hl
+    0e99: LD a, [hli]
+    0e9a: LD [$c132], a
+    0e9d: ADD hl, bc
+    0e9e: LD a, [hl]
+    0e9f: LD [$c131], a
+

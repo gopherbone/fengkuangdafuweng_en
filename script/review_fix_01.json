@@ -1,0 +1,4 @@
+{
+  "311": {"from": "鳴", "to": "嗚", "why": "crying sound 嗚嗚～; bitmap right part has no dot inside the box, so it is 烏 (matches 29D) not 鳥"},
+  "321": {"from": "實", "to": "賓", "why": "VF賓館 (hotel); duplicate of 2C3 實, and the bitmap shows 宀 + 丏 + 貝 = 賓 (old=賓)"}
+}

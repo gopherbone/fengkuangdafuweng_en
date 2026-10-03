@@ -1,0 +1,11 @@
+{
+"023": [["<icon-swirl>", "<icon-recycle>", "<icon-turn>"], "Solid swirl/arrow-like icon, not a character; old='O' is wrong"],
+"024": [["<OK>"], "Whole word 'OK' drawn in a single cell; old='I' is wrong"],
+"08D": [["蟲", "晶"], "Each of the three parts has a vertical stroke through the box and the bottom ones have the 虫 dot, so it reads as 蟲; 晶 is separately at 1BA"],
+"0BA": [["VF", "<VF>"], "Bold Latin letters 'VF' in one cell, purpose unknown"],
+"0BF": [["乙", "Z"], "Z-shape with an upward hook at the bottom right, which is how 乙 is drawn; could be Latin Z"],
+"1B9": [["痢", "瘌"], "疒 enclosing 禾+刂; follows 馬公 in a block of place names, so the word context is unclear"],
+"1C6": [["—", "－", "ー", "<bar>"], "Thick 2px horizontal bar across the middle; most likely a long dash"],
+"22D": [["早", "旱"], "日 over 十 (the box sides run 1px past the bottom); followed by 晨"],
+"26A": [["賽", "寶"], "宀 + 共-like + 貝; old said 蔡, which does not fit (no 艹)"]
+}

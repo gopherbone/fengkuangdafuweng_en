@@ -1,0 +1,14 @@
+{
+ "3C4": [["侯","候"], "single 亻 (no extra vertical) vs 3DE which has 亻+| = 候; drawn as 侯 but may be a font variant/mistake for 候"],
+ "3B7": [["未","末"], "upper horizontal shorter than lower -> 未"],
+ "42D": [["麋","廉","鹿"], "广 + 鹿-head (same as in 慶 411) + 比-like middle + 米 bottom"],
+ "457": [["‧","・","·","•"], "bold centered dot; Big5 A145 maps to U+2027"],
+ "528": [["邀","徵","懲"], "辶 + (山/王-like) + 攵; read as 邀 (敫 squeezed)"],
+ "552": [["呿"], "口+去; rare char, likely an interjection"],
+ "561": [["養"], "羊-top + 食/良-like bottom"],
+ "591": [["凋","淍","調"], "left side drawn with 3 strokes (氵) + 周; 凋 most plausible (cf. 零 57F)"],
+ "4B6": [["宛"], "宀 + 夗"],
+ "49F": [["雍"], "亠 + 乡 + 隹"],
+ "3FF": [["<blank>"], "only stray pixels in last row (overlaps next bank half header byte)"],
+ "5FF": [["<blank>"], "only stray pixels in last row (overlaps next bank half header byte)"]
+}
