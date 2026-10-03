@@ -8,91 +8,141 @@
      2,
      3,
      2,
-     6
+     3
     ],
     "lines": [
-     "Continue"
-    ]
+     "Load"
+    ],
+    "align": "right",
+    "right": 1
+   },
+   {
+    "rect": [
+     2,
+     6,
+     2,
+     3
+    ],
+    "lines": [
+     "Save"
+    ],
+    "left": 2
    },
    {
     "rect": [
      4,
      3,
      2,
-     6
+     3
     ],
     "lines": [
      "New"
-    ]
+    ],
+    "align": "right",
+    "right": 1
+   },
+   {
+    "rect": [
+     4,
+     6,
+     2,
+     3
+    ],
+    "lines": [
+     "Save"
+    ],
+    "left": 2
    },
    {
     "rect": [
      6,
      3,
      2,
-     6
+     3
     ],
     "lines": [
      "Copy"
-    ]
+    ],
+    "align": "right",
+    "right": 1
+   },
+   {
+    "rect": [
+     6,
+     6,
+     2,
+     3
+    ],
+    "lines": [
+     "Save"
+    ],
+    "left": 2
    }
   ]
  },
  "setup": {
   "state": "st/o_s1.state",
+  "rebuild": {
+   "descriptor": "130DED",
+   "bank": "7D"
+  },
   "regions": [
    {
     "rect": [
      1,
      7,
      2,
-     7
+     6
     ],
     "lines": [
-     "Game Setup"
+     "Settings"
     ],
-    "align": "center"
+    "align": "center",
+    "unshare": true
    },
    {
     "rect": [
      5,
-     4,
+     3,
      2,
      6
     ],
     "lines": [
      "Players"
     ],
-    "keep_bottom": 2
+    "keep_bottom": 2,
+    "unshare": true
    },
    {
     "rect": [
      8,
-     4,
+     3,
      2,
      6
     ],
     "lines": [
      "Humans"
     ],
-    "keep_bottom": 2
+    "keep_bottom": 2,
+    "unshare": true
    },
    {
     "rect": [
      11,
-     4,
+     3,
      2,
      6
     ],
     "lines": [
      "Game Time"
     ],
-    "keep_bottom": 2
+    "keep_bottom": 2,
+    "unshare": true
    },
    {
     "rect": [
      5,
-     16,
+     15,
      2,
      2
     ],
@@ -104,7 +154,7 @@
    {
     "rect": [
      11,
-     16,
+     15,
      2,
      2
     ],
@@ -115,20 +165,49 @@
    }
   ]
  },
- "money_popup": {
-  "state": "snaps/popup.state",
+ "save_info": {
+  "_doc": "1bpp glyph strip (bank 4C) used for the save-slot labels: 進度 第 年 月",
+  "raw1bpp": [
+   {
+    "offset": "1311CE",
+    "cells": 2,
+    "text": "Save"
+   },
+   {
+    "offset": "13120E",
+    "cells": 1,
+    "text": "Yr"
+   },
+   {
+    "offset": "13122E",
+    "cells": 1,
+    "text": "Mo"
+   },
+   {
+    "offset": "13124E",
+    "cells": 1,
+    "text": ""
+   }
+  ]
+ },
+ "char_select": {
+  "state": "st/p0.state",
   "regions": [
    {
     "rect": [
-     30,
-     12,
+     1,
+     6,
      2,
-     1
+     8
     ],
     "lines": [
-     ""
-    ]
+     "Pick Character"
+    ],
+    "align": "center"
    }
   ]
+ },
+ "profiles": {
+  "generator": "tools/gfx_profiles.py"
  }
 }

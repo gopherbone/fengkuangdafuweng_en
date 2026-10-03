@@ -46,3 +46,5 @@ DEF EN_FSAVE  EQU $C800   ; 33: saved PX + column buffers while drawing a money 
 DEF EN_FSTART EQU $C821   ; 2
 DEF EN_WRAM   EQU $C823   ; 1: WriteCol targets EN_FIELD instead of VRAM
 DEF EN_FIELD  EQU $C830   ; 144: 9-column money field buffer (1bpp rows)
+DEF EN_BURST  EQU $C824   ; chars drawn in the current typewriter call
+DEF EN_CPF    EQU 3       ; typewriter speed: characters per frame

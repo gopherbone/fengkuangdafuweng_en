@@ -24,7 +24,7 @@ SECTION "blank_14_40ef", ROMX[$40EF], BANK[$14]
     ds 32, 0
 
 ; ---------------------------------------------------------------- engine (free ROM0 space)
-SECTION "en_engine", ROM0[$3000]
+SECTION "en_engine", ROM0[$2000]
 
 ; Top-level entry from $0A3B: mark that the next $0A43 entry starts/resumes a top-level string.
 EnTop::
@@ -224,7 +224,14 @@ EnRun::
     ld a, [EN_DEPTH]
     and a
     jr nz, EnRun            ; inserts always render instantly
-    ; typewriter: one character per call
+    ; typewriter: EN_CPF characters per call (a hanzi was 16 px per frame; letters are ~5 px)
+    ld a, [EN_BURST]
+    inc a
+    ld [EN_BURST], a
+    cp EN_CPF
+    jp c, EnRun
+    xor a
+    ld [EN_BURST], a
     ld a, LOW(EN_TOKEN_CHR)
     ld [$C0DE], a
     ld a, HIGH(EN_TOKEN_CHR)
@@ -1283,3 +1290,16 @@ ClearPage::
     jp FreshColumn
 
 INCLUDE "font.inc"
+
+; ---------------------------------------------------------------- graphics helpers (fixed addresses: patched by tools/gfx_*.py)
+SECTION "far_copy_prof", ROM0[$1F00]
+; Copy BC bytes from DE (bank $7C) to HL. Used by the character-profile screen (per-character tiles).
+FarCopyProf::
+    ld a, [$4000]
+    push af
+    ld a, $7C
+    ld [rROMB], a
+    call $0445
+    pop af
+    ld [rROMB], a
+    ret

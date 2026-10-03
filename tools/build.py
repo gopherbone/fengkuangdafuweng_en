@@ -182,12 +182,14 @@ def main():
     gp = os.path.join(ROOT, 'gfx', 'patch.json')
     if os.path.exists(gp):
         owner = {}
-        for screen, tiles in json.load(open(gp)).items():
-            for off, data in tiles.items():
-                if off in owner and owner[off][1] != data:
-                    raise SystemExit('gfx conflict at %s: %s vs %s' % (off, owner[off][0], screen))
-                owner[off] = (screen, data)
-                o = int(off, 16); rom[o:o + 16] = bytes.fromhex(data)
+        for screen, chunks in json.load(open(gp)).items():
+            for off, data in chunks.items():
+                o = int(off, 16); d = bytes.fromhex(data)
+                for k in range(o, o + len(d)):
+                    if k in owner and owner[k] != screen:
+                        raise SystemExit('gfx conflict at %06X: %s vs %s' % (k, owner[k], screen))
+                    owner[k] = screen
+                rom[o:o + len(d)] = d
     base = os.path.join(ROOT, 'build', 'base.gbc')
     open(base, 'wb').write(rom)
 
