@@ -901,6 +901,7 @@ CheckWrap::
     ld a, l
     sub EN_RMARGIN
     ld l, a
+    call PopupLimit
     ld a, b
     cp l
     ret c
@@ -1182,8 +1183,27 @@ NumFieldGo:
     jr nz, .sv
     pop de
     pop bc
-    ; build "-$1,234,0000" text in EN_NUMBUF (NUL terminated)
+    ; build "-$1,234,0000" text in EN_NUMBUF (NUL terminated); the board's money popup (tiles $8D80-$8EFF)
+    ; gets a compact "$14.52M": its left half shares tiles with the portrait box and is wiped by it
+    ld a, [EN_FALIGN]
+    and a
+    jr nz, .full            ; HUD (left-aligned) keeps the full amount
+    ld a, [$C0C9]
+    cp $8D
+    jr c, .full
+    cp $8F
+    jr nc, .full
+    cp $8E
+    jr nc, .compact
+    ld a, [$C0C8]
+    cp $80
+    jr c, .full
+.compact:
+    call FormatCompact
+    jr .fmtd
+.full:
     call FormatMoney
+.fmtd:
     ; width in px
     ld hl, EN_NUMBUF
     ld c, 0
@@ -1403,6 +1423,112 @@ FormatMoney::
     dec b
     jr nz, .pdig
     jr .fin
+
+; L = usable line width (px). The portrait box's second line (starting at $8C80) runs into the money popup's
+; tiles from column 8 on: while the popup is up ($C129 != 0), stop that line at 8 columns.
+PopupLimit:
+    ld a, [$C129]
+    and a
+    ret z
+    ld a, [EN_LSTART+1]
+    cp $8C
+    ret nz
+    ld a, [EN_LSTART]
+    cp $80
+    ret nz
+    ld a, l
+    cp 8 * 8 - 1
+    ret c
+    ld l, 8 * 8 - 1
+    ret
+
+; Compact money for the popup: DE = digits (units of 10,000), B = count, C = negative.
+; < $1M: "$520K"; < $1B: "$14.52M"; else "$1.23B" (trailing zeros after the point dropped)
+FormatCompact::
+    ld hl, EN_NUMBUF
+    ld a, c
+    and a
+    jr z, .pos
+    ld a, '-'
+    ld [hl+], a
+.pos:
+    ld a, '$'
+    ld [hl+], a
+.skip:
+    ld a, [de]
+    and a
+    jr nz, .sig
+    inc de
+    dec b
+    jr nz, .skip
+    ld a, '0'
+    ld [hl+], a
+    jr .end
+.sig:                       ; B = significant digits
+    ld a, b
+    cp 3
+    jr nc, .big
+    ; thousands: digits + "0K"
+.k:
+    ld a, [de]
+    inc de
+    add '0'
+    ld [hl+], a
+    dec b
+    jr nz, .k
+    ld a, '0'
+    ld [hl+], a
+    ld c, 'K'
+    jr .suffix
+.big:
+    ld c, 'M'
+    ld a, b
+    sub 2                   ; integer digits for millions
+    cp 4
+    jr c, .ip
+    ld c, 'B'
+    sub 3                   ; integer digits for billions
+.ip:
+    ld b, a
+.int:
+    ld a, [de]
+    inc de
+    add '0'
+    ld [hl+], a
+    dec b
+    jr nz, .int
+    ; two decimals, dropping trailing zeros
+    ld a, [de]
+    ld b, a
+    inc de
+    ld a, [de]
+    and a
+    jr nz, .two
+    ld a, b
+    and a
+    jr z, .suffix
+    ld a, '.'
+    ld [hl+], a
+    ld a, b
+    add '0'
+    ld [hl+], a
+    jr .suffix
+.two:
+    ld a, '.'
+    ld [hl+], a
+    ld a, b
+    add '0'
+    ld [hl+], a
+    ld a, [de]
+    add '0'
+    ld [hl+], a
+.suffix:
+    ld a, c
+    ld [hl+], a
+.end:
+    xor a
+    ld [hl], a
+    ret
 
 ; Z set if the current player has no debt (mirrors bank $14:$58C7)
 PlayerDebt::
