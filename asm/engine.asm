@@ -26,6 +26,20 @@ SECTION "blank_14_40ef", ROMX[$40EF], BANK[$14]
     ds 32, 0
 
 ; name-entry keyboard (bank $07): names are stored as plain ASCII (max 6 letters + FD in the 7-byte field)
+; Assets screen (bank $08): the land / business counts go through the money field; flag them as plain counts
+SECTION "assets_count", ROMX[$5F84], BANK[$08]
+    ld a, [hl+]
+    ld hl, $C228
+    ld [hl+], a
+    jp AssetsCount          ; was: xor a / ld [hl+],a / ld [hl+],a / jr $5F6B
+SECTION "assets_count2", ROMX[$7F00], BANK[$08]
+AssetsCount:
+    xor a
+    ld [hl+], a
+    ld [hl+], a
+    ld a, 1
+    ld [EN_FPLAIN], a
+    jp $5F6B
 SECTION "ending_page", ROMX[$4091], BANK[$0C]
     call EndPage            ; was: call $1A31 (load a wish-scene text page)
 SECTION "kbd_init", ROMX[$4093], BANK[$07]
@@ -1246,6 +1260,9 @@ NumFieldGo:
 ; DE = digit buffer, B = digits, C = 1 if negative -> EN_NUMBUF = "[-]$d,ddd,dd0,000" NUL-terminated (x10,000)
 FormatMoney::
     ld hl, EN_NUMBUF
+    ld a, [EN_FPLAIN]
+    and a
+    jr nz, .plain
     ld a, c
     and a
     jr z, .pos
@@ -1309,6 +1326,27 @@ FormatMoney::
     xor a
     ld [hl], a
     ret
+.plain:                     ; a count: digits only
+    xor a
+    ld [EN_FPLAIN], a
+.pskip:
+    ld a, [de]
+    and a
+    jr nz, .pdig
+    inc de
+    dec b
+    jr nz, .pskip
+    ld a, '0'
+    ld [hl+], a
+    jr .fin
+.pdig:
+    ld a, [de]
+    inc de
+    add '0'
+    ld [hl+], a
+    dec b
+    jr nz, .pdig
+    jr .fin
 
 ; Z set if the current player has no debt (mirrors bank $14:$58C7)
 PlayerDebt::

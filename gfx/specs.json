@@ -360,5 +360,40 @@
     "all_sources": true
    }
   ]
+ },
+ "assets": {
+  "_doc": "Other > Assets screen: 1bpp 16x16-format strips expanded by $08:$46D0 (labels at $08:$5D20, 合計 at $5DE8 drawn red, 萬元 at $4F43)",
+  "raw1bpp": [
+   {
+    "offset": "021D20",
+    "cells": 2,
+    "text": "Lots"
+   },
+   {
+    "offset": "021D60",
+    "cells": 2,
+    "text": "Firms"
+   },
+   {
+    "offset": "021DA0",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "021DC0",
+    "cells": 1,
+    "text": ""
+   },
+   {
+    "offset": "021DE8",
+    "cells": 2,
+    "text": "Total"
+   },
+   {
+    "offset": "020F43",
+    "cells": 2,
+    "text": ""
+   }
+  ]
  }
 }

@@ -55,3 +55,4 @@ DEF EN_CPF    EQU 3       ; typewriter speed: characters per frame
 DEF EN_FALIGN EQU $C825   ; money field: 0 = right-aligned 9 columns, 1 = left-aligned, minimal
 DEF EN_FCOLS  EQU $C826
 DEF ENDING_BANK EQU $60         ; wish-scene text pages, one bank per character ($60-$67)
+DEF EN_FPLAIN EQU $C82F   ; 1: next money field prints a plain count (no $, no x10,000)
